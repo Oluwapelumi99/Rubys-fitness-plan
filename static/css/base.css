@@ -1,0 +1,10 @@
+header {
+    color: aqua;
+}
+body {
+    color: red;
+}
+
+h1 {
+    display: flex;
+}
