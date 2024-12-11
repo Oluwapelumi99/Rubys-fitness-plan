@@ -1,10 +1,38 @@
-header {
-    color: aqua;
-}
-body {
-    color: red;
+#text-container {
+    word-break: break-all;
 }
 
-h1 {
-    display: flex;
+
+.float-left {
+    float: left;
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    
+}
+
+.container {
+    text-align: justify;
+    margin-top: 10px;
+}
+
+h5 {
+    font-weight: bolder;
+}
+
+
+
+/*Media queries of screen sizes bigger than 768px and up*/
+/*Media queries*/
+@media screen and (min-width :768px) {
+    .float-left {
+        width: 40%;
+        margin-right: 30px;
+    }
+    #plans {
+        font-size: 19px;
+    }
+    .container {
+        margin-top: 20px;
+    }
 }
