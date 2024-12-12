@@ -2,9 +2,11 @@
 .float-left {
     float: left;
     width: 100%;
+    margin-bottom: 20px;   
+}
+
+.curved-edges {
     border-radius: 10px;
-    margin-bottom: 20px;
-    
 }
 
 .container {
@@ -12,6 +14,24 @@
     margin-top: 10px;
 }
 
+.glutes-container {
+    position: relative;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.glutes {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+    font-size: 30px;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    border: 1px solid #303030;
+    color: #303030;
+}
 h5 {
     font-weight: bolder;
 }

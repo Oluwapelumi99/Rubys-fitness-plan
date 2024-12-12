@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block content %}
+{% for exercise in exercises %}
+    {{ exercise.name }}
+    {{ exercise.video }}
+    {{ exercise.description }}
+    {{ exercise.sets }}
+    {{ exercise.reps }}
+    {{ exercise.warm_up }}
+{% endfor %}   
+{% endblock %}
