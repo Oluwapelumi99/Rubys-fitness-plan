@@ -1,4 +1,11 @@
-
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* body {
+    background-color: rgb(234, 58, 87);
+} */
 .float-left {
     float: left;
     width: 100%;
@@ -36,8 +43,26 @@ h5 {
     font-weight: bolder;
 }
 
-
-
+#arrow-container {
+    margin-top: 7rem;
+}
+#arrow , #arrow_1, #arrow_2, #arrow_3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 10vh;
+    background: white;
+}
+.weeks {
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    padding: 18px 40px;
+    clip-path: polygon(80% 0, 100% 50%, 80% 100%, 0% 100%, 10% 55%, 0% 0%);
+    background: rgb(234, 58, 87);
+    color: #000000;
+}
 /*Media queries of screen sizes bigger than 768px and up*/
 /*Media queries*/
 @media screen and (min-width :768px) {
@@ -51,6 +76,13 @@ h5 {
         width: 40%;
         margin-right: 50px;
     }
+    #arrow-container {
+        margin-top: 7rem;
+        display: flex;
+        justify-content: space-around;
+    }
+
+
     #plans {
         font-size: 19px;
     }
