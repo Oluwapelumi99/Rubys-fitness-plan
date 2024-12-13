@@ -6,6 +6,33 @@
 /* body {
     background-color: rgb(234, 58, 87);
 } */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+
+.plan {
+    height: 30px;
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid;
+    background: rgb(219, 86, 108);
+    border-radius: 10px;
+    color: #000000;
+}
+
+.plan:hover, .plan:active {
+    text-decoration: none;
+    background: #000000;
+    color: rgb(219, 86, 108) !important;
+
+}
+
 .float-left {
     float: left;
     width: 100%;
@@ -36,8 +63,8 @@
     font-size: 30px;
     border-radius: 0.5rem;
     text-decoration: none;
-    border: 1px solid #303030;
-    color: #303030;
+    border: 1px solid rgb(219, 86, 108);
+    color: #000000;
 }
 h5 {
     font-weight: bolder;
