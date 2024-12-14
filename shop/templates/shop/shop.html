@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+
+<div id="reviews" class="col text-center font-weight-bold">Week 1</div>
+{% for shop in shops %}
+    {{ shop.name }}
+    {{ shop.description }}
+    {{ shop.color }}
+    {{ shop.price }}
+    {{ shop.image }}
+{% endfor %} 
+
+{% endblock %}
