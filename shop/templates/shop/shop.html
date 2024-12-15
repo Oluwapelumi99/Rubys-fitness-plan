@@ -2,25 +2,60 @@
 {% load static %}
 {% block content %}
 
-
+<div class="container">
 <div class="overlay"></div>
-<div class="container-fluid">
+{% for shop in shops %}
+    <div class="row">
+        <div class="col-lg-3 text-center">
+            <div class="card border-0 bg-light">
+                    <a href="{% url 'item_details' shop.id %}">
+                        <img class="card-img-top" src="{{ shop.image.url }}" alt="{{ shop.name }}" >    
+                    </a>
+
+                <h6>{{ shop.name }}</h6>
+
+            </div>
+
+        </div>
+    {% endfor %}
+    </div>
+</div>
+<!-- <div class="col-10 offset-1">
+    <div class="row mt-1 mb-2"></div>
+    <div class="row">
+        <div class="card-deck">
+            <div class="card">
+                <div class="col-lg-3">
+                    <a href="">
+                        <img class="card-img-top" src="{{ shop.image.url }}" alt="{{ shop.name }}">    
+                    </a>
+                <div class="card-body">
+                <h5 class="card-title">{{ shop.name }}</h5>
+                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+{% endblock%}
+<!-- <div class="container">
     <div class="row">
         <div class="col-lg-4">
-            {% for shop in shops %}
+            
             <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
                 <div class="card-body">
                 <a href="">
-                <img class="card-img-top img-fluid" src="{{ shop.image }}" alt="{{ shop.name }}">
+                <img class="card-img-top img-fluid" src="{{ shop.image.url }}" alt="{{ shop.name }}">
                 </a>
                 <p class="mb-0">{{ shop.name }}</p>  
                 </div>            
             </div>
         </div>
     </div>
-</div>
-{% endfor %}
-{% endblock%}
+</div> -->
 
          <!-- <div class="col text-center mt-3">
             <h2 class="logo-font">Shop</h2>

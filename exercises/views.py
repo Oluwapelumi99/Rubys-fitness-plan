@@ -16,6 +16,7 @@ def exercises_list(request):
 
 def glutes_week1(request):
     exercises = Exercise.objects.all()
+    print("excersises = ", exercises)
     return render (request, 'exercises/glutes_week1.html', {"exercises": exercises})
 
 

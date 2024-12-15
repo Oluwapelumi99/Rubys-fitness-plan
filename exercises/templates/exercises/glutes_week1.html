@@ -6,8 +6,19 @@
 <div id="reviews" class="col text-center font-weight-bold">Week 1</div>
 {% for exercise in exercises %}
     {{ exercise.name }}
-    {{ exercise.video }}
+    {% if exercise.video %}
+    <video src="{{ exercise.video.url }}" autoplay muted loop height="375px">
+    </video>
+        {% else %}
+    <p>No video available</p>
+    {% endif %}
     {{ exercise.description }}
+    <!-- {% if exercise.image %}
+    <img src="{{ exercise.image.url }}" alt="{{ exercise.name }}" style="max-width: 300px; height:300;">
+        {% else %}
+    <p>No image available.</p> -->
+    <!-- {% endif %} -->
+
     {{ exercise.sets1 }}
     {{ exercise.reps1 }}
 {% endfor %} 

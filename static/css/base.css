@@ -31,6 +31,17 @@ a {
     color: inherit;
 }
 /* index page styling*/
+
+.main {
+    background: url('../media/selective_focused_woman_holding_2_1kg_dumbells.jpg') no-repeat center center/cover;
+    height: 900px;
+}
+
+.about {
+    margin-top: 25px;
+}
+
+/* plans page styling*/
 .plan {
     height: 30px;
     width: 150px;
@@ -140,6 +151,7 @@ section {
 /*Media queries of screen sizes bigger than 768px and up*/
 /*Media queries*/
 @media screen and (min-width :768px) {
+
     #text-container {
         width: 40%;
         justify-content: center;
