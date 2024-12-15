@@ -1,18 +1,27 @@
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
+<div>
+    <section>
+        <div class="exerc-bottom">
+            <h1 class="text-center font-weight-bold ">Exercises</h1>
+            <p class="text-center font-weight-bold">No matter what program or workout you're following, these instructional videos and how-to guides will help you master every movement </p>
+        </div>
+    </section>
+</div>
 
-<h1>Add intro</h1>
-<h1 class="text-center"> Choose a program </h1>
-<div class="card-body glutes-container"> <a href="{% url 'exercises_list' %}">
-    <img src="/static/media/woman_liftingweight_in_the_gym2.jpg" alt="woman_liftingweight_in_the_gym" class="curved-edges ">
-    <button class="glutes">Glutes</button>
-</div></a>
+<div id="exercises">
+    <h1 class="text-center"> Choose a program </h1>
+    <div class="card-body glutes-container"> <a href="{% url 'exercises_list' %}">
+        <img src="/static/media/woman_liftingweight_in_the_gym2.jpg" alt="woman_liftingweight_in_the_gym" class="curved-edges ">
+        <button class="glutes">Glutes</button>
+    </div></a>
 
-<div class="card-body glutes-container"> <a href="{% url 'exercises_list' %}">
-    <img src="/static/media/Close_Up_View_of_a_Person's_Abs.jpg" alt="Close_Up_View_of_a_Person's_Abs" class="curved-edges ">
-    <button class="glutes">Abs</button>
-</div></a>
+    <div class="card-body glutes-container"> <a href="{% url 'exercises_list' %}">
+        <img src="/static/media/Close_Up_View_of_a_Person's_Abs.jpg" alt="Close_Up_View_of_a_Person's_Abs" class="curved-edges ">
+        <button class="glutes">Abs</button>
+    </div></a>
+</div>
 
 
 {% endblock %}

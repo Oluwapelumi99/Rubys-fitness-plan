@@ -3,13 +3,83 @@
 {% block content %}
 
 
-<div id="reviews" class="col text-center font-weight-bold">Week 1</div>
-{% for shop in shops %}
-    {{ shop.name }}
-    {{ shop.description }}
-    {{ shop.color }}
-    {{ shop.price }}
-    {{ shop.image }}
-{% endfor %} 
+<div class="overlay"></div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-4">
+            {% for shop in shops %}
+            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
+                <div class="card-body">
+                <a href="">
+                <img class="card-img-top img-fluid" src="{{ shop.image }}" alt="{{ shop.name }}">
+                </a>
+                <p class="mb-0">{{ shop.name }}</p>  
+                </div>            
+            </div>
+        </div>
+    </div>
+</div>
+{% endfor %}
+{% endblock%}
 
-{% endblock %}
+         <!-- <div class="col text-center mt-3">
+            <h2 class="logo-font">Shop</h2>
+            <hr class="w-50 mb-1">
+        </div>
+    </div>
+    <div class="row">
+        <div class="shop-container col-10 offset-1">
+            <div class="row mt-1 mb-2"></div>
+            <div class="row">
+                {% for shop in shops %}
+                    <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
+                        <div class="card h-100 border-0">
+                             {% if shop.image %}
+                             <a href=""> -->
+                                <!-- <img class="card-img-top img-fluid" src="{{ shop.image }}" alt="{{ shop.name }}">
+                            </a>  -->
+                                <!-- {% else %}
+                                <a href="{% url 'product_detail' product.id %}">
+                                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                                </a> -->
+                                <!-- {% endif %} -->
+                            <!-- <div class="card-body pb-0">
+                                <p class="mb-0">{{ shop.name }}</p>
+                            </div>
+                            <div class="card-footer bg-white pt-0 border-0 text-left">
+                                <div class="row">
+                                    <div class="col">
+                                        <p class="lead mb-0 text-left font-weight-bold">{{ shop.color }}</p>
+                                        <p class="lead mb-0 text-left font-weight-bold">£{{ shop.price }}</p>
+                                     --> 
+                                    <!-- {% if product.category %}
+                                    <p class="small mt-1 mb-0">
+                                        <a class="text-muted" href="{% url 'products' %}?category={{ product.category.name }}">
+                                            <i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}
+                                        </a>
+                                    </p>
+                                    {% endif %} -->
+                                    <!-- {% if product.rating %}
+                                        <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
+                                    {% else %}
+                                        <small class="text-muted">No Rating</small>
+                                    {% endif %} -->
+                                    <!-- {% if request.user.is_superuser %}
+                                        <small class="ml-3">
+                                            <a href="">Edit</a> | 
+                                            <a class="text-danger" href="">Delete</a>
+                                        </small>
+                                    {% endif %}
+                                </div> -->
+                                    <!-- </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>     
+    </div>
+</div>
+{% endfor %} -->
+
+
