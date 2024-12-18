@@ -15,8 +15,11 @@
 
     {% block corecss %}
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&display=swap">
+        <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&display=swap"> -->
         <link rel="stylesheet" href="{% static 'css/base.css' %}">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&display=swap" rel="stylesheet">
     {% endblock %}
 
     {% block extra_css %}
@@ -72,14 +75,37 @@
                             <li class="nav-item">
                             <a class="nav-link disabled" href="#">Disabled</a>
                             </li>
+                            <li class="list-inline-item">
+                                <a  class="" href="{% url 'view_cart' %}">
+                                    <div class="text-center">
+                                        <div><i class="fas fa-cart-shopping fa-xl mt-3">
+                                            <p class="my-0 cart text-center ">
+                                                {% if grand_total %}
+                                                    ${{ grand_total|floatformat:2 }}
+                                                {% else %}
+                                                    0
+                                                {% endif %}
+                                            </p>
+                                        </i></div>
+                                        <!-- <p class="my-0">
+                                            {% if grand_total %}
+                                                ${{ grand_total|floatformat:2 }}
+                                            {% else %}
+                                                $0.00
+                                            {% endif %}
+                                        </p> -->
+                                    </div>
+                                </a>
+                            </li>
                     </ul>
                 </div>
-                <div>
+
+                    <!-- <div>
                     <form method="GET" action="{% url 'shop' %}" class="form-inline search my-2 my-lg-0">
                         <input class="form-control mr-sm-2 me-2" type="search" name="q" placeholder="Search our shop" aria-label="Search">
                         <button class="btn my-2 my-sm-0" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
                     </form>
-                </div>
+                </div> -->
             </div>
         </nav>
           <!-- <nav class="navbar" aria-label="breadcrumb">

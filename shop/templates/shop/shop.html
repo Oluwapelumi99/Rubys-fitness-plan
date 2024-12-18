@@ -1,25 +1,172 @@
-{% extends "base.html" %}
 {% load static %}
-{% block content %}
 
-<div class="container">
-<div class="overlay"></div>
-{% for shop in shops %}
-    <div class="row">
-        <div class="col-lg-3 text-center">
-            <div class="card border-0 bg-light">
-                    <a href="{% url 'item_details' shop.id %}">
-                        <img class="card-img-top" src="{{ shop.image.url }}" alt="{{ shop.name }}" >    
-                    </a>
+<!doctype html>
+<html lang="en">
+    <head>
 
-                <h6>{{ shop.name }}</h6>
+    {% block meta %}
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    {% endblock %}
 
+    {% block extra_meta %}
+    {% endblock %}
+
+    {% block corecss %}
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&display=swap">
+        <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    {% endblock %}
+
+    {% block extra_css %}
+    {% endblock %}
+
+    {% block corejs %}
+        <script src="https://kit.fontawesome.com/3dac582a5a.js" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    {% endblock %}
+
+    {% block extra_js %}
+    {% endblock %}
+
+        <title>Rubys Fitness Plan {% block extra_title %}{% endblock %}</title>
+    </head>
+    <body class="d-flex flex-column h-100 main-bg">
+        <nav class="navbar navbar-expand-lg navbar-light ">
+            <a class="navbar-brand" href="{% url 'home' %}">Rubys <i class="fa-solid fa-dumbbell"></i></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse nav-container navbar-collapse" id="navbarSupportedContent">
+                <div>
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="{% url 'shop' %}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Shop
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                              <a class="dropdown-item" href="{% url 'shop' %}">All Products</a>
+                              <a class="dropdown-item" href="#">Another action</a>
+                              <div class="dropdown-divider"></div>
+                              <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Gym sets
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{% url 'shop' %}?category=gym_wears">Sets</a>
+                                    <a class="dropdown-item" href="{% url 'shop' %}?category=top">Top</a>
+                                    <a class="dropdown-item" href="{% url 'shop' %}?category=leggings">leggings</a>
+                                    <a class="dropdown-item" href="{% url 'shop' %}?category=gym_wears,top,leggings">All gym wears</a>
+                                </div>
+                                </li>
+                            <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                My Account
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+                            </li>
+                            <li class="nav-item">
+                            <a class="nav-link disabled" href="#">Disabled</a>
+                            </li>
+                    </ul>
+                </div>
+                <div>
+                    <form method="GET" action="{% url 'shop' %}" class="form-inline search my-2 my-lg-0">
+                        <input class="form-control mr-sm-2 me-2" type="search" name="q" placeholder="Search our shop" aria-label="Search">
+                        <button class="btn my-2 my-sm-0" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </form>
+                </div>
             </div>
+        </nav>
+        <div class="container">
+            <div class="overlay"></div>
+            {% for shop in shops %}
+                <div class="row">
+                    <div class="col-lg-3 text-center">
+                        <div class="card border-0 bg-light">
+                                <a href="{% url 'item_details' shop.id %}">
+                                    <img class="card-img-top" src="{{ shop.image.url }}" alt="{{ shop.name }}" >    
+                                </a>
+            
+                            <h6>{{ shop.name }}</h6>
+            
+                        </div>
+            
+                    </div>
+                {% endfor %}
+                </div>
+            </div>
+          <!-- <nav class="navbar" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item"><a href="#">Library</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Data</li>
+            </ol>
+          </nav>
+         -->
 
-        </div>
-    {% endfor %}
-    </div>
-</div>
+    <!-- Navigation -->
+    <!-- <nav class="navbar navbar-expand-lg navbar-light bg-white">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="{% url 'home' %}">Rubys <i class="fa-solid fa-dumbbell"></i> </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+                aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="list-inline-item dropdown">
+                    <a class="text-black nav-link" href="#" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <div class="text-center">
+                            <p class="my-0">My Account</p>
+                        </div>
+                    </a>
+                    <div class="dropdown-menu border-0" aria-labelledby="user-options">
+                        {% if request.user.is_authenticated %}
+                            <a href="" class="dropdown-item">My Profile</a>
+                            <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+                        {% else %}
+                            <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+                            <a href="{% url 'account_login' %}" class="dropdown-item">Login</a> 
+                        {% endif %}
+                    </div> -->
+                    <!-- <li class="list-inline-item">
+                        <a class="" href="">
+                            <div class="text-center mt-2">
+                                <div><i class="fa-solid fa-basket-shopping"></i></div>
+                            </div>
+                        </a>
+                    </li> -->
+
+    {% if messages %}
+        <div class="message-container"></div>
+    {% endif %}
+
+    {% block page_header %}
+    {% endblock %}
+
+    {% block content %}
+    {% endblock %}
+
+    {% block postloadjs %}
+    {% endblock %}
+
+    
+    </body>
+</html>
+
 <!-- <div class="col-10 offset-1">
     <div class="row mt-1 mb-2"></div>
     <div class="row">
@@ -40,7 +187,7 @@
     </div>
 </div> -->
 
-{% endblock%}
+
 <!-- <div class="container">
     <div class="row">
         <div class="col-lg-4">
