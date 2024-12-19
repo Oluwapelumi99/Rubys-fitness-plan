@@ -84,8 +84,8 @@
                                 <a  class=""href="{% url 'view_cart' %}">
                                     <div class="text-center">
                                         <div><i class="fas fa-cart-shopping fa-xl mt-3">
-                                            <p class="my-0 cart text-center" id="cart-quantity">
-                                                0
+                                            <p class="my-0 cart text-center" id="cart_quantity">
+                                                {{ cart|length }}
                                             </p>
                                         </i></div>
                                         <!-- <p class="my-0">
@@ -194,7 +194,8 @@
                 },
 
                 success: function(json){
-                    console.log(json)
+                    // console.log(json)
+                    document.getElementById('cart_quantity').textContent = json.cart_quantity
                 },
 
                 error: function(xhr, errmsg, err){

@@ -9,7 +9,10 @@ from django.http import JsonResponse
 def view_cart(request):
     """ A view to return the cart items page """
 
-    return render(request, 'cart/cart.html')
+    carts = Cart(request)
+    cart_items = carts.get_items
+
+    return render(request, 'cart/cart.html', {'cart_items': cart_items})
 
 
 def add_to_cart(request):
@@ -19,7 +22,9 @@ def add_to_cart(request):
         shop_id = int(request.POST.get('shop_id'))
         shop = get_object_or_404(Shop, id=shop_id)
         cart.add(shop=shop)
-        response = JsonResponse({'Shop Name: ': shop.name})
+        # response = JsonResponse({'Shop Name: ': shop.name})
+        cart_quantity = cart.__len__()
+        response = JsonResponse({'cart_quantity': cart_quantity})
         return response
 
 

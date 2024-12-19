@@ -1,3 +1,5 @@
+from shop.models import Shop
+
 class Cart():
     def __init__(self, request):
         self.session = request.session
@@ -24,3 +26,9 @@ class Cart():
 
     def __len__(self):
         return len(self.cart)
+
+
+    def get_items(self):
+        shop_ids = self.cart.keys()
+        shops = Shop.objects.filter(id__in=shop_ids)
+        return shops
