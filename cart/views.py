@@ -9,12 +9,12 @@ from django.http import JsonResponse
 def view_cart(request):
     """ A view to return the cart items page """
 
-    carts = Cart(request)
-    quantities = carts.get_quantity                                                                                                          
-    cart_items = carts.get_items
+    # carts = Cart(request)
+    # quantities = carts.get_quantity                                                                                                          
+    # cart_items = carts.get_items
 
-    return render(request, 'cart/cart.html', {'cart_items': cart_items,
-    'quantities': quantities})
+    return render(request, 'cart/cart.html')
+    # 'quantities': quantities})
 
 
 # def add_to_cart(request, item_id):

@@ -53,10 +53,10 @@
                                 <span class="icon">
                                     <i class="fas fa-chevron-left"></i>
                                 </span>
-                                <span class="text-uppercase">Keep Shopping</span>
+                                <span class="text-uppercase ">Keep Shopping</span>
                             </a>
-                            <button type=button class="btn btn-secondary" value="{{ shop.id }}" id="add-cart">Add to cart </button>
-                            <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5" value="Add to Cart">
+                            <!-- <button type=button class="btn btn-secondary" value="{{ shop.id }}" id="add-cart">Add to cart </button> -->
+                            <input type="submit" class="btn btn-black btn-outline-black rounded-0 text-uppercase mt-5" value="Add to Cart">
                         </div>
                         <input type="hidden" name="redirect_url" value="{{ request.path }}">
                         {% endwith %}
@@ -70,7 +70,7 @@
 {% endblock %}
 
 {% block postloadjs %}
-<script>
+<!-- <script>
     $(document).on('click', '#add-cart', function(e){
         e.preventDefault();
         $.ajax({
@@ -98,5 +98,5 @@
 
 
 
-</script>
+</script> -->
 {% endblock %}

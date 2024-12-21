@@ -85,7 +85,7 @@
                                     <div class="text-center">
                                         <div><i class="fas fa-cart-shopping fa-xl mt-3">
                                             <p class="my-0 cart text-center" id="cart_quantity">
-                                                {{ cart|length }}
+                                                {{ shop_count }}
                                             </p>
                                         </i></div>
                                     </div>
@@ -199,7 +199,7 @@
     {% endblock %}
 
     {% block postloadjs %}
-    <script>
+    <!-- <script>
         $(document).on('click', '#add-cart', function(e){
             e.preventDefault();
             $.ajax({
@@ -227,7 +227,7 @@
 
 
 
-    </script>
+    </script> -->
 {% endblock %}
 
     

@@ -2,6 +2,7 @@
 {% load static %}
 
 {% block content %}
+{% if cart_items %}
 <div class="container">
     <div class="row">
         <div class="col">
@@ -18,18 +19,7 @@
                 <table class="table">
                     <tr>
                         <th><h5>Items: <strong>3</strong></h5></th>
-                        <th><h5 class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %}">Total
-                            <div class="text-center">
-                                <p class="my-0"><strong>
-                                    {% if grand_total %}
-                                        ${{ grand_total|floatformat:2 }}
-                                    {% else %}
-                                        £0.00
-                                    {% endif %}
-                                </strong>
-                                </p>
-                            </div>
-                        </h5></th>
+                        <th></th>
                         <th>
                             <a style="float: right;margin: 5px;" href="" class="btn btn-success">Check Out</a>
                         </th>
@@ -46,18 +36,18 @@
                 <div style="flex:2"><strong>Prize</strong></div>
                 <div style="flex:2"><strong>Quantity</strong></div>
             </div>
-            {% for shop in cart_items %}
+            {% for item in cart_items %}
             <div class="cart-row">
                 <div style="flex:2">
-                    <a href="{{ shop.image.url }}" target="_blank">
-                        <img class="row-image" src="{{ shop.image.url }}" alt="{{ shop.name }}">
+                    <a href="{{ item.shop.image.url }}" target="_blank">
+                        <img class="row-image" src="{{ item.shop.image.url }}" alt="{{ item.shop.name }}">
                     </a>
                 </div>
-                <div style="flex:2">{{shop.name}}</div>
-                <div style="flex:2">M</div>
-                <div style="flex:2">£{{shop.price}}</div>
+                <div style="flex:2">{{ item.shop.name}}</div>
+                <div style="flex:2"></strong>{% if item.shop.sizes %}{{ item.sizes|upper }}{% else %}N/A{% endif %}</div>
+                <div style="flex:2">£{{ item.shop.price}}</div>
                 <div style="flex:2">
-                    <p class="quantity">2</p>
+                    <p class="quantity">{{ item.quantity }}</p>
                     <div class="quantity">
                         <i class="fa-solid fa-arrow-up"></i>
                         <i class="fa-solid fa-arrow-down"></i>
@@ -65,6 +55,40 @@
                 </div>
             </div>
             {% endfor %}
+            <h5 class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %}"><strong>Grand total:</strong>           
+                <span class="my-0">
+                    {% if grand_total %}
+                        £{{ grand_total|floatformat:2 }}
+                    {% else %}
+                        £0.00
+                    {% endif %}
+                </span>
+            </h5>
+            <h6>Delivery: £{{ delivery|floatformat:2 }}</h6>
+            <!-- <h4 class="mt-4"><strong>Grand Total: £{{ grand_total|floatformat:2 }}</strong></h4> -->
+            {% if free_delivery_delta > 0 %}
+                <p class="mb-1 text-black">
+                    You could get free delivery by spending just <strong>£{{ free_delivery_delta }}</strong> more!
+                </p>
+            {% endif %}
+            <a href="{% url 'shop' %}" class="btn btn-outline-black rounded-0 btn-lg">
+                <span class="icon">
+                    <i class="fas fa-chevron-left"></i>
+                </span>
+                <span class="text-uppercase p-border ">Keep Shopping</span>
+            </a>
+            <a href="" class="btn btn-black btn-outline-black rounded-0 btn-lg">
+                <span class="text-uppercase p-border">Checkout</span>
+            </a>
+            {% else %}
+                    <p class="lead mb-5">Your bag is empty.</p>
+                    <a href="{% url 'shop' %}" class="btn btn-outline-black rounded-0 btn-lg">
+                        <span class="icon">
+                            <i class="fas fa-chevron-left"></i>
+                        </span>
+                        <span class="text-uppercase">Keep Shopping</span>
+                    </a>
+            {% endif %}
 
     </div>
 </div>
