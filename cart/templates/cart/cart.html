@@ -47,7 +47,7 @@
                     </a>
                 </div>
                 <div style="flex:2">{{ item.shop.name}}</div>
-                <div style="flex:2"></strong>{% if item.shop.sizes %}{{ item.sizes|upper }}{% else %}N/A{% endif %}</div>
+                <div style="flex:2"></strong>{% if item.shop.sizes %}{{ item.size|upper }}{% else %}N/A{% endif %}</div>
                 <div style="flex:2">£{{ item.shop.price}}</div>
                 <div style="flex:2">
                     <p class="quantity">{{ item.quantity }}</p>
