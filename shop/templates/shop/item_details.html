@@ -27,15 +27,27 @@
                 <form class="form" action="{% url 'add_to_cart' shop.id %}" method="POST">
                     {% csrf_token %}
                     <div class="form-row">
+                        {% with shop.sizes as s %}
+                            {% if s %}
+                                <div class="col-12">
+                                    <p><strong>Size:</strong></p>
+                                    <select class="form-control rounded-0 w-50" name="shop_size" id='id_shop_size'>
+                                        <option value="xs">XS</option>
+                                        <option value="s">S</option>
+                                        <option value="m" selected>M</option>
+                                        <option value="l">L</option>
+                                        <option value="xl">XL</option>
+                                    </select>
+                                </div>
+                            {% endif %}
                         <div class="col-12">
                             <p class="mt-3"><strong>Quantity:</strong></p>
                             <div class="form-group w-50">
                                 <div class="input-group">
-                                    <input class="form-control qty_input" type="number" name="quantity" value="1" min="1" max="99" data-item_id="{{ shop.id }}" id="id_qty_{{ shop.id }}">
+                                    <input class="form-control qty_input" type="number" name="quantity" value="1" min="1" max="99" data-item_id="{{ shop.id }}" id="cart_qty">
                                 </div>
                             </div>
                         </div>
-
                         <div class="col-12">
                             <a href="{% url 'shop' %}" class="btn btn-outline-black rounded-0 mt-5">
                                 <span class="icon">
@@ -43,9 +55,11 @@
                                 </span>
                                 <span class="text-uppercase">Keep Shopping</span>
                             </a>
+                            <button type=button class="btn btn-secondary" value="{{ shop.id }}" id="add-cart">Add to cart </button>
                             <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5" value="Add to Cart">
                         </div>
                         <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                        {% endwith %}
                     </div>
                 </form>
 
@@ -55,3 +69,34 @@
 </div>
 {% endblock %}
 
+{% block postloadjs %}
+<script>
+    $(document).on('click', '#add-cart', function(e){
+        e.preventDefault();
+        $.ajax({
+            type: 'POST',
+            url: "{% url 'add_to_cart' %}",
+            data: {
+                shop_id: $('#add-cart').val(),
+                shop_qty: $('#cart_qty value:1').text(),
+                csrfmiddlewaretoken: '{{ csrf_token }}',
+                action: 'post'
+            },
+
+            success: function(json){
+                // console.log(json)
+                document.getElementById('cart_quantity').textContent = json.cart_quantity
+            },
+
+            error: function(xhr, errmsg, err){
+
+            }
+        });
+
+    })
+
+
+
+
+</script>
+{% endblock %}

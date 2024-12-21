@@ -3,7 +3,31 @@
     margin: 0;
     box-sizing: border-box;
 }
+.box-element {
+    box-shadow: hsl(0%, 0%, 80%) 0 0 16px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 10px;
+}
+/* .cart-row {
+    align-items: center;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid rgb(219, 86, 108);
+} */
 
+.btn-outline-black {
+    background: white;
+    color: black !important; /* use important to override link colors for <a> elements */
+    border: 1px solid black;
+}
+
+.row-image {
+    width: 100px;
+}
+button {
+    color: rgb(219, 86, 108);
+}
 .navbar {
     background: rgb(219, 86, 108);
     font-size: 1.2rem;
@@ -193,6 +217,13 @@ section {
     }
     .container {
         margin-top: 20px;
+    }
+    .cart-row {
+        display: flex;
+        align-items: center;
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+        border-bottom: 1px solid rgb(219, 86, 108);
     }
 }
 

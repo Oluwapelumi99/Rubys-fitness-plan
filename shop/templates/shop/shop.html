@@ -88,13 +88,6 @@
                                                 {{ cart|length }}
                                             </p>
                                         </i></div>
-                                        <!-- <p class="my-0">
-                                            {% if grand_total %}
-                                                ${{ grand_total|floatformat:2 }}
-                                            {% else %}
-                                                $0.00
-                                            {% endif %}
-                                        </p> -->
                                     </div>
                                 </a>
                             </li>
@@ -109,6 +102,31 @@
             </div>
         </nav>
         <div class="container">
+            <div class="row">
+                {% for shop in shops %}
+                    {% if shop.image %}
+                    <div class="col-lg-2">
+                        <a href="{% url 'item_details' shop.id %}">
+                            <img class="card-img-top mt-3" src="{{ shop.image.url }}" alt="{{ shop.name }}" >    
+                        </a>
+                        {% else %}
+                        <a href="{% url 'product_detail' product.id %}">
+                            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                        </a>
+                    {% endif %}
+                    <div class="box-element shop">
+                        <h6><strong>{{ shop.name }}</strong></h6>
+                        <hr>
+                        <button type="button" class="btn btn-secondary cart" value="{{ shop.id }}" id="add-cart"><i class="fa-solid fa-cart-shopping"></i></button>
+                        <h4 style="float: right;">
+                            £{{shop.price|floatformat:2}}
+                        </h4>
+                    </div>   
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        <!-- <div class="container">
             <div class="overlay"></div>
             {% for shop in shops %}
                 <div class="row">
@@ -126,7 +144,7 @@
                     <button type=button class="btn btn-secondary" value="{{ shop.id }}" id="add-cart">Add to cart </button>
                 {% endfor %}
                 </div>
-            </div>
+            </div> -->
             
           <!-- <nav class="navbar" aria-label="breadcrumb">
             <ol class="breadcrumb">
@@ -189,6 +207,7 @@
                 url: "{% url 'add_to_cart' %}",
                 data: {
                     shop_id: $('#add-cart').val(),
+                    shop_qty: $('#cart_qty value').text(),
                     csrfmiddlewaretoken: '{{ csrf_token }}',
                     action: 'post'
                 },
@@ -209,7 +228,7 @@
 
 
     </script>
-    {% endblock %}
+{% endblock %}
 
     
     </body>
