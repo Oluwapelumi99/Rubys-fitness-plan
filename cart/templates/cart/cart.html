@@ -3,6 +3,9 @@
 
 {% block content %}
 {% if cart_items %}
+{{ cart_items }}
+<br>
+{{ request.session.cart }}
 <div class="container">
     <div class="row">
         <div class="col">
