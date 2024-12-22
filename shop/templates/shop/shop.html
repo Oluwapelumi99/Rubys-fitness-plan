@@ -199,35 +199,7 @@
     {% endblock %}
 
     {% block postloadjs %}
-    <!-- <script>
-        $(document).on('click', '#add-cart', function(e){
-            e.preventDefault();
-            $.ajax({
-                type: 'POST',
-                url: "{% url 'add_to_cart' %}",
-                data: {
-                    shop_id: $('#add-cart').val(),
-                    shop_qty: $('#cart_qty value').text(),
-                    csrfmiddlewaretoken: '{{ csrf_token }}',
-                    action: 'post'
-                },
 
-                success: function(json){
-                    // console.log(json)
-                    document.getElementById('cart_quantity').textContent = json.cart_quantity
-                },
-
-                error: function(xhr, errmsg, err){
-
-                }
-            });
-
-        })
-
-
-
-
-    </script> -->
 {% endblock %}
 
     

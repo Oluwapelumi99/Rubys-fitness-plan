@@ -42,7 +42,7 @@
                 <!-- <div style="flex:2">
                     <p class="quantity">{{ item.quantity }}</p>
                 </div> -->
-                <form class="form update-form" method="POST" action="">
+                <form class="form update-form" method="POST" action="{% url 'update_cart' item.item_id %}">
                     {% csrf_token %}
                     <div class="form-group">
                         <div class="input-group">
