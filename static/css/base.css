@@ -47,13 +47,20 @@ button {
 }
 
 body {
-    font-family: 'Edu Australia VIC WA NT Hand Arrows', sans-serifs;
+    font-family: 'Lato';
     background-color: rgb(234, 206, 211);
 }
 a {
     text-decoration: none;
     color: inherit;
 }
+
+.btt-link,
+.update-link,
+.remove-item {
+    cursor: pointer;
+}
+
 /* index page styling*/
 
 .main {
