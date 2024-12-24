@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-jpaggl9w$7psena(*7g7*$g97-j&^-((&24#rzz#9&ro*y^hyi
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-oluwapelumi-rubysfitnes-xhh1g6n4xty.ws.codeinstitute-ide.net']
+ALLOWED_HOSTS = ['8000-oluwapelumi-rubysfitnes-5xbxqzqx0dv.ws.codeinstitute-ide.net']
 
 
 # Application definition
@@ -80,6 +80,8 @@ TEMPLATES = [
         },
     },
 ]
+
+MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
 
 
 AUTHENTICATION_BACKENDS = [
