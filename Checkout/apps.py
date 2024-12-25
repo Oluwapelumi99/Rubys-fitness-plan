@@ -2,7 +2,7 @@ from django.apps import AppConfig
 
 
 class CheckoutConfig(AppConfig):
-    name = 'checkout'
+    name = 'Checkout'
 
     def ready(self):
-        import checkout.signals
+        import Checkout.signals
