@@ -11,25 +11,22 @@
 <div class="container">
     <div class="row">
         <div class="col">
-            <h2 class="logo-font mb-4 text-center mt-4">Your Cart</h2>
+            <h2 class="logo-font mb-4 text-center mt-4">Checkout</h2>
         </div>
     </div>
     <div class="row">
         <div class="col-12 col-lg-6 order-lg-last mb-5">
-            <p class="text-muted">Order Summary ({{ product_count }})</p>
+            <p class="text-muted">Order Summary ({{ shop_count }})</p>
             <div class="row">
                 <div class="col-7 offset-2">
                     <p class="mb-1 mt-0 small text-muted">Item</p>
                 </div>
-                <div class="col-3 text-right">
-                    <p class="mb-1 mt-0 small text-muted">Subtotal</p>
-                </div>
             </div>
-            {% for item in bag_items %}
-                <div class="row">
+            {% for item in cart_items %}
+                <div class="row justify-content-center">
                     <div class="col-2 mb-1">
                         <a href="{% url 'item_details' item.shop.id %}">
-                            {% if item.product.image %}
+                            {% if item.shop.image %}
                                 <img class="w-100" src="{{ item.shop.image.url }}" alt="{{ shop.name }}">
                             {% else %}
                                 <img class="w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ shop.name }}">
@@ -38,11 +35,8 @@
                     </div>
                     <div class="col-7">
                         <p class="my-0"><strong>{{ item.shop.name }}</strong></p>
-                        <p class="my-0 small">Size: {% if item.shop.izes %}{{ item.size|upper }}{% else %}N/A{% endif %}</p>
+                        <p class="my-0 small">Size: {% if item.shop.sizes %}{{ item.size|upper }}{% else %}N/A{% endif %}</p>
                         <p class="my-0 small text-muted">Qty: {{ item.quantity }}</p>
-                    </div>
-                    <div class="col-3 text-right">
-                        <p class="my-0 small text-muted">${{ item.shop.price }}</p>
                     </div>
                 </div>
             {% endfor %}
@@ -54,9 +48,9 @@
                     <p class="my-0">Grand Total:</p>
                 </div>
                 <div class="col-3">
-                    <p class="my-0">${{ total | floatformat:2 }}</p>
-                    <p class="my-0">${{ delivery | floatformat:2 }}</p>
-                    <p class="my-0"><strong>${{ grand_total | floatformat:2 }}</strong></p>
+                    <p class="my-0">£{{ total | floatformat:2 }}</p>
+                    <p class="my-0">£{{ delivery | floatformat:2 }}</p>
+                    <p class="my-0"><strong>£{{ grand_total | floatformat:2 }}</strong></p>
                 </div>
             </div>
         </div>
@@ -104,13 +98,10 @@
                     <span class="icon">
                         <i class="fas fa-chevron-left"></i>
                     </span>
-                    <span class="font-weight-bold">Adjust Bag</span>
+                    <span class="font-weight-bold">View Cart</span>
                 </a>
-                <button id="submit-button" class="btn btn-black rounded-0">
+                <button id="submit-button" class="btn btn-outline-black rounded-0">
                     <span class="font-weight-bold">Complete Order</span>
-                    <span class="icon">
-                        <i class="fas fa-lock"></i>
-                    </span>
                 </button>
                 <p class="small text-danger my-0">
                     <span class="icon">
@@ -129,6 +120,12 @@
     </div>
 </div>
       
+{% endblock %}
+{% block postloadjs %}
+    {{ block.super }}
+    {{ stripe_public_key|json_script:"id_stripe_public_key" }}
+    {{ client_secret|json_script:"id_client_secret" }}
+    <script src="{% static 'checkout/js/stripe_elements.js' %}"></script>
 {% endblock %}
 
 
