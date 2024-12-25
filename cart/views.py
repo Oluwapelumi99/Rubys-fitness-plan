@@ -13,7 +13,7 @@ def view_cart(request):
 
 def add_to_cart(request, item_id):
     """ Add quantity ans sizes to the cart"""
-
+    shop = get_object_or_404(Shop, pk=item_id)
     quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')
     size = None
@@ -92,7 +92,7 @@ def remove_item(request, item_id):
             messages.success(request, f'Removed size {size} {shop.name} from your cart')
         else:
             cart.pop(item_id)
-            messages.success(request, f'Removed {product.name} from your cart')
+            messages.success(request, f'Removed {shop.name} from your cart')
 
         request.session['cart'] = cart
         return HttpResponse(status=200)
