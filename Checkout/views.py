@@ -137,6 +137,7 @@ def checkout(request):
         'stripe_public_key': stripe_public_key,
         'client_secret': intent.client_secret,
     }
+    print(stripe_secret_key)
 
     return render(request, template, context)
 
