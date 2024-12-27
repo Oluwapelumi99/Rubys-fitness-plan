@@ -108,6 +108,10 @@ a {
     margin-top: 10px;
 }
 
+.container-fluid {
+    z-index: 99999;
+}
+
 .glutes-container {
     position: relative;
     text-align: center;
