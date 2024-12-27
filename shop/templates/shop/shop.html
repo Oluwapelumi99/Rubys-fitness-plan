@@ -80,7 +80,7 @@
                             </div>
                             </li>
                             <li class="nav-item">
-                            <a class="nav-link " href="#">Community</a>
+                            <a class="nav-link " href="{% url 'community' %}">Community</a>
                             </li>
                             <li class="list-inline-item">
                                 <a  class=""href="{% url 'view_cart' %}">
@@ -112,8 +112,8 @@
                             <img class="card-img-top mt-3" src="{{ shop.image.url }}" alt="{{ shop.name }}" >    
                         </a>
                         {% else %}
-                        <a href="{% url 'product_detail' product.id %}">
-                            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                        <a href="{% url 'item_details' shop.id %}">
+                            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ shop.name }}">
                         </a>
                     {% endif %}
                     <div class="box-element shop">

@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from exercises.models import Exercise
+
 
 # Create your views here.
 

@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+{% for blog in blogs %}
+<div class="masthead">
+    <div class="container text-center">
+        <div class="row g-0">
+            <div class="col-md-6 masthead-text">
+                <h1>Welcome to Our blog page</h1>
+                <p class="post-subtitle">{{ blog.author }} | {{ blog.created_on }}</p>
+                {% if blog.image %}
+                <div class=" col-md-12 masthead-image">
+            <div class="">
+            <img class="card-img-top mt-3 float-left glutes-container" src="{{ blog.image.url }}" alt="{{ blog.name }}" >    
+            {% else %}
+            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ blog.name }}">
+        {% endif %}
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col mb-4  mt-3 left  top">
+                <div class="card-body">
+                    <p class="card-text">
+                        {{ blog.content | safe }}
+                    </p>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+
+{% endblock%}
