@@ -1,9 +1,16 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404, reverse
+from django.views import generic
 from .models import Blog, Comment
 
 # Create your views here.
 
-def community(request):
+class BlogList(generic.ListView):
+    queryset = Blog.objects.all()
+    template_name = "community/blog_list.html"
+    paginate_by = 6
+
+def community(request, slug):
     """ A view to return the community page """
-    blogs = Blog.objects.all()
-    return render(request, 'community/community.html', {'blogs': blogs})
+    queryset = Blog.objects.all()
+    blog = get_object_or_404(queryset, slug=slug)
+    return render(request, 'community/community.html', {'blog': blog})
