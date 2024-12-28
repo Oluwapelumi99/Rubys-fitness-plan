@@ -31,3 +31,11 @@ class Comment(models.Model):
 
     def __str__(self):
         return f"Comment {self.body} by {self.author}"
+
+
+class Reply(models.Model):
+    content = models.TextField()
+    author = models.ForeignKey(User, on_delete=models.CASCADE, related_name="replier")
+    comment = models.ForeignKey(Comment, on_delete=models.CASCADE)
+    approved = models.BooleanField(default=False)
+    created_on = models.DateTimeField(auto_now_add=True)
