@@ -9,13 +9,10 @@
                 <h1 class="blog-title float-left">{{ blog.title }}</h1>
                 <p class="blog-subtitle ">{{ blog.author }} | {{ blog.created_on }}</p>
                 {% if blog.image %}
-                <div class=" col-md-12 masthead-image">
-            <div class="">
-            <img class="card-img-top mt-3 float-left glutes-container" src="{{ blog.image.url }}" alt="{{ blog.name }}" >    
-            {% else %}
-            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ blog.name }}">
-        {% endif %}
-            </div>
+                <img class="card-img-top mt-3 float-left glutes-container" src="{{ blog.image.url }}" alt="{{ blog.name }}" >    
+                {% else %}
+                <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ blog.name }}">
+                {% endif %}
             </div>
         </div>
     </div>
@@ -29,6 +26,7 @@
                 </div>
             </div>
         </div>
+    </div>
 </div>
 
 {% endblock%}
