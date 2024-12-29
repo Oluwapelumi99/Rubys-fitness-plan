@@ -4,6 +4,7 @@ from django.db import models
 
 class Exercise(models.Model):
     name = models.CharField(max_length=254, null=True, blank=True)
+    slug = models.SlugField(max_length=200, unique=True, default="", null=False)
     image = models.ImageField(null=True, blank=True)
     video = models.FileField(blank=True, null=True)
     description = models.TextField(null=True, blank=True)
