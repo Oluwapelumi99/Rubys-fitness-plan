@@ -6,15 +6,77 @@
 <div class="main">
 </div>
 <div class="container about">
-    <img src="/static/media/woman_holding_barbell_in_the_gym.jpg" alt="woman_holding_barbell_in_the_gym" class="float-left curved-edges mt-5 font-weight-bold">
-    <div>
-        <h5 class="text-center mt-5 mx-3">A more empowered you.</h5>
+    <div id="plans">
+        <h3 class="text-center mt-5 mx-3" style="color: rgb(189, 58, 80)">A more empowered you.</h5>
         Our goal? Helping you smash your goals. At Rubys, our mission is to empower women to take control of their fitness journey by providing
         a comprehensive and engaging mobile app experience.
         Our team of experts have come together to create an app that helps motivate and guide you towards acheiving your fitness goals.
+        Founded by a team of passionate fitness enthusiasts and technologists, Rubys aims to bridge the gap between traditional gym workouts and the convinence
+        of digital fitness. We believe that everyone deserves access to high quality fitness guidance and motivation, regardless of their location and schedule.
+        You can also visit our online store which offers a range of fitness related products, including resistance bands and exercise equipments, yoga mats, fitness apparel and accessories.
     </div>
 </div>
 
+<div class="container mt-5">
+    <a href="{% url 'exercise_page' %}">
+        <h5 class="text-center plan  mt-5 mx-3">Exercise plans</h5>
+        <img src="/static/media/woman_holding_barbell_in_the_gym.jpg" alt="woman_holding_barbell_in_the_gym.jpg" class="float-left curved-edges mt-4 font-weight-bold"></a>
+    <div id="plans">
+        Our exercise plans cater to various fitness levels, from beginner to advanced, and focus on functional training, strength building, and cardiovascular fitness. You'll
+        find workouts that can be done at home, in a gym, or outdoors, using a variety of equipments and techniques. Whether you're looking to tone and sculpt, increase
+        endurance, or boost overall fitness, our exercises are designed to help you acheive your objectives.
+    </div>
+</div>
 
+<div class="container mt-5">
+    <a href="">
+        <h5 class="text-center mt-5 plan mx-3">Meal plans</h5>
+        <img src="/static/media/plate_of_food.jpg" alt="plate_of_food.jpg" class="float-left curved-edges mt-5 font-weight-bold"></a> 
+    <div id="plans">
+        Our meal plans are designed to support your fitness goals, providing balanced and nutritious diet that fuels your body for optimal performance.
+        Our plans take into account variety dietary needs and preferences, including vegetarian, gluten-free, and low-carb options. You'll receive personalized
+        guidance on portion control, macronutrient ratios, and healthy eating habits to suport your weight loss, maintenance or muscle-building goals.
+    </div>
+</div>
+
+<div class="shop mt-5">
+    <div class="container ">
+        <div class="row ">
+            <div class="col-lg-12 text-center">
+                <h1 style="color:  rgb(189, 58, 80);">
+                    Shop
+                </h1>
+            </div>
+        </div>
+        <div class="row text-center">
+            <div class="col-lg-4">
+                <div class="card-body curved-edges">
+                    <img src="/media/1_black_and_tan_gym_bag-remove-background.com.png" alt="1_black_and_tan_gym_bag">
+                </div>
+                <h5 class="">Black and tan gym bag</h5>
+                <p class="font-weight-bold">£15.99</p>
+            </div>
+            <div class="col-lg-4">
+                <div class="card-body curved-edges">
+                    <img src="/media/resistance_bands.jpg" alt="resistance_bands.jpg">
+                </div>
+                <h5 class="">Resistance bands</h5>
+                <p class="font-weight-bold">£13.99</p>
+            </div>
+            <div class="col-lg-4">
+                <div class="card-body curved-edges">
+                    <a href="{% url 'shop' %}?category=gym_wears"><img src="/media/2_water_bottles_red_and_blue.png" alt="2_water_bottles_red_and_blue.png"></a>
+                </div>
+                <h5 class="">Water bottles</h5>
+                <p class="font-weight-bold">£30.99</p>
+            </div>                     
+        </div>
+        <div class="row">
+            <div class="col-lg-12 text-center ">
+                <button class="font-weight-bold btn1 mt-3 mb-5">Visit Shop for more</button>
+            </div>
+        </div>         
+    </div>
+</div>
 
 {% endblock%}

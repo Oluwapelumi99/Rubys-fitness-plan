@@ -158,12 +158,38 @@
         {% endfor %}
         </div>    
     {% endif %}
+    <main>
+        {% block page_header %}
+        {% endblock %}
+    
+        {% block content %}
+        {% endblock %}
 
-    {% block page_header %}
-    {% endblock %}
+    </main>
+      <!-- Footer -->
+      <footer class="footer mt-auto py-3">
+        <p class="text-black mx-5 mt-4">
+            {% block copyright %}
+            Rubys <i class="fa-solid fa-dumbbell"></i></p>
+        {% endblock copyright %}
+        <p class="mx-5">The fitness app trusted by millions of women.</p>
+        <p class="m-0 mx-5">Follow us: <a href="https://www.facebook.com/" target="_blank"
+                rel="nonopener" aria-label="Visit our facebook page(opens in a new tab)"> <i
+                    class="fab fa-facebook-square ms-3"></i> </a>
+            <a href="https://www.twitter.com/" target="_blank" rel="nonopener"
+                aria-label="Visit our twitter page(opens in a new tab)"> <i class="fab fa-twitter-square ms-3"></i> </a>
+            <a href="https://www.Instagram.com/" target="_blank" rel="nonopener"
+                aria-label="Visit our instgram page (opens in a new tab)"> <i
+                    class="fab fa-instagram-square ms-3"></i> </a>
+            <a href="https://www.youtube.com/" target="_blank" rel="nonopener"
+                aria-label="Visit our youtube page (opens in a new tab)"> <i class="fab fa-youtube-square ms-3"></i> </a>
+        </p>
+        <div id="support">
+            <p class="text-center text-black">Support</p>
+            <p class="m-0 text-center text-black"><i class="fa-solid fa-phone"></i>: 03000000000</p>
+        </div>
+    </footer>
 
-    {% block content %}
-    {% endblock %}
 
     {% block postloadjs %}
     <script type="text/javascript">

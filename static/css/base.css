@@ -52,7 +52,8 @@ body {
 }
 a {
     text-decoration: none;
-    color: inherit;
+    color: black
+    ;
 }
 
 .btt-link,
@@ -72,25 +73,48 @@ a {
     margin-top: 25px;
 }
 
-/* plans page styling*/
+.btn1 {
+    height: 60px;
+    width: 35%;
+    border: none;
+    outline: none;
+    background: rgb(219, 86, 108);
+    color: #000000;
+    font-size: 20px;
+    border-radius: 20px;
+}
+.btn1:hover {
+    background-color: rgb(189, 79, 98);
+    transition: 0.5s;
+}
 .plan {
     height: 30px;
-    width: 150px;
+    width: 200px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
     justify-content: center;
     border: 1px solid;
     background: rgb(219, 86, 108);
     border-radius: 10px;
     color: #000000;
+    text-decoration: none; */
 }
 
 .plan:hover, .plan:active {
     text-decoration: none;
-    background: #000000;
-    color: rgb(219, 86, 108) !important;
+    background-color: rgb(189, 79, 98);
+    transition: 0.5s;
 
+}
+
+.card-body:hover {
+    box-shadow: -2px -1px 25px -4px rgba(0,0,0,0.75);
+    -webkit-box-shadow: -2px -1px 25px -4px rgba(0,0,0,0.75);
+    -moz-box-shadow: -2px -1px 25px -4px rgba(0,0,0,0.75);
+    transition: 0.5s;
+    /* border-radius: 10px; */
 }
 
 .float-left {
@@ -101,6 +125,13 @@ a {
 
 .curved-edges {
     border-radius: 10px;
+}
+
+.curved-edges:hover {
+    box-shadow: -2px -1px 25px -4px rgba(0,0,0,0.75);
+    -webkit-box-shadow: -2px -1px 25px -4px rgba(0,0,0,0.75);
+    -moz-box-shadow: -2px -1px 25px -4px rgba(0,0,0,0.75);
+    transition: 0.1s;
 }
 
 .container {
@@ -159,7 +190,7 @@ section {
     justify-content: center;
     align-items: center;
     min-height: 10vh;
-    background: white;
+    /* background: white; */
 }
 .weeks {
     font-size: 16px;
@@ -182,7 +213,14 @@ section {
 	background: white;
 	z-index: -1;
 } */
-
+footer {
+    background-color: rgb(219, 86, 108);
+    color: #000000;
+    /* font-size: 28px; */
+}
+#support {
+    margin-top: 10px;
+}
 /*Media queries of screen sizes bigger than 768px and up*/
 /*Media queries*/
 @media screen and (min-width :768px) {
@@ -218,8 +256,16 @@ section {
         margin-top: 5rem;
         display: flex;
     }
+    .btn1{
+        border-radius: 60px;
+    }
     #plans {
         font-size: 19px;
+    }
+   
+    #meal-text {
+        height: 30px;
+        width: 200px;
     }
     .container {
         margin-top: 20px;
@@ -230,6 +276,9 @@ section {
         padding-bottom: 10px;
         margin-bottom: 10px;
         border-bottom: 1px solid rgb(219, 86, 108);
+    }
+    #support {
+        margin-top: 0px;
     }
 }
 

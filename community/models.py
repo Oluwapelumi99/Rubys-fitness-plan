@@ -34,8 +34,12 @@ class Comment(models.Model):
 
 
 class Reply(models.Model):
-    content = models.TextField()
+
+    class Meta:
+        verbose_name_plural = 'Replies'
+
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name="replier")
     comment = models.ForeignKey(Comment, on_delete=models.CASCADE)
+    content = models.TextField()
     approved = models.BooleanField(default=False)
     created_on = models.DateTimeField(auto_now_add=True)
