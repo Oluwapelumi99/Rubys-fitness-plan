@@ -6,4 +6,4 @@ from django_summernote.admin import SummernoteModelAdmin
 
 @admin.register(Exercise)
 class ExerciseAdmin(SummernoteModelAdmin):
-    summernote_fields = ('description',)
+    summernote_fields = ('description','abs_description',)

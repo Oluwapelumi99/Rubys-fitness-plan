@@ -9,28 +9,13 @@ def exercise_page(request):
     return render(request, 'exercises/exercise_page.html')
 
 
-def exercises_list(request): 
+def glutes_exercises(request): 
     exercises = Exercise.objects.all()
-    return render(request, 'exercises/exercises_list.html', {"exercises": exercises},)
+    return render(request, 'exercises/glutes_exercises.html', {"exercises": exercises},)
 
 
-def glutes_week1(request, slug):
-    queryset = Exercise.objects.all()
-    exercises = get_object_or_404(queryset, slug=slug)
-    # print("excersises = ", exercises)
-    return render (request, 'exercises/glutes_week1.html', {"exercises": exercises})
-
-
-def glutes_week2(request):
+def abs_exercises(request):
     exercises = Exercise.objects.all()
-    return render (request, 'exercises/glutes_week2.html', {"exercises": exercises})
+    return render (request, 'exercises/abs_exercises.html', {"exercises": exercises})
 
 
-def glutes_week3(request):
-    exercises = Exercise.objects.all()
-    return render (request, 'exercises/glutes_week3.html', {"exercises": exercises})
-
-
-def glutes_week4(request):
-    exercises = Exercise.objects.all()
-    return render (request, 'exercises/glutes_week4.html', {"exercises": exercises})
