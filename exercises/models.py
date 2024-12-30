@@ -15,5 +15,16 @@ class Exercise(models.Model):
     def __str__(self):
         return f"{self.name} | {self.abs_name}"
 
+class MealPlan(models.Model):
+    name = models.CharField(max_length=254)
+    slug = models.SlugField(max_length=200, unique=True, default="", null=False)
+    description = models.TextField()
+    calories_per_day = models.IntegerField()
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return self.name
+
   
 

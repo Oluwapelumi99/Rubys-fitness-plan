@@ -49,6 +49,7 @@ button {
 body {
     font-family: 'Lato';
     background-color: rgb(234, 206, 211);
+    min-height: 100vh
 }
 a {
     text-decoration: none;
@@ -183,14 +184,14 @@ section {
     margin-left: 25%;
 }
 
-#arrow , #arrow_1, #arrow_2, #arrow_3 {
+/* #arrow , #arrow_1, #arrow_2, #arrow_3 {
     display: flex;
     /* justify-content: center; */
-    align-items: center;
-    min-height: 10vh;
+    /* align-items: center;
+    min-height: 10vh; */
     /* background: white; */
-}
-.weeks {
+/* } */
+/* .weeks {
     font-size: 16px;
     text-decoration: none;
     text-transform: uppercase;
@@ -199,7 +200,7 @@ section {
     clip-path: polygon(80% 0, 100% 50%, 80% 100%, 0% 100%, 10% 55%, 0% 0%);
     background: rgb(234, 58, 87);
     color: #000000;
-}
+} */ */
 
 video {
     height: 375px;

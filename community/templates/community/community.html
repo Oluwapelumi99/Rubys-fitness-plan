@@ -42,9 +42,7 @@
       <div class="row">
         <div class="col-md-8 mb-4 mt-3 ">
           <h3>Comments...</h3>
-          <div class="card-body">
-            <!-- We want a for loop inside the empty control tags
-              to iterate through each comment in comments -->
+          <div>
             {% if comments %}
             {% for comment in comments %}
             <div class="p-2 comments
@@ -68,18 +66,14 @@
               <a href="{% url 'comment_delete' blog.slug comment.id %}" class="btn btn-outline-black btn-delete mt-3">Delete</a>
               <!-- <button class="btn btn-edit btn-outline-black"
                 comment_id="{{ comment.id }}">Edit</button> -->
-                <a href="{% url 'comment_edit' blog.slug comment.id %}" class="btn btn-outline-black btn-edit mt-3">Edit</a>
+              <a href="{% url 'comment_edit' blog.slug comment.id %}" class="btn btn-outline-black btn-edit mt-3">Edit</a>
               {% endif %}
               <div x-show="repliesOpen" x-cloak class="basis-full mt-3 pl-8 grid grid cols-1">
                 {% for reply in comment.replies.all %}
                 {% include 'community/reply.html' %}
                 {% endfor %}
-
-
-
               </div>
             </div>
-            <!-- Our for loop ends here -->
             {% endfor %}
           </div>
         </div>
