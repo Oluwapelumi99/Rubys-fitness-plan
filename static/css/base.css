@@ -139,6 +139,7 @@ a {
     margin-top: 10px;
 }
 
+
 .container-fluid {
     z-index: 99999;
 }
@@ -182,12 +183,9 @@ section {
     margin-left: 25%;
 }
 
-#arrow-container {
-    margin-top: 7rem;
-}
 #arrow , #arrow_1, #arrow_2, #arrow_3 {
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
     min-height: 10vh;
     /* background: white; */
@@ -201,6 +199,11 @@ section {
     clip-path: polygon(80% 0, 100% 50%, 80% 100%, 0% 100%, 10% 55%, 0% 0%);
     background: rgb(234, 58, 87);
     color: #000000;
+}
+
+video {
+    height: 375px;
+    width: 250px
 }
 
 /*shop page styling*/
@@ -235,12 +238,14 @@ footer {
         width: 40%;
         margin-right: 50px;
     }
-    #arrow-container {
+    /* #arrow-container {
         margin-top: 7rem;
         display: flex;
         justify-content: space-around;
-    }
-
+    } */
+.plan-container {
+    display: flex;
+}
     .exerc-bottom {
         justify-content: center;
         width: 40%;
@@ -261,6 +266,11 @@ footer {
     }
     #plans {
         font-size: 19px;
+    }
+
+    video {
+        height: 375px;
+        width: 666px
     }
    
     #meal-text {

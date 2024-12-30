@@ -3,21 +3,50 @@
 
 
 {% block content %}
-<div id="arrow-container">
-    <div id="arrow">
-        <a href="{% url 'glutes_week1' %}" class="weeks">week 1</a>
-    </div>
+<!-- 
+    <div class="container mt-5">
+        <div id="arrow">
+            <a href="{% url 'glutes_week1' %}" class="weeks exercises-link">week 1</a>
+        </div>
+        {% for exercise in exercises %}
+        {{ exercise.name }}
+        {% if exercise.video %}
+        <video class="text-center" src="{{ exercise.video.url }}" autoplay muted loop height="375px" width="250px">
+        </video>
+            {% else %}
+        <p>No video available</p>
+        {% endif %}
+        {% if exercise.image %}
+        <img src="{{ exercise.image.url }}" alt="{{ exercise.name }}" style="max-width: 300px; height:300px;">
+        {% else %}
+        <p>No image available.</p>
+        {% endif %}
+        {{ exercise.description }}
+        <p style='color:  rgb(189, 58, 80);'>SETS:{{ exercise.sets1 }}</p>
+        <p style='color:  rgb(189, 58, 80);'>SETS:{{ exercise.reps1 }}</p>
+    {% endfor %} 
+    </div> -->
+   
 
-    <div id="arrow_1">
-        <a href="{% url 'glutes_week2' %}" class="weeks">week 2</a>
-    </div>
 
-    <div id="arrow_2">
-        <a href="{% url 'glutes_week3' %}" class="weeks">week 3</a>
-    </div>
-
-    <div id="arrow_3">
-        <a href="{% url 'glutes_week4' %}" class="weeks">week 4</a>
+<div class="plan-container">
+    <div class="container mt-5 text-center">
+        {% for exercise in exercises %}
+        <h3 class="mt-5">{{ exercise.name }}</h3>
+        {% if exercise.video %}
+        <a href="{{ exercise.video.url }} " target="_blank">
+        <video class="text-center curved-edges" src="{{ exercise.video.url }}" autoplay muted loop fit>
+        </video></a>
+            {% else %}
+        <p>No video available</p>
+        {% endif %}
+        <div id="plans" class="mt-5 mb-4">
+            Our meal plans are designed to support your fitness goals, providing balanced and nutritious diet that fuels your body for optimal performance.
+            Our plans take into account variety dietary needs and preferences, including vegetarian, gluten-free, and low-carb options. You'll receive personalized
+            guidance on portion control, macronutrient ratios, and healthy eating habits to suport your weight loss, maintenance or muscle-building goals.
+        </div>
+        {% endfor %}
     </div>
 </div>
+
 {% endblock %}
