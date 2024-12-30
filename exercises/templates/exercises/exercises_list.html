@@ -41,9 +41,9 @@
         <p>No video available</p>
         {% endif %}
         <div id="plans" class="mt-5 mb-4">
-            Our meal plans are designed to support your fitness goals, providing balanced and nutritious diet that fuels your body for optimal performance.
-            Our plans take into account variety dietary needs and preferences, including vegetarian, gluten-free, and low-carb options. You'll receive personalized
-            guidance on portion control, macronutrient ratios, and healthy eating habits to suport your weight loss, maintenance or muscle-building goals.
+            <p>{{ exercise.description | safe }}</p>
+            <p style='color:  rgb(189, 58, 80);'>SETS:{{ exercise.sets1 }}</p>
+            <p style='color:  rgb(189, 58, 80);'>SETS:{{ exercise.reps1 }}</p>
         </div>
         {% endfor %}
     </div>
