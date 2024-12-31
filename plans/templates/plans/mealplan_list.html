@@ -1,0 +1,176 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block content %}
+<div class="mainmeal">
+</div>
+<div class="container table-responsive rounded d-md-block text-center mb-5">
+    <table class="table table-sm table-borderless">
+        <thead class="text-black">
+            <tr>
+                <th scope="col">Days</th>
+                <th scope="col">Breakfast</th>
+                <th scope="col">Lunch</th>
+                <th scope="col">Snack</th>
+                <th scope="col">Dinner</th>
+            </tr>
+        </thead>
+            <tr>
+                <td>
+                    <p class="font-weight-bold">Sundays</p>
+                </td>
+                <td>
+                    Whole grain toast with scrambled eggs and avocado
+                </td>
+                <td>
+                    <p>Chicken Salad</p>
+                </td>
+                <td>
+                    Fresh fruits and nuts
+                </td>
+                <td>
+                    Beef stew and broccoli
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p class="font-weight-bold">Mondays</p>
+                </td>
+                <td>
+                    Oats Porridge
+                </td>
+                <td>
+                    <p>Turkey Fajitas</p>
+                </td>
+                <td>
+                    Greek yoghurt with honey and berries
+                </td>
+                <td>
+                    Tuna Melts
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p class="font-weight-bold">Tuesdays</p>
+                </td>
+                <td >
+                    <p class="container-fluid">Smoothie bowl with spanich banana and almond milk with granola and nuts</p>
+                </td>
+                <td>
+                    <p>Chicken Salad</p>
+                </td>
+                <td>
+                    Hard-boiled egg and cherry tomatoes
+                </td>
+                <td>
+                    <p class="container-fluid">Lentil soup with bread and a side salad</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p class="font-weight-bold">Wednesdays</p>
+                </td>
+                <td >
+                    <p class="container-fluid">Whole grain waffles with fresh berries and whipped cream</p>
+                </td>
+                <td>
+                    <p>Turkey Burger</p>
+                </td>
+                <td>
+                    Cottage cheese and cucumber slices
+                </td>
+                <td>
+                    <p class="container-fluid">Baked chicken breast with roated asparagus and quinoa</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p class="font-weight-bold">Thursdays</p>
+                </td>
+                <td >
+                    <p class="container-fluid">Avocado toast with scrambled eggs and cherry tomatoes</p>
+                </td>
+                <td>
+                    <p>Grilled Chicken Lettuce</p>
+                </td>
+                <td>
+                    Apple slices with peanut butter
+                </td>
+                <td>
+                    <p class="container-fluid">Stir-fry with tofu, brown rice and mixed veggies</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p class="font-weight-bold">Fridays</p>
+                </td>
+                <td >
+                    <p class="container-fluid">Omelette with mushrooms, bell peppers and onions</p>
+                </td>
+                <td>
+                    <p>Chicken Salad</p>
+                </td>
+                <td>
+                    Rice cakes with almond butter and banana slices
+                </td>
+                <td>
+                    <p class="container-fluid">Beef tacos with whole-grain tortillas, avocado and salsa</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p class="font-weight-bold">Saturdays</p>
+                </td>
+                <td >
+                    <p class="container-fluid">Breakfast burrito with scrambled eggs, black beans and avocado</p>
+                </td>
+                <td>
+                    <p>Chicken and quinoa bowl</p>
+                </td>
+                <td>
+                    Greek yoghurt mixed with berries and granola
+                </td>
+                <td>
+                    <p class="container-fluid">Baked cod with roasted Bruseels srouts and brown rice</p>
+                </td>
+            </tr>
+    </table>
+</div>
+<div class="container">
+    <div class="row text-center">
+        <div class="col-12 mt-3 left">
+            <div class="row">
+                {% for meal in mealplan_list %}
+                <div class="col-md-6 card-body mb-4">
+                    <a href="{% url 'mealplan' meal.slug %}" class="meal-link">
+                    <div class="mb-4">
+                        <div>
+                            <div class="image-container">
+                            {% if meal.image %}
+                            <img class="card-img-top mt-3 float-left glutes-container" src="{{ meal.image.url }}" alt="{{ meal.name }}" >    
+                            {% else %}
+                            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ meal.name }}">
+                            {% endif %}
+                            </div>
+                                <h2 class="card-title">{{ meal.name }}</h2>
+                                <h4 class="card-title">{{ meal.calories }}KJ</h4>
+                            <hr>
+                            <p class="card-text text-muted h6">{{ meal.created_at}}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                {% if forloop.counter|divisibleby:2 %}
+            </div>
+            <div class="row">
+                {% endif %}
+                {% endfor %}
+
+            </div>
+        </div>
+    </div>
+</div> </a>
+
+
+{% endblock %}
