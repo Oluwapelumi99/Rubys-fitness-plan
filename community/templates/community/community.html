@@ -20,7 +20,7 @@
     <div class="container">
         <div class="row">
             <div class="col mb-4  mt-3 left top">
-                <div class="card-body">
+                <div class="card-body shadow">
                     <p class="card-text">
                         {{ blog.content | safe }}
                     </p>
@@ -28,7 +28,8 @@
             </div>
         </div>
     </div>
-    <div class="row">
+    <div class="container">
+      <div class="row">
         <div class="col-12">
           <strong class="text-secondary">
             <i class="far fa-comments"></i> {{ comment_count }}
@@ -98,6 +99,7 @@
             {% endif %}
           </div>
         </div>
+      </div>
     </div>
 </div>
 

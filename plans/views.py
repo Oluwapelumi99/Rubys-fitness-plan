@@ -29,5 +29,5 @@ def mealplan(request, slug):
     """ A view to return the community page """
     queryset = MealPlan.objects.all()
     meal = get_object_or_404(queryset, slug=slug)
-    return render(request,
+    return render(request, 'plans/meals_guide.html',
     {'meal': meal})

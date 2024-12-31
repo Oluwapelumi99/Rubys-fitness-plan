@@ -194,15 +194,18 @@ section {
 table {
     border-collapse: collapse;
     margin: 20px auto;
-    border: 2px solid rgb(219, 86, 108);
-    border-radius: 10px;
+    border: 1px solid rgb(219, 86, 108);
+    /* border-radius: 10px; */
     box-shadow: -2px -1px 25px -4px rgba(219, 86, 108,0.75);
 }
 
-th, td {
-    border: 1px solid black;
-    padding: 10px;
+.shadow {
+    box-shadow: -2px -1px 25px -4px rgba(219, 86, 108,0.75);
+    -webkit-box-shadow: -2px -1px 25px -4px rgba(219, 86, 108,0.75);
+    -moz-box-shadow: -2px -1px 25px -4px rgba(219, 86, 108,0.75);
+    /* border-radius: 10px; */
 }
+
 /* #arrow , #arrow_1, #arrow_2, #arrow_3 {
     display: flex;
     /* justify-content: center; */
