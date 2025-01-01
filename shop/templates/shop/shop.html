@@ -119,8 +119,8 @@
                     <div class="box-element shop">
                         <h6><strong>{{ shop.name }}</strong></h6>
                         <hr>
-                        <button type="button" class="btn btn-secondary cart" value="{{ shop.id }}" id="add-cart"><i class="fa-solid fa-cart-shopping"></i></button>
-                        <h4 style="float: right;">
+                        <h4>
+                            <p class="text-muted fa-xs">{{ shop.category.friendly_name }}</p>
                             £{{shop.price|floatformat:2}}
                         </h4>
                     </div>   
@@ -241,6 +241,7 @@
         </div>
     </footer>
     {% block postloadjs %}
+{% include 'shop/includes/quantity_script.html' %}
     <script type="text/javascript">
         $('.toast').toast('show');
     </script>
@@ -346,5 +347,3 @@
     </div>
 </div>
 {% endfor %} -->
-
-

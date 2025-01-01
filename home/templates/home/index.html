@@ -4,6 +4,11 @@
 
 {% block content %}
 <div class="main">
+    <div class="row text-center">
+        <div class="col text-black">
+            <h4 class="font-weight-bold subscription" style="font-size: 18px;" >Enjoy 50% off your one-off subscription today!</h4>                
+        </div>            
+    </div>
 </div>
 <div class="container about">
     <div id="plans">
@@ -31,7 +36,7 @@
 
 <div class="plan-container">
     <div class="container mt-5">
-        <a href="">
+        <a href="{% url 'MealPlanList' %}">
             <h5 class="text-center mt-5 plan mx-3">Meal plans</h5>
             <img src="/static/media/plate_of_food.jpg" alt="plate_of_food.jpg" class="float-left curved-edges mt-5 font-weight-bold"></a> 
         <div id="plans">
@@ -73,9 +78,14 @@
                 <p class="font-weight-bold">£30.99</p>
             </div>                     
         </div>
+        <div class="row text-center">
+            <div class="col bg-black text-black">
+                <h4 class="logo-font my-1">Free delivery on orders over £{{ free_delivery_threshold }}!</h4>                
+            </div>            
+        </div>
         <div class="row">
             <div class="col-lg-12 text-center ">
-                <button class="font-weight-bold btn1 mt-3 mb-5">Visit Shop for more</button>
+                <a href="{% url 'shop' %}" class="font-weight-bold btn btn1 mt-3 mb-5">Visit Shop for more</a>
             </div>
         </div>         
     </div>

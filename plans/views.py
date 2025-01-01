@@ -17,13 +17,13 @@ def glutes_exercises(request):
 
 def abs_exercises(request):
     exercises = Exercise.objects.all()
-    return render (request, 'plans/abs_exercises.html', {"exercises": exercises})
+    return render (request, 'plans/abs_exercises.html', {"exercises": exercises},)
 
 
 class MealPlanList(generic.ListView):
     queryset = MealPlan.objects.all()
     template_name = "plans/mealplan_list.html"
-    paginate_by = 6
+
 
 def mealplan(request, slug): 
     """ A view to return the community page """

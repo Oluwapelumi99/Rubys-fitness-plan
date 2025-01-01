@@ -10,7 +10,7 @@ from .forms import CommentForm, ReplyForm
 class BlogList(generic.ListView):
     queryset = Blog.objects.all()
     template_name = "community/blog_list.html"
-    paginate_by = 6
+
 
 def community(request, slug):
     """ A view to return the community page """

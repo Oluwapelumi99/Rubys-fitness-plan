@@ -20,7 +20,7 @@
 .row-image {
     width: 100px;
 }
-button {
+button, .btn {
     color: rgb(219, 86, 108);
 }
 .navbar {
@@ -49,9 +49,11 @@ button {
 body {
     font-family: 'Lato';
     background-color: rgb(234, 206, 211);
-    min-height: 100vh
+    min-height: 100vh;
+    overflow: hidden;
 }
 a {
+    outline: none;
     text-decoration: none;
     color: black
     ;
@@ -75,7 +77,7 @@ a {
 }
 
 .btn1 {
-    height: 60px;
+    height: 100px;
     width: 35%;
     border: none;
     outline: none;
@@ -115,7 +117,6 @@ a {
     -webkit-box-shadow: -2px -1px 25px -4px rgba(219, 86, 108,0.75);
     -moz-box-shadow: -2px -1px 25px -4px rgba(219, 86, 108,0.75);
     transition: 0.5s;
-    /* border-radius: 10px; */
 }
 
 .float-left {
@@ -137,12 +138,7 @@ a {
 
 .container {
     text-align: justify;
-    margin-top: 10px;
-}
-
-
-.container-fluid {
-    z-index: 99999;
+    margin-top: 20px;
 }
 
 .glutes-container {
@@ -163,7 +159,8 @@ a {
     border: 1px solid rgb(219, 86, 108);
     color: #000000;
 }
-h5 {
+
+h5, h1 {
     font-weight: bolder;
 }
 
@@ -188,14 +185,18 @@ section {
 .mainmeal {
     background: url('../media/vegetables_on_a_chopping_board.jpg') no-repeat center center/cover;
     height: 900px;
-    z-index: -1;
+}
+
+#mainmeal_text {
+    padding-top: 400px;
+    text-align: center;
+    color: rgb(219, 86, 108);
 }
 
 table {
     border-collapse: collapse;
     margin: 20px auto;
     border: 1px solid rgb(219, 86, 108);
-    /* border-radius: 10px; */
     box-shadow: -2px -1px 25px -4px rgba(219, 86, 108,0.75);
 }
 
@@ -203,8 +204,9 @@ table {
     box-shadow: -2px -1px 25px -4px rgba(219, 86, 108,0.75);
     -webkit-box-shadow: -2px -1px 25px -4px rgba(219, 86, 108,0.75);
     -moz-box-shadow: -2px -1px 25px -4px rgba(219, 86, 108,0.75);
-    /* border-radius: 10px; */
+    border: 1px solid rgb(219, 86, 108);
 }
+
 
 /* #arrow , #arrow_1, #arrow_2, #arrow_3 {
     display: flex;
@@ -256,16 +258,13 @@ footer {
         justify-content: center;
         margin-left: 30%;
     }
+
     
     .float-left {
         width: 40%;
         margin-right: 50px;
     }
-    /* #arrow-container {
-        margin-top: 7rem;
-        display: flex;
-        justify-content: space-around;
-    } */
+
 .plan-container {
     display: flex;
 }
@@ -285,6 +284,7 @@ footer {
         display: flex;
     }
     .btn1{
+        height: 50px;
         border-radius: 60px;
     }
     #plans {
@@ -324,3 +324,4 @@ footer {
         margin-bottom: 20px;   
     }  
 }
+
