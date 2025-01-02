@@ -48,40 +48,63 @@
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="{% url 'shop' %}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Shop
+                            All Products
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                              <a class="dropdown-item" href="{% url 'shop' %}">All Products</a>
+                              <a class="dropdown-item" href="">Yoga mats</a>
                               <a class="dropdown-item" href="#">Another action</a>
-                              <div class="dropdown-divider"></div>
-                              <a class="dropdown-item" href="#">Something else here</a>
+                              <a class="dropdown-item" href="{% url 'shop' %}">All products</a>
                             </div>
                             </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Gym sets
+                                    Gym wear
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{% url 'shop' %}?category=gym_wears">Sets</a>
-                                    <a class="dropdown-item" href="{% url 'shop' %}?category=top">Top</a>
-                                    <a class="dropdown-item" href="{% url 'shop' %}?category=leggings">leggings</a>
-                                    <a class="dropdown-item" href="{% url 'shop' %}?category=gym_wears,top,leggings">All gym wears</a>
+                                    <a class="dropdown-item" href="{% url 'shop' %}?category=gym_wears">gym sets</a>
+                                    <a class="dropdown-item" href="{% url 'shop' %}?category=socks">socks</a>
+                                    <a class="dropdown-item" href="{% url 'shop' %}?category=trainers">Trainers</a>
+                                    <a class="dropdown-item" href="{% url 'shop' %}?category=gym_wears,trainers,socks">All gym wears</a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Weights
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{% url 'shop' %}?category=dumbells">Dumbells</a>
+                                    <a class="dropdown-item" href="{% url 'shop' %}?category=kettle_bells">Kettlebells</a>
+                                    <a class="dropdown-item" href="{% url 'shop' %}?category=dumbells,kettle_bells">All weights</a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Accessories
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{% url 'shop' %}?category=bottles">Water bottles</a>
+                                    <a class="dropdown-item" href="{% url 'shop' %}?category=mats">Yoga mats</a>
+                                    <a class="dropdown-item" href="{% url 'shop' %}?category=bags">Gym bag</a>
+                                    <a class="dropdown-item" href="{% url 'shop' %}?category=gloves">Gloves</a>
+                                    <a class="dropdown-item" href="{% url 'shop' %}?category=jump_ropes">Jump ropes</a>
+                                    <a class="dropdown-item" href="{% url 'shop' %}?category=resistance_bands">Resistance bands</a>
+                                    <a class="dropdown-item" href="{% url 'shop' %}?category=bottles,mats,bags,gloves,jump_ropes,resistance_bands">All accessories</a>
+                                </div>
+                            </li>
+                            <!-- <li class="nav-item">
+                            <a class="nav-link " href="{% url 'BlogList' %}">Community</a>
+                            </li> -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="fa-solid fa-user"></i>
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="#">Action</a>
+                                    <a class="dropdown-item" href="#">Another action</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#">Something else here</a>
                                 </div>
                                 </li>
-                            <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                My Account
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="#">Action</a>
-                                <a class="dropdown-item" href="#">Another action</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Something else here</a>
-                            </div>
-                            </li>
-                            <li class="nav-item">
-                            <a class="nav-link " href="{% url 'BlogList' %}">Community</a>
-                            </li>
                             <li class="list-inline-item">
                                 <a  class=""href="{% url 'view_cart' %}">
                                     <div class="text-center">
@@ -107,27 +130,26 @@
             <div class="row">
                 {% for shop in shops %}
                     {% if shop.image %}
-                    <div class="col-lg-2">
+                    <div class="col-lg-3 card-body">
                         <a href="{% url 'item_details' shop.id %}">
                             <img class="card-img-top mt-3" src="{{ shop.image.url }}" alt="{{ shop.name }}" >    
-                        </a>
+                       
                         {% else %}
                         <a href="{% url 'item_details' shop.id %}">
                             <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ shop.name }}">
-                        </a>
                     {% endif %}
                     <div class="box-element shop">
                         <h6><strong>{{ shop.name }}</strong></h6>
                         <hr>
                         <h4>
-                            <p class="text-muted fa-xs">{{ shop.category.friendly_name }}</p>
+                            <p class="text-muted category">{{ shop.category.friendly_name }}</p>
                             £{{shop.price|floatformat:2}}
                         </h4>
                     </div>   
                 </div>
                 {% endfor %}
             </div>
-        </div>
+        </div> </a></a>
         <!-- <div class="container">
             <div class="overlay"></div>
             {% for shop in shops %}

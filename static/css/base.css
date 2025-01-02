@@ -6,7 +6,7 @@
 .box-element {
     box-shadow: hsl(0%, 0%, 80%) 0 0 16px;
     background-color: #fff;
-    border-radius: 10px;
+    /* border-radius: 10px; */
     padding: 10px;
 }
 
@@ -50,13 +50,23 @@ body {
     font-family: 'Lato';
     background-color: rgb(234, 206, 211);
     min-height: 100vh;
-    overflow: hidden;
+
 }
 a {
     outline: none;
     text-decoration: none;
-    color: black
-    ;
+    color: black;
+}
+.card-body a {
+    outline: none;
+    text-decoration: none;
+    color: black;
+}
+
+.plan-container a {
+    outline: none;
+    text-decoration: none;
+    color: black;
 }
 
 .btt-link,
@@ -207,6 +217,11 @@ table {
     border: 1px solid rgb(219, 86, 108);
 }
 
+/* Shops page styling*/
+.category {
+    font-size: 15px;
+}
+
 
 /* #arrow , #arrow_1, #arrow_2, #arrow_3 {
     display: flex;
@@ -226,10 +241,6 @@ table {
     color: #000000;
 } */ */
 
-video {
-    height: 375px;
-    width: 250px
-}
 
 /*shop page styling*/
 /* .overlay {

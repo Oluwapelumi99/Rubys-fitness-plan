@@ -4,17 +4,17 @@
 
 {% block content %}
 <div class="plan-container">
-    <div class="container mt-5 text-center">
+    <div class="container  text-center">
         {% for exercise in exercises %}
-        <h1 class="mt-5">{{ exercise.name }}</h1>
+        <h1 class="">{{ exercise.name }}</h1>
         {% if exercise.video %}
         <a href="{{ exercise.video.url }} " target="_blank">
-        <video class="text-center curved-edges" src="{{ exercise.video.url }}" autoplay muted loop fit>
+        <video class="text-center curved-edges" src="{{ exercise.video.url }}" autoplay muted loop fit height="250px" width="250px">
         </video></a>
             {% else %}
         <p>No video available</p>
         {% endif %}
-        <div id="plans" class="mt-5 mb-4">
+        <div id="plans" class="">
             <p>{{ exercise.description | safe }}</p>
             <p style='color:  rgb(189, 58, 80);'>SETS:{{ exercise.sets }}</p>
             <p style='color:  rgb(189, 58, 80);'>REPS:{{ exercise.reps }}</p>
