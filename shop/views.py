@@ -33,6 +33,7 @@ def view_shop(request):
             categories = request.GET['category'].split(',')
             shops = shops.filter(category__name__in=categories)
             categories = Category.objects.filter(name__in=categories)
+            
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
