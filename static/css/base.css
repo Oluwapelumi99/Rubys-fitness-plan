@@ -222,7 +222,19 @@ table {
     font-size: 15px;
 }
 
+.btt-button {
+    height: 42px;
+    width: 42px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
 
+.btt-link,
+.update-link,
+.remove-item {
+    cursor: pointer;
+}
 /* #arrow , #arrow_1, #arrow_2, #arrow_3 {
     display: flex;
     /* justify-content: center; */

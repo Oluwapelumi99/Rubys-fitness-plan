@@ -14,6 +14,7 @@ class BlogList(generic.ListView):
 
 def community(request, slug):
     """ A view to return the community page """
+    comment_form = CommentForm(request.POST)
     queryset = Blog.objects.all()
     blog = get_object_or_404(queryset, slug=slug)
     comments = blog.comments.all().order_by("-created_on")
@@ -32,8 +33,6 @@ def community(request, slug):
         'Comment submitted and awaiting approval'
     )
 
-    comment_form = CommentForm()
-
     return render(request, 'community/community.html', 
     {'blog': blog,
     "comments": comments,
@@ -50,7 +49,10 @@ def comment_edit(request, slug, comment_id):
         queryset = Blog.objects.all()
         blog = get_object_or_404(queryset, slug=slug)
         comment = get_object_or_404(Comment, pk=comment_id)
-        comment_form = CommentForm(data=request.POST, instance=comment)
+        comment_form = CommentForm(data=request.POST or None, instance=comment)
+        context = {
+            'comment_form': comment_form
+        }
 
         if comment_form.is_valid() and comment.author == request.user:
             comment = comment_form.save(commit=False)
@@ -60,6 +62,7 @@ def comment_edit(request, slug, comment_id):
             messages.add_message(request, messages.SUCCESS, 'Comment Updated!')
         else:
             messages.add_message(request, messages.ERROR, 'Error updating comment!')
+            return render(request, 'community/community.html', context)
 
     return HttpResponseRedirect(reverse('community', args=[slug]))
 
@@ -67,6 +70,7 @@ def comment_delete(request, slug, comment_id):
     """
     view to delete comment
     """
+
     queryset = Blog.objects.all()
     blog = get_object_or_404(queryset, slug=slug)
     comment = get_object_or_404(Comment, pk=comment_id)
