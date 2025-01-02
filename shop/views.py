@@ -10,8 +10,25 @@ def view_shop(request):
     shops = Shop.objects.all()
     query = None
     categories = None
+    sort = None
+    direction = None
+
 
     if request.GET:
+        if 'sort' in request.GET:
+            sortkey = request.GET['sort']
+            sort = sortkey
+            if sortkey == 'name':
+                sortkey = 'lower_name'
+                shops = shops.annotate(lower_name=Lower('name'))
+            if sortkey == 'category':
+                sortkey = 'category__name'
+            if 'direction' in request.GET:
+                direction = request.GET['direction']
+                if direction == 'desc':
+                    sortkey = f'-{sortkey}'
+            shops = shops.order_by(sortkey)
+
         if 'category' in request.GET:
             categories = request.GET['category'].split(',')
             shops = shops.filter(category__name__in=categories)
@@ -24,11 +41,16 @@ def view_shop(request):
 
             queries = Q(name__icontains=query) | Q(description__icontains=query)
             shops = shops.filter(queries)
+
+    current_sorting = f'{sort}_{direction}'
+
     context = {
         'shops': shops,
         'search_term': query,
         'current_categories': categories,
+        'current_sorting': current_sorting
     }
+    
     return render(request, 'shop/shop.html', context)
 
 

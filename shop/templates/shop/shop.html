@@ -51,8 +51,8 @@
                             All Products
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                              <a class="dropdown-item" href="">Yoga mats</a>
-                              <a class="dropdown-item" href="#">Another action</a>
+                              <a class="dropdown-item" href="{% url 'shop' %}?sort=price&direction=asc">By Price</a>
+                              <a class="dropdown-item" href="{% url 'shop' %}?sort=category&direction=asc">By Category</a>
                               <a class="dropdown-item" href="{% url 'shop' %}">All products</a>
                             </div>
                             </li>
