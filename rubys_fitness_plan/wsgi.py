@@ -1,5 +1,5 @@
 """
-WSGI config for Rubys_fitness_plan project.
+WSGI config for rubys_fitness_plan project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'Rubys_fitness_plan.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'rubys_fitness_plan.settings')
 
 application = get_wsgi_application()
