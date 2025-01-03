@@ -1,1 +1,1 @@
-web: gunicorn Rubys_fitness_plan.wsgi:application
+web: gunicorn rubys_fitness_plan.wsgi:application
