@@ -44,16 +44,16 @@ def comment_edit(request, slug, comment_id):
     """
     view to edit comments
     """
-    if request.method == "POST":
 
-        queryset = Blog.objects.all()
-        blog = get_object_or_404(queryset, slug=slug)
-        comment = get_object_or_404(Comment, pk=comment_id)
+    queryset = Blog.objects.all()
+    blog = get_object_or_404(queryset, slug=slug)
+    comment = get_object_or_404(Comment, pk=comment_id)
+    comment_form = CommentForm(instance=comment)
+    context = {
+        'comment_form': comment_form
+    }
+    if request.method == 'POST':
         comment_form = CommentForm(data=request.POST or None, instance=comment)
-        context = {
-            'comment_form': comment_form
-        }
-
         if comment_form.is_valid() and comment.author == request.user:
             comment = comment_form.save(commit=False)
             comment.blog = blog
@@ -63,8 +63,8 @@ def comment_edit(request, slug, comment_id):
         else:
             messages.add_message(request, messages.ERROR, 'Error updating comment!')
             return render(request, 'community/community.html', context)
-
-    return HttpResponseRedirect(reverse('community', args=[slug]))
+            
+    return render(request, 'community/community.html', context)
 
 def comment_delete(request, slug, comment_id):
     """

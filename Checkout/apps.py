@@ -1,8 +1,8 @@
-from django.apps import AppConfig
+# from django.apps import AppConfig
 
 
-class CheckoutConfig(AppConfig):
-    name = 'Checkout'
+# class CheckoutConfig(AppConfig):
+#     name = 'Checkout'
 
-    def ready(self):
-        import Checkout.signals
+#     def ready(self):
+#         import Checkout.signals

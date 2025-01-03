@@ -95,3 +95,30 @@ Image used on all the pages matches the theme of the site. Image is seen below. 
 # Favicon
 A favicon has been set to display in the icon bar when the website is viewed on the browser. The favicon gives a description of what the app is about.Favicon was gotten from https://icons8.com
 ![icons8-exercise-female-color-hand-drawn-32](https://github.com/user-attachments/assets/89c3a214-283d-4921-88ad-af2c52bb28a6)
+
+# navigations
+- Home page
+<img width="1692" alt="Screenshot 2025-01-02 at 18 36 07" src="https://github.com/user-attachments/assets/d6fab2e3-6f4c-4f52-a052-aee580ecfbfc" />
+At the top of the page, we can see 'Rubys', which is the appp's name, clicking on Ruby's lead us to the home page as seen below.
+<img width="1693" alt="Screenshot 2025-01-02 at 18 45 46" src="https://github.com/user-attachments/assets/c50e128b-2c03-4f7a-a4db-9c43b5feb9cd" />
+
+- Clicking on the 'shop' takes us to the shopping page. As seen below:
+<img width="1693" alt="Screenshot 2025-01-02 at 18 45 46" src="https://github.com/user-attachments/assets/c50e128b-2c03-4f7a-a4db-9c43b5feb9cd" />
+
+- Clicking on the 'commmunity' takes us to the blog page where people can make comments on blog posts
+
+<img width="1686" alt="Screenshot 2025-01-02 at 18 59 29" src="https://github.com/user-attachments/assets/1fd6896f-be4f-47ab-9e73-a355d1824011" />
+
+- Clicking on the 'User icon' it leads pops up the option of register or sign in depending on whether the user is logged in or not. As seen below:
+<img width="1680" alt="Screenshot 2025-01-02 at 19 06 07" src="https://github.com/user-attachments/assets/abe90379-1665-4775-87af-4be8fe772d4a" />
+-  If they are logged in, it only pops option to logout. As seen below:
+
+<img width="1654" alt="Screenshot 2025-01-02 at 19 12 57" src="https://github.com/user-attachments/assets/6cc53a2f-4b8c-4017-864f-03d77e9c688f" />
+
+
+
+
+
+- Shop page
+
+

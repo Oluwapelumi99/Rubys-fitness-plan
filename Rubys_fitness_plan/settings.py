@@ -13,7 +13,7 @@ import os
 from pathlib import Path
 # import dj_database_url
 
-if os.path.exists('env.py'):
+if os.path.isfile('env.py'):
     import env
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('SECRET_KEY', '')
+SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -47,11 +47,10 @@ INSTALLED_APPS = [
     # Optional -- requires install using `django-allauth[socialaccount]`.
     'allauth.socialaccount',
     'home',
-    'exercises',
     'plans',
     'shop',
     'cart',
-    'Checkout',
+    'checkout',
     'profiles',
     'community',
 
@@ -143,6 +142,11 @@ DATABASES = {
 }
 
 
+CSRF_TRUSTED_ORIGINS = [
+    "https://8000-oluwapelumi-rubysfitnes-5xbxqzqx0dv.ws.codeinstitute-ide.net",
+    "https://*.herokuapp.com"
+]
+
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
 
@@ -198,8 +202,3 @@ STRIPE_CURRENCY = 'GBP'
 STRIPE_PUBLIC_KEY = os.environ.get('STRIPE_PUBLIC_KEY', '')
 STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', '')
 STRIPE_WH_SECRET = os.getenv('STRIPE_WH_SECRET', '')
-
-
-
-
-
