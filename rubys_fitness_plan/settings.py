@@ -147,9 +147,6 @@ else:
         }
     }
 
-# DATABASES = {
-#      'default': dj_database_url.parse('postgresql://neondb_owner:jOEqnm21SxGi@ep-sweet-sound-a28pc52k.eu-central-1.aws.neon.tech/rail_plot_probe_19900')
-#  }
 
 
 CSRF_TRUSTED_ORIGINS = [
