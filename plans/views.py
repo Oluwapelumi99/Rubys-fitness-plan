@@ -1,6 +1,9 @@
-from django.shortcuts import render, get_object_or_404, reverse
+from django.shortcuts import render, get_object_or_404, reverse, redirect
+from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 from django.views import generic
 from .models import Exercise, MealPlan
+from .forms import MealPlanForm
 
 # Create your views here.
 
@@ -31,3 +34,53 @@ def mealplan(request, slug):
     meal = get_object_or_404(queryset, slug=slug)
     return render(request, 'plans/meals_guide.html',
     {'meal': meal})
+
+
+# @login_required
+# def add_meals(request):
+#     """ Add a product to the store """
+#     if not request.user.is_superuser:
+#         messages.error(request, 'Sorry, only store owners can do that.')
+#         return redirect(reverse('home'))
+    
+#     mealplan_form = MealPlanForm(request.POST)
+#     queryset = MealPlan.objects.all()
+#     mealplan = get_object_or_404(queryset)
+#     mealplan_count = MealPlan.objects.all().count()
+
+#     if request.method == "POST":
+#         mealplan_form = MealPlanForm(data=request.POST)
+#         if mealplan_form.is_valid():
+#             mealplan = mealplan_form.save(commit=False)
+#             mealplan.author = request.user
+#             mealplan.save()
+#             messages.add_message(
+#         request, messages.SUCCESS,
+#         'Comment submitted and awaiting approval'
+#     )
+
+#     return render(request, 'plans/add_meals.html', 
+#     {
+#     "mealplan": mealplan,
+#     "mealplan_count": mealplan_count,
+#     "mealplan_form": mealplan_form,})
+#     # if request.method == 'POST':
+#     #     form = MealPlanForm(request.POST, request.FILES)
+#     #     if form.is_valid():
+#     #         mealplan = form.save()
+#     #         messages.success(request, 'Successfully added meal!')
+#     #         return redirect(reverse('mealplan', args=[mealplan.id]))
+#     #     else:
+#     #         messages.error(request, 'Failed to add product. Please ensure the form is valid.')
+#     # else:
+#     #     form = MealPlanForm()
+        
+#     # template = 'plans/add_meals.html'
+#     # context = {
+#     #     'form': form,
+#     # }
+
+#     return render(request, template, context)
+
+
+        

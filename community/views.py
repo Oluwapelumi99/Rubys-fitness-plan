@@ -13,7 +13,8 @@ class BlogList(generic.ListView):
 
 
 def community(request, slug):
-    """ A view to return the community page """
+    """ A view to return the community page
+    and to add comments """
     comment_form = CommentForm(request.POST)
     queryset = Blog.objects.all()
     blog = get_object_or_404(queryset, slug=slug)

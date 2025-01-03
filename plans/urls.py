@@ -7,9 +7,9 @@ urlpatterns = [
     path('abs_exercises/', views.abs_exercises, name='abs_exercises'),
     path('', views.MealPlanList.as_view(), name='MealPlanList'),
     path('<slug:slug>/', views.mealplan, name='mealplan'),
-    #  path('<slug:slug>/edit_comment/<int:comment_id>',
-    #      views.comment_edit, name='comment_edit'),
-    # path('<slug:slug>/delete_comment/<int:comment_id>',
+    #  path('<slug:slug>/plan/add_meals/',
+    #      views.add_meals, name='add_meals'),
+    # # path('<slug:slug>/delete_comment/<int:comment_id>',
     #      views.comment_delete, name='comment_delete'),
 
 ]

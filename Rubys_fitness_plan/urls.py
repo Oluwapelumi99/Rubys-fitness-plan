@@ -22,11 +22,10 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('allauth.urls')),
     path('', include('home.urls')),
-    # path('', include('exercises.urls')),
     path('plan/', include('plans.urls')),
     path('shop/', include('shop.urls')),
     path('cart/', include('cart.urls')),
-    path('checkout/', include('checkout.urls')),
+    path('checkout/', include('checkouts.urls')),
     path('community/', include('community.urls')),
     path('summernote/', include('django_summernote.urls')),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
