@@ -22,9 +22,11 @@ class Blog(models.Model):
 
 class Comment(models.Model):
     blog = models.ForeignKey(Blog, on_delete=models.CASCADE, related_name="comments")
-    author = models.ForeignKey(User, on_delete=models.CASCADE, related_name="commenter")
+    # author = models.ForeignKey(User, null=False, blank=True, on_delete=models.CASCADE, related_name="commenter")
+    author = models.CharField(max_length=100)
     body = models.TextField()
     approved = models.BooleanField(default=False)
+    reply = models.ForeignKey('Comment', null=True, on_delete=models.CASCADE, blank=True, related_name='replies')
     created_on = models.DateTimeField(auto_now_add=True)
     class Meta:
         ordering = ["created_on"]
@@ -33,13 +35,13 @@ class Comment(models.Model):
         return f"Comment {self.body} by {self.author}"
 
 
-class Reply(models.Model):
+# class Reply(models.Model):
 
-    class Meta:
-        verbose_name_plural = 'Replies'
+#     class Meta:
+#         verbose_name_plural = 'Replies'
 
-    author = models.ForeignKey(User, on_delete=models.CASCADE, related_name="replier")
-    comment = models.ForeignKey(Comment, on_delete=models.CASCADE)
-    content = models.TextField()
-    approved = models.BooleanField(default=False)
-    created_on = models.DateTimeField(auto_now_add=True)
+#     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name="replier")
+#     comment = models.ForeignKey(Comment, on_delete=models.CASCADE)
+#     content = models.TextField()
+#     approved = models.BooleanField(default=False)
+#     created_on = models.DateTimeField(auto_now_add=True)

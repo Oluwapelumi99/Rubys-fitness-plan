@@ -2,8 +2,8 @@ from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic
 from django.contrib import messages
 from django.http import HttpResponseRedirect
-from .models import Blog, Comment, Reply
-from .forms import CommentForm, ReplyForm
+from .models import Blog, Comment
+from .forms import CommentForm
 
 # Create your views here.
 
@@ -18,27 +18,53 @@ def community(request, slug):
     comment_form = CommentForm(request.POST)
     queryset = Blog.objects.all()
     blog = get_object_or_404(queryset, slug=slug)
-    comments = blog.comments.all().order_by("-created_on")
-    replies = Reply.objects.filter(comment__in=comments)
     comment_count = blog.comments.filter(approved=True).count()
 
     if request.method == "POST":
         comment_form = CommentForm(data=request.POST)
         if comment_form.is_valid():
-            comment = comment_form.save(commit=False)
-            comment.author = request.user
-            comment.blog = blog
-            comment.save()
-            messages.add_message(
-        request, messages.SUCCESS,
-        'Comment submitted and awaiting approval'
-    )
+            reply_obj = None
+            try:
+                reply_id = int(request.POST.get('reply_id'))
+            except:
+                reply_id = None
+            if reply_id:
+                reply_obj = Comment.objects.get(id=reply_id)
 
-    return render(request, 'community/community.html', 
-    {'blog': blog,
+            author = self.cleaned_data.get['author']
+            comment = comment_form.cleaned_data['comment']
+            if reply_obj:
+                Comment(author=author, body=comment, reply=reply_obj, blog=blog).save()
+            else:
+                Comment(author=author, body=comment, blog=blog).save()
+            return redirect(reverse('community', args=[slug]))
+    else:
+        comment_form = CommentForm()
+    comments = Comment.objects.filter(blog=blog, reply=None).order_by("-created_on")
+    context = {
+        'blog': blog,
     "comments": comments,
     "comment_count": comment_count,
-    "comment_form": comment_form,})
+    "comment_form": comment_form,
+    }
+    return render(request, 'community/community.html', context)
+
+    #         comment = comment_form.save(commit=False)
+    #         comment.author = request.user
+    #         comment.blog = blog
+    #         comment.save()
+    #         messages.add_message(
+    #     request, messages.SUCCESS,
+    #     'Comment submitted and awaiting approval'
+    # )
+    # else:
+    #     comment_form = CommentForm
+
+    # return render(request, 'community/community.html', 
+    # {'blog': blog,
+    # "comments": comments,
+    # "comment_count": comment_count,
+    # "comment_form": comment_form,})
 
 
 def comment_edit(request, slug, comment_id):
@@ -85,16 +111,16 @@ def comment_delete(request, slug, comment_id):
     return HttpResponseRedirect(reverse('community', args=[slug]))
 
 
-def reply(request, slug, pk):
-    comments = Comment.objects.filter(blog=blog)
-    comment = get_object_or_404(Comment, pk=pk)
-    if request.method == 'POST':
-        reply_form = ReplyForm(data=request.POST)
-        if form.is_valid():
-            reply = form.save(commit=False)
-            reply.comment = comment
-            reply.save()
-            return redirect('community', pk=comment.blog.pk)
-    else:
-        reply_form = ReplyForm()
-    return render(request, 'community/community.html', {'reply_form': reply_form,})
+# def reply(request, slug, pk):
+#     comments = Comment.objects.filter(blog=blog)
+#     comment = get_object_or_404(Comment, pk=pk)
+#     if request.method == 'POST':
+#         reply_form = ReplyForm(data=request.POST)
+#         if form.is_valid():
+#             reply = form.save(commit=False)
+#             reply.comment = comment
+#             reply.save()
+#             return redirect('community', pk=comment.blog.pk)
+#     else:
+#         reply_form = ReplyForm()
+#     return render(request, 'community/community.html', {'reply_form': reply_form,})

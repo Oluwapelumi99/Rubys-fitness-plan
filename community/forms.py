@@ -1,4 +1,4 @@
-from .models import Comment, Reply
+from .models import Comment
 from django import forms
 
 
@@ -7,7 +7,10 @@ class CommentForm(forms.ModelForm):
         model = Comment
         fields = ('body',)
 
-class ReplyForm(forms.ModelForm):
-    class Meta:
-        model = Reply
-        fields = ('content',)
+
+    def clean(self):
+        cleaned_data = super(CommentForm, self).clean()
+        print(cleaned_data)
+        author = cleaned_data.get['author']
+        comment = data.get['comment']
+        return cleaned_data

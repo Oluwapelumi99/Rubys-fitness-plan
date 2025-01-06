@@ -3,7 +3,7 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.views import generic
 from .models import Exercise, MealPlan
-from .forms import MealPlanForm
+from .forms import MealPlanForm, ExerciseForm
 
 # Create your views here.
 
@@ -28,12 +28,40 @@ class MealPlanList(generic.ListView):
     template_name = "plans/mealplan_list.html"
 
 
-def mealplan(request, slug): 
-    """ A view to return the community page """
-    queryset = MealPlan.objects.all()
-    meal = get_object_or_404(queryset, slug=slug)
-    return render(request, 'plans/meals_guide.html',
-    {'meal': meal})
+# def mealplan(request, slug): 
+#     """ A view to return the community page """
+#     queryset = MealPlan.objects.all()
+#     meal = get_object_or_404(queryset, slug=slug)
+#     return render(request, 'plans/meals_guide.html',
+#     {'meal': meal})
+
+
+
+@login_required
+def add_exercises(request):
+    """ Add a exercise to the app """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only authorized users can do this.')
+        return redirect(reverse('home'))
+
+    if request.method == 'POST':
+        form = ExerciseForm(request.POST, request.FILES)
+        if form.is_valid():
+            exercise = form.save()
+            messages.success(request, 'Successfully added exercise!')
+            return redirect(reverse('home', args=[exercise.id]))
+        else:
+            messages.error(request, 'Failed to add exercise. Please ensure the form is valid.')
+    else:
+        form = ExerciseForm()
+        
+    template = 'plans/add_exercises.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)
+
 
 
 # @login_required
