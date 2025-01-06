@@ -168,7 +168,7 @@
             <div class="row">
                 {% for meal in mealplan_list %}
                 <div class="col-md-6 card-body mb-4">
-                    <!-- <a href="" class="meal-link"> -->
+                    <a href="{% url 'mealplan' meal.slug %}" class="meal-link">
                     <div class="mb-4">
                         <div>
                             <div class="image-container">

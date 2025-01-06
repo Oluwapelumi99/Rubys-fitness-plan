@@ -28,17 +28,17 @@ class MealPlanList(generic.ListView):
     template_name = "plans/mealplan_list.html"
 
 
-# def mealplan(request, slug): 
-#     """ A view to return the community page """
-#     queryset = MealPlan.objects.all()
-#     meal = get_object_or_404(queryset, slug=slug)
-#     return render(request, 'plans/meals_guide.html',
-#     {'meal': meal})
+def mealplan(request, slug): 
+    """ A view to return the community page """
+    queryset = MealPlan.objects.all()
+    meal = get_object_or_404(queryset, slug=slug)
+    return render(request, 'plans/meals_guide.html',
+    {'meal': meal})
 
 
 
 @login_required
-def add_exercises(request):
+def add_exercise(request):
     """ Add a exercise to the app """
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only authorized users can do this.')
@@ -62,6 +62,47 @@ def add_exercises(request):
 
     return render(request, template, context)
 
+
+@login_required
+def edit_exercise(request, exercise_id):
+    """ Edit a Exercise """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only authorized users can do this.')
+        return redirect(reverse('home'))
+
+    exercise = get_object_or_404(Exercise, pk=exercise_id)
+    if request.method == 'POST':
+        form = ExerciseForm(request.POST, request.FILES, instance=exercise)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully updated exercises!')
+            return redirect(reverse('community', args=[exercise.id]))
+        else:
+            messages.error(request, 'Failed to update. Please ensure the form is valid.')
+    else:
+        form = ExerciseForm(instance=exercise)
+        messages.info(request, f'You are editing {exercise.name}')
+
+    template = 'plans/edit_exercises.html'
+    context = {
+        'form': form,
+        'exercise': exercise,
+    }
+
+    return render(request, template, context)
+
+
+@login_required
+def delete_exercise(request, exercise_id):
+    """ Delete an exercise from the app """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only authorized users can do this.')
+        return redirect(reverse('home'))
+
+    exercise = get_object_or_404(Exercise, pk=exercise_id)
+    exercise.delete()
+    messages.success(request, 'Exercise deleted!')
+    return redirect(reverse('exercise_page'))
 
 
 # @login_required
