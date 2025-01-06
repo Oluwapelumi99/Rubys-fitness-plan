@@ -37,6 +37,7 @@ def mealplan(request, slug):
 
 
 
+
 @login_required
 def add_exercise(request):
     """ Add a exercise to the app """
