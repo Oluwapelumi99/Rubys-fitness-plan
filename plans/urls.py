@@ -7,7 +7,10 @@ urlpatterns = [
     path('abs_exercises/', views.abs_exercises, name='abs_exercises'),
     path('', views.MealPlanList.as_view(), name='MealPlanList'),
     path('<slug:slug>/', views.mealplan, name='mealplan'),
+
     path('add/', views.add_exercise, name='add_exercise'),
+
     path('edit/<int:exercise_id>/', views.edit_exercise, name='edit_exercise'),
+    
     path('delete/<int:exercise_id>/', views.delete_exercise, name='delete_exercise'),
 ]
