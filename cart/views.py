@@ -1,7 +1,7 @@
-from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpResponse
-from django.contrib import messages
 from shop.models import Shop
-
+from django.contrib import messages
+from django.shortcuts import (
+    render, redirect, reverse, get_object_or_404, HttpResponse)
 
 
 # Create your views here.
@@ -20,6 +20,7 @@ def view_cart(request):
     """
 
     return render(request, 'cart/cart.html')
+
 
 def add_to_cart(request, item_id):
     """ Add quantity and sizes to the cart:model:`Shop`
@@ -42,27 +43,36 @@ def add_to_cart(request, item_id):
         if item_id in list(cart.keys()):
             if size in cart[item_id]['items_by_size'].keys():
                 cart[item_id]['items_by_size'][size] += quantity
-                messages.success(request, f'Updated size {size} {shop.name} quantity to {cart[item_id]["items_by_size"][size]}')
+                messages.success(
+                    request,
+                    f'Updated size {size} {shop.name} quantity to {cart[
+                                                    item_id]["items_by_size"][
+                                                    size]}')
             else:
                 cart[item_id]['items_by_size'][size] = quantity
-                messages.success(request, f'Added size {size} {shop.name} to your bag')
+                messages.success(
+                    request,
+                    f'Added size {size} {shop.name} to your bag')
         else:
             cart[item_id] = {'items_by_size': {size: quantity}}
-            messages.success(request, f'Added size {size} {shop.name} to your bag')
+            messages.success(
+                request, f'Added size {size} {shop.name} to your bag')
     else:
         if item_id in list(cart.keys()):
             cart[item_id] += quantity
-            messages.success(request, f'Updated {shop.name} quantity to {cart[item_id]}')
+            messages.success(
+                request, f'Updated {shop.name} quantity to {cart[item_id]}')
         else:
             cart[item_id] = quantity
             messages.success(request, f'Added {shop.name} to your cart')
 
-
     request.session['cart'] = cart
     return redirect(redirect_url)
 
+
 def update_cart(request, item_id):
-    """Update the quantity of the cart and update the price accordingly:model:`Shop`
+    """Update the quantity of the cart and update the price
+    accordingly:model:`Shop`
 
     **Context**
 
@@ -80,16 +90,23 @@ def update_cart(request, item_id):
     if size:
         if quantity > 0:
             cart[item_id]['items_by_size'][size] = quantity
-            messages.success(request, f'Updated size {size} {shop.name} quantity to {cart[item_id]["items_by_size"][size]}')
+            messages.success(
+                request,
+                f'Updated size {size} {shop.name} quantity to{cart[
+                                                item_id]["items_by_size"][
+                                                size]}')
         else:
             del cart[item_id]['items_by_size'][size]
             if not cart[item_id]['items_by_size']:
                 cart.pop(item_id)
-            messages.success(request, f'Removed size {size} {shop.name} from your cart')
+            messages.success(
+                request, f'Removed size {size} {shop.name} from your cart')
     else:
         if quantity > 0:
             cart[item_id] = quantity
-            messages.success(request, f'Updated {shop.name} quantity to {cart[item_id]}')
+            messages.success(
+                    request,
+                    f'Updated {shop.name} quantity to {cart[item_id]}')
         else:
             cart.pop(item_id)
             messages.success(request, f'Removed {shop.name} from your cart')
@@ -118,7 +135,8 @@ def remove_item(request, item_id):
             del cart[item_id]['items_by_size'][size]
             if not cart[item_id]['items_by_size']:
                 cart.pop(item_id)
-            messages.success(request, f'Removed size {size} {shop.name} from your cart')
+            messages.success(
+                request, f'Removed size {size} {shop.name} from your cart')
         else:
             cart.pop(item_id)
             messages.success(request, f'Removed {shop.name} from your cart')
@@ -129,16 +147,3 @@ def remove_item(request, item_id):
     except Exception as e:
         messages.error(request, f'Error removing item: {e}')
         return HttpResponse(status=500)
-
-
-    """ A view to return the cart items page:model:`blog.Post`.
-
-    **Context**
-
-    ``post``
-        An instance of :model:`blog.Post`.
-
-    **Template:**
-
-    :template:`blog/post_detail.html`
-    """

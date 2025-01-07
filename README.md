@@ -29,6 +29,7 @@ This site was created to show case what a B2C ecommerce store looks like.
 . Automated testing
 # Bugs
 . Solved bugs
+- Unsolved bugs
 # Validator testing
 . HTML
 . CSS
@@ -122,3 +123,44 @@ At the top of the page, we can see 'Rubys', which is the appp's name, clicking o
 - Shop page
 
 
+
+# Testing
+
+- Manual Testing
+
+- Automated Testing
+
+
+# Validator Testing
+- HTML
+
+- CSS
+
+- JAVASCRIPT
+
+- PYTHON
+
+I tested the python files in this project with https://pep8ci.herokuapp.com/
+
+- ### CART APP
+- context.py
+- This page gave a few errors as seen below.
+<img width="1544" alt="Screenshot 2025-01-07 at 20 22 40" src="https://github.com/user-attachments/assets/af6d5f52-186f-4be2-b399-21079e0e8a49" />
+
+- I fixed the code and there were no more errors as seen below.
+<img width="1357" alt="Screenshot 2025-01-07 at 20 31 20" src="https://github.com/user-attachments/assets/e2cd9231-9f16-41da-8749-de307391d29f" />
+
+- urls.py 
+- The codes in this file gave error as seen below
+<img width="1440" alt="Screenshot 2025-01-07 at 20 33 26" src="https://github.com/user-attachments/assets/441ec19a-c80d-4e39-849f-229d4183c473" />
+
+- Error has been fixed as seen below
+<img width="1334" alt="Screenshot 2025-01-07 at 20 35 00" src="https://github.com/user-attachments/assets/788ca649-9c8c-4f8d-b95e-938b3295b0ab" />
+
+- views.py 
+- The errors in this file are seen below
+
+<img width="1440" alt="Screenshot 2025-01-07 at 20 36 42" src="https://github.com/user-attachments/assets/360b52b0-2233-4aa4-a6e1-f5442fffe244" />
+
+- The errors have been fixed and code is clear has seen below.
+<img width="1325" alt="Screenshot 2025-01-07 at 21 08 36" src="https://github.com/user-attachments/assets/0ab909d5-8185-48c8-a5d9-dbf1ac29d92a" />

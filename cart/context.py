@@ -4,7 +4,6 @@ from django.shortcuts import get_object_or_404
 from shop.models import Shop
 
 
-
 def cart_contents(request):
     """
     views to make the carts content visible on all pages
@@ -14,7 +13,6 @@ def cart_contents(request):
     total = 0
     shop_count = 0
     cart = request.session.get('cart', {})
-
 
     for item_id, item_data in cart.items():
         if isinstance(item_data, int):
@@ -43,9 +41,9 @@ def cart_contents(request):
     else:
         delivery = 0
         free_delivery_delta = 0
-    
+
     grand_total = delivery + total
-    
+
     context = {
         'cart_items': cart_items,
         'total': total,
