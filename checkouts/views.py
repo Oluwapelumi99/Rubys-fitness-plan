@@ -140,7 +140,6 @@ def checkout(request):
             Did you forget to set it in your environment?')
 
     template = 'checkouts/checkout.html'
-    print(stripe_public_key)
     context = {
         'order_form': order_form,
         'stripe_public_key': stripe_public_key,
