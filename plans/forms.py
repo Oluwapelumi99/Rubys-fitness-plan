@@ -20,3 +20,15 @@ class ExerciseForm(forms.ModelForm):
     class Meta:
         model = Exercise
         fields = '__all__'
+
+
+class DeleteExerciseForm(forms.ModelForm):
+    class Meta:
+        model = Exercise
+        fields = []
+
+    def __init__(self, *args, **kwargs):
+        super(DeleteExerciseForm, self).__init__(*args, **kwargs)
+        self.fields['id'] = forms.IntegerField(widget=forms.HiddenInput())
+        if self.instance and self.instance.pk:
+            self.fields['id'].initial = self.instance.pk

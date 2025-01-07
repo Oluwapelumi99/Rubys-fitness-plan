@@ -81,7 +81,8 @@
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     {% if request.user.is_authenticated %}
                                         {% if request.user.is_superuser %}
-                                    <a class="dropdown-item" href="{% url 'add_exercise' %}">App Manager</a>
+                                        <a class="dropdown-item" href="{% url 'add_items' %}">Shop Manager</a>
+                                    <a class="dropdown-item" href="{% url 'add_exercise' %}">Exercises Manager</a>
                                         {% endif %}
                                     <a class="dropdown-item" href="{% url 'account_logout' %}">Logout</a>
                                     {% else %}

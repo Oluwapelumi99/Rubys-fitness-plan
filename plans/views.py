@@ -3,7 +3,7 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.views import generic
 from .models import Exercise, MealPlan
-from .forms import MealPlanForm, ExerciseForm
+from .forms import MealPlanForm, ExerciseForm, DeleteExerciseForm
 
 # Create your views here.
 
@@ -43,14 +43,14 @@ def add_exercise(request):
     """ Add a exercise to the app """
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only authorized users can do this.')
-        return redirect(reverse('home'))
+        return redirect('home')
 
     if request.method == 'POST':
         form = ExerciseForm(request.POST, request.FILES)
         if form.is_valid():
             exercise = form.save()
             messages.success(request, 'Successfully added exercise!')
-            return redirect(reverse('home', args=[exercise.id]))
+            return redirect('exercise_page')
         else:
             messages.error(request, 'Failed to add exercise. Please ensure the form is valid.')
     else:
@@ -77,7 +77,7 @@ def edit_exercise(request, exercise_id):
         if form.is_valid():
             form.save()
             messages.success(request, 'Successfully updated exercises!')
-            return redirect(reverse('community', args=[exercise.id]))
+            return redirect('exercise_page')
         else:
             messages.error(request, 'Failed to update. Please ensure the form is valid.')
     else:
@@ -94,18 +94,100 @@ def edit_exercise(request, exercise_id):
 
 
 @login_required
-def delete_exercise(request, exercise_id):
+def delete_exercise(request, pk):
     """ Delete an exercise from the app """
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only authorized users can do this.')
         return redirect(reverse('home'))
 
-    exercise = get_object_or_404(Exercise, pk=exercise_id)
-    exercise.delete()
-    messages.success(request, 'Exercise deleted!')
-    return redirect(reverse('exercise_page'))
+    exercise= get_object_or_404(Exercise, id=pk)
+    if request.method == 'POST':
+        form = DeleteExerciseForm(request.POST, instance=exercise)
+        if form.is_valid():
+            deleted_exercise = form.save(commit=False)
+            exercise = get_object_or_404(Exercise, id=deleted_exercise.id)
+            exercise.delete()
+            messages.add_message(
+                request, messages.SUCCESS, 'Exercise deleted')
+            return redirect('exercise_page')
+    else:
+        form = DeleteExerciseForm(instance=exercise)
+        context = {
+            'form': form,
+            'exercise': exercise
+        }
+
+        return render(request, 'plans/delete_exercises.html', context)
 
 
+
+# def update_booking(request, pk):
+#     """
+#     view to update bookings
+#     **context**
+#     ``booking``
+#     an instance of booking.customer
+#     ``tables``
+#     all approved tables related to table.approved
+#     ``form``
+#     related to forms BookingForm
+#     *template*
+#     ``booking/booking.html``
+#     """
+#     booking = get_object_or_404(Booking, pk=pk)
+#     booking_form = BookingForm(data=request.POST or None, instance=booking)
+#     if request.method == "POST":
+#         booking = get_object_or_404(Booking, pk=pk)
+#         if booking_form.is_valid() and booking.customer == request.user:
+#             booking = booking_form.save(commit=False)
+#             booking.save()
+#             messages.add_message(request, messages.SUCCESS, 'Booking Updated!')
+#             return redirect('home_page')
+#         else:
+#             messages.add_message(
+#                 request, messages.ERROR, 'Error updating booking!')
+#             return render(request, 'booking/booking.html', context)
+#     else:
+#         context = {
+#             'form': booking_form
+#         }
+#     return render(request, 'booking/booking.html', context)
+
+
+# @login_required
+# def cancel_booking(request, pk):
+#     """
+#     view to cancel bookings
+#     **context**
+#     ``booking``
+#     an instance of booking
+#     ``form``
+#     related to forms BookingForm
+#     *template*
+#     ``booking/cancel_booking.html``
+#     """
+#     booking = get_object_or_404(Booking, id=pk)
+#     if booking.customer != request.user:
+#         messages.add_message(
+#             request, messages.ERROR, 'You do not have any bookings.')
+#         return redirect('home_page')
+#     if request.method == 'POST':
+#         form = CancelBookingForm(request.POST, instance=booking)
+#         if form.is_valid():
+#             cancelled_booking = form.save(commit=False)
+#             booking = get_object_or_404(Booking, id=cancelled_booking.id)
+#             booking.delete()
+#             messages.add_message(
+#                 request, messages.SUCCESS, 'Booking cancelled')
+#             return redirect('customer_bookings')
+#     else:
+#         form = CancelBookingForm(instance=booking)
+#         context = {
+#             'form': form,
+#             'booking': booking
+#         }
+
+#         return render(request, 'booking/cancel_booking.html', context)
 # @login_required
 # def add_meals(request):
 #     """ Add a product to the store """

@@ -101,7 +101,8 @@
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     {% if request.user.is_authenticated %}
                                         {% if request.user.is_superuser %}
-                                    <a class="dropdown-item" href="{% url 'add_exercise' %}">App Manager</a>
+                                    <a class="dropdown-item" href="{% url 'add_items' %}">Shop Manager</a>
+                                    <a class="dropdown-item" href="{% url 'add_exercise' %}">Exercise Manager</a>
                                         {% endif %}
                                     <a class="dropdown-item" href="{% url 'account_logout' %}">Logout</a>
                                     {% else %}
@@ -184,7 +185,13 @@
                             <p class="text-muted category">{{ shop.category.friendly_name }}</p>
                             £{{shop.price|floatformat:2}}
                         </h4>
-                    </div>   
+                    </div>  
+                    {% if request.user.is_superuser %}
+                    <small class="ml-3">
+                        <a style="color: rgb(189, 58, 80);" href="{% url 'edit_items' shop.id %}">Edit</a> | 
+                        <a style="color: rgb(189, 58, 80);" href="{% url 'delete_items' shop.id %}">Delete</a>
+                    </small>
+                    {% endif %} 
                 </div>
                 {% endfor %}
             </div>
