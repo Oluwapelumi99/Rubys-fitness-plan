@@ -11,7 +11,7 @@ class MealPlanForm(forms.ModelForm):
         fields = ('name','slug','image','description','calories')
 
 
-    image = forms.ImageField(label='Image', required=False, widget=CustomClearableFileInput)
+    image = forms.ImageField(label='Image', required=False,)
 
 
 class ExerciseForm(forms.ModelForm):
