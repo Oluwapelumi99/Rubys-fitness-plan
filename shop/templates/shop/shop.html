@@ -55,83 +55,124 @@
                               <a class="dropdown-item" href="{% url 'shop' %}?sort=category&direction=asc">By Category</a>
                               <a class="dropdown-item" href="{% url 'shop' %}">All products</a>
                             </div>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     Gym wear
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{% url 'shop' %}?category=gym_wears">gym sets</a>
-                                    <a class="dropdown-item" href="{% url 'shop' %}?category=socks">socks</a>
-                                    <a class="dropdown-item" href="{% url 'shop' %}?category=trainers">Trainers</a>
-                                    <a class="dropdown-item" href="{% url 'shop' %}?category=gym_wears,trainers,socks">All gym wears</a>
-                                </div>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="{% url 'shop' %}?category=gym_wears">gym sets</a>
+                                <a class="dropdown-item" href="{% url 'shop' %}?category=socks">socks</a>
+                                <a class="dropdown-item" href="{% url 'shop' %}?category=trainers">Trainers</a>
+                                <a class="dropdown-item" href="{% url 'shop' %}?category=gym_wears,trainers,socks">All gym wears</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     Weights
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{% url 'shop' %}?category=dumbells">Dumbells</a>
-                                    <a class="dropdown-item" href="{% url 'shop' %}?category=kettle_bells">Kettlebells</a>
-                                    <a class="dropdown-item" href="{% url 'shop' %}?category=dumbells,kettle_bells">All weights</a>
-                                </div>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="{% url 'shop' %}?category=dumbells">Dumbells</a>
+                                <a class="dropdown-item" href="{% url 'shop' %}?category=kettle_bells">Kettlebells</a>
+                                <a class="dropdown-item" href="{% url 'shop' %}?category=dumbells,kettle_bells">All weights</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     Accessories
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{% url 'shop' %}?category=bottles">Water bottles</a>
-                                    <a class="dropdown-item" href="{% url 'shop' %}?category=mats">Yoga mats</a>
-                                    <a class="dropdown-item" href="{% url 'shop' %}?category=bags">Gym bag</a>
-                                    <a class="dropdown-item" href="{% url 'shop' %}?category=gloves">Gloves</a>
-                                    <a class="dropdown-item" href="{% url 'shop' %}?category=jump_ropes">Jump ropes</a>
-                                    <a class="dropdown-item" href="{% url 'shop' %}?category=resistance_bands">Resistance bands</a>
-                                    <a class="dropdown-item" href="{% url 'shop' %}?category=bottles,mats,bags,gloves,jump_ropes,resistance_bands">All accessories</a>
-                                </div>
-                            </li>
-                            <!-- <li class="nav-item">
-                            <a class="nav-link " href="{% url 'BlogList' %}">Community</a>
-                            </li> -->
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <i class="fa-solid fa-user"></i>
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    {% if request.user.is_authenticated %}
-                                        {% if request.user.is_superuser %}
-                                    <a class="dropdown-item" href="{% url 'add_items' %}">Shop Manager</a>
-                                    <a class="dropdown-item" href="{% url 'add_exercise' %}">Exercise Manager</a>
-                                        {% endif %}
-                                    <a class="dropdown-item" href="{% url 'account_logout' %}">Logout</a>
-                                    {% else %}
-                                    <a class="dropdown-item" href="{% url 'account_signup' %}">Register</a>
-                                    <a class="dropdown-item" href="{% url 'account_login' %}">Login</a>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="{% url 'shop' %}?category=bottles">Water bottles</a>
+                                <a class="dropdown-item" href="{% url 'shop' %}?category=mats">Yoga mats</a>
+                                <a class="dropdown-item" href="{% url 'shop' %}?category=bags">Gym bag</a>
+                                <a class="dropdown-item" href="{% url 'shop' %}?category=gloves">Gloves</a>
+                                <a class="dropdown-item" href="{% url 'shop' %}?category=jump_ropes">Jump ropes</a>
+                                <a class="dropdown-item" href="{% url 'shop' %}?category=resistance_bands">Resistance bands</a>
+                                <a class="dropdown-item" href="{% url 'shop' %}?category=bottles,mats,bags,gloves,jump_ropes,resistance_bands">All accessories</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fa-solid fa-user"></i>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                {% if request.user.is_authenticated %}
+                                    {% if request.user.is_superuser %}
+                                <a class="dropdown-item" href="{% url 'add_items' %}">Shop Manager</a>
+                                <a class="dropdown-item" href="{% url 'add_exercise' %}">Exercise Manager</a>
                                     {% endif %}
-                                </div>
-                            </li>
-                            <li class="list-inline-item">
-                                <a  class=""href="{% url 'view_cart' %}">
-                                    <div class="text-center">
-                                        <div><i class="fas fa-cart-shopping fa-xl mt-3">
-                                            <p class="my-0 cart text-center" id="cart_quantity">
-                                                {{ shop_count }}
-                                            </p>
-                                        </i></div>
+                                <a class="dropdown-item" href="{% url 'account_logout' %}">Logout</a>
+                                {% else %}
+                                <a class="dropdown-item" href="{% url 'account_signup' %}">Register</a>
+                                <a class="dropdown-item" href="{% url 'account_login' %}">Login</a>
+                                {% endif %}
+                            </div>
+                        </li>
+                        <li class="list-inline-item">
+                            <a  class=""href="{% url 'view_cart' %}">
+                                <div class="text-center">
+                                    <div><i class="fas fa-cart-shopping fa-xl mt-3">
+                                        <p class="my-0 cart text-center" id="cart_quantity">
+                                            {{ shop_count }}
+                                        </p>
+                                        </i>
                                     </div>
-                                </a>
-                            </li>
+                                </div>
+                            </a>
+                        </li>
                     </ul>
-                </div>
-                <div>
-                    <form method="GET" action="{% url 'shop' %}" class="form-inline search my-2 my-lg-0 justify-content-md-end">
-                        <input class="form-control mr-sm-2 me-2" type="search" name="q" placeholder="Search our shop" aria-label="Search">
-                        <button class="btn my-2 my-sm-0" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-                    </form>
                 </div>
             </div>
         </nav>
+        <div class="search-dropdowns container">
+            <div class="dropdown">
+                <a href="{% url 'shop' %}" class=" dropdown-toggle"  id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    All Products
+                </a>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+            </div>
+    
+            <div class="dropdown">
+                <a class=" dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Dropdown button
+                </a>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a class=" dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Dropdown button
+                </a>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a class=" dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Dropdown button
+                </a>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+            </div>
+        </div> 
+        <div class="justify-content-end">
+            <form method="GET" action="{% url 'shop' %}" class="form-inline search my-2 my-lg-0 justify-content-md-end">
+                <input class="form-control search-form mr-sm-2 me-2" type="search" name="q" placeholder="Search our shop" aria-label="Search">
+                <button class="btn my-2 my-sm-0" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
+        </div>     
         <div class="container">
             <div class="row">
                 <div class="col">
@@ -201,118 +242,6 @@
                 <i class="fas fa-arrow-up text-black mx-auto my-auto"></i>
             </a>	
         </div>
-        <!-- <div class="container">
-            <div class="overlay"></div>
-            {% for shop in shops %}
-                <div class="row">
-                    <div class="col-lg-3 text-center">
-                        <div class="card border-0 bg-light">
-                                <a href="{% url 'item_details' shop.id %}">
-                                    <img class="card-img-top" src="{{ shop.image.url }}" alt="{{ shop.name }}" >    
-                                </a>
-            
-                            <h6>{{ shop.name }}</h6>
-            
-                        </div>
-            
-                    </div>
-                    <button type=button class="btn btn-secondary" value="{{ shop.id }}" id="add-cart">Add to cart </button>
-                {% endfor %}
-                </div>
-            </div> -->
-            
-          <!-- <nav class="navbar" aria-label="breadcrumb">
-            <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item"><a href="#">Library</a></li>
-              <li class="breadcrumb-item active" aria-current="page">Data</li>
-            </ol>
-          </nav>
-         -->
-
-    <!-- Navigation -->
-    <!-- <nav class="navbar navbar-expand-lg navbar-light bg-white">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="{% url 'home' %}">Rubys <i class="fa-solid fa-dumbbell"></i> </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
-                aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarText">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="list-inline-item dropdown">
-                    <a class="text-black nav-link" href="#" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <div class="text-center">
-                            <p class="my-0">My Account</p>
-                        </div>
-                    </a>
-                    <div class="dropdown-menu border-0" aria-labelledby="user-options">
-                        {% if request.user.is_authenticated %}
-                            <a href="" class="dropdown-item">My Profile</a>
-                            <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
-                        {% else %}
-                            <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-                            <a href="{% url 'account_login' %}" class="dropdown-item">Login</a> 
-                        {% endif %}
-                    </div> -->
-                    <!-- <li class="list-inline-item">
-                        <a class="" href="">
-                            <div class="text-center mt-2">
-                                <div><i class="fa-solid fa-basket-shopping"></i></div>
-                            </div>
-                        </a>
-                    </li> -->
-
-    {% if messages %}
-        <div class="message-container">
-            {% for message in messages %}
-            {% with message.level as level %}
-                {% if level == 40 %}
-                    {% include 'includes/toasts/toasts_error.html' %}
-                {% elif level == 30 %}
-                    {% include 'includes/toasts/toasts_warning.html' %}
-                {% elif level == 25 %}
-                    {% include 'includes/toasts/toasts_success.html' %}
-                {% else %}
-                    {% include 'includes/toasts/toasts_info.html' %}
-                {% endif %}
-            {% endwith %}
-        {% endfor %}
-        </div>  
-    {% endif %}
-
-    {% block page_header %}
-    {% endblock %}
-<main>
-    {% block content %}
-    {% endblock %}
-
-</main>
-
-
-          <!-- Footer -->
-    <footer class="footer mt-auto py-3">
-        <p class="text-black mx-5 mt-4">
-            {% block copyright %}
-            Rubys <i class="fa-solid fa-dumbbell"></i></p>
-        {% endblock copyright %}
-        <p class="mx-5">The fitness app trusted by millions of women.</p>
-        <p class="m-0 mx-5">Follow us: <a href="https://www.facebook.com/" target="_blank"
-                rel="nonopener" aria-label="Visit our facebook page(opens in a new tab)"> <i
-                    class="fab fa-facebook-square ms-3"></i> </a>
-            <a href="https://www.twitter.com/" target="_blank" rel="nonopener"
-                aria-label="Visit our twitter page(opens in a new tab)"> <i class="fab fa-twitter-square ms-3"></i> </a>
-            <a href="https://www.Instagram.com/" target="_blank" rel="nonopener"
-                aria-label="Visit our instgram page (opens in a new tab)"> <i
-                    class="fab fa-instagram-square ms-3"></i> </a>
-            <a href="https://www.youtube.com/" target="_blank" rel="nonopener"
-                aria-label="Visit our youtube page (opens in a new tab)"> <i class="fab fa-youtube-square ms-3"></i> </a>
-        </p>
-        <div id="support">
-            <p class="text-center text-black">Support</p>
-            <p class="m-0 text-center text-black"><i class="fa-solid fa-phone"></i>: 03000000000</p>
-        </div>
-    </footer>
     {% block postloadjs %}
 {% include 'shop/includes/quantity_script.html' %}
 
@@ -353,102 +282,3 @@
     
     </body>
 </html>
-
-
-
-<!-- <div class="col-10 offset-1">
-    <div class="row mt-1 mb-2"></div>
-    <div class="row">
-        <div class="card-deck">
-            <div class="card">
-                <div class="col-lg-3">
-                    <a href="">
-                        <img class="card-img-top" src="{{ shop.image.url }}" alt="{{ shop.name }}">    
-                    </a>
-                <div class="card-body">
-                <h5 class="card-title">{{ shop.name }}</h5>
-                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                </div>
-            </div>
-            </div>
-        </div>
-    </div>
-</div> -->
-
-
-<!-- <div class="container">
-    <div class="row">
-        <div class="col-lg-4">
-            
-            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
-                <div class="card-body">
-                <a href="">
-                <img class="card-img-top img-fluid" src="{{ shop.image.url }}" alt="{{ shop.name }}">
-                </a>
-                <p class="mb-0">{{ shop.name }}</p>  
-                </div>            
-            </div>
-        </div>
-    </div>
-</div> -->
-
-         <!-- <div class="col text-center mt-3">
-            <h2 class="logo-font">Shop</h2>
-            <hr class="w-50 mb-1">
-        </div>
-    </div>
-    <div class="row">
-        <div class="shop-container col-10 offset-1">
-            <div class="row mt-1 mb-2"></div>
-            <div class="row">
-                {% for shop in shops %}
-                    <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
-                        <div class="card h-100 border-0">
-                             {% if shop.image %}
-                             <a href=""> -->
-                                <!-- <img class="card-img-top img-fluid" src="{{ shop.image }}" alt="{{ shop.name }}">
-                            </a>  -->
-                                <!-- {% else %}
-                                <a href="{% url 'product_detail' product.id %}">
-                                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
-                                </a> -->
-                                <!-- {% endif %} -->
-                            <!-- <div class="card-body pb-0">
-                                <p class="mb-0">{{ shop.name }}</p>
-                            </div>
-                            <div class="card-footer bg-white pt-0 border-0 text-left">
-                                <div class="row">
-                                    <div class="col">
-                                        <p class="lead mb-0 text-left font-weight-bold">{{ shop.color }}</p>
-                                        <p class="lead mb-0 text-left font-weight-bold">£{{ shop.price }}</p>
-                                     --> 
-                                    <!-- {% if product.category %}
-                                    <p class="small mt-1 mb-0">
-                                        <a class="text-muted" href="{% url 'products' %}?category={{ product.category.name }}">
-                                            <i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}
-                                        </a>
-                                    </p>
-                                    {% endif %} -->
-                                    <!-- {% if product.rating %}
-                                        <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
-                                    {% else %}
-                                        <small class="text-muted">No Rating</small>
-                                    {% endif %} -->
-                                    <!-- {% if request.user.is_superuser %}
-                                        <small class="ml-3">
-                                            <a href="">Edit</a> | 
-                                            <a class="text-danger" href="">Delete</a>
-                                        </small>
-                                    {% endif %}
-                                </div> -->
-                                    <!-- </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-            </div>
-        </div>     
-    </div>
-</div>
-{% endfor %} -->

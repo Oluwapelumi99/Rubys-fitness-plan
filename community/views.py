@@ -49,23 +49,6 @@ def community(request, slug):
     }
     return render(request, 'community/community.html', context)
 
-    #         comment = comment_form.save(commit=False)
-    #         comment.author = request.user
-    #         comment.blog = blog
-    #         comment.save()
-    #         messages.add_message(
-    #     request, messages.SUCCESS,
-    #     'Comment submitted and awaiting approval'
-    # )
-    # else:
-    #     comment_form = CommentForm
-
-    # return render(request, 'community/community.html', 
-    # {'blog': blog,
-    # "comments": comments,
-    # "comment_count": comment_count,
-    # "comment_form": comment_form,})
-
 
 def comment_edit(request, slug, comment_id):
     """
@@ -110,17 +93,3 @@ def comment_delete(request, slug, comment_id):
 
     return HttpResponseRedirect(reverse('community', args=[slug]))
 
-
-# def reply(request, slug, pk):
-#     comments = Comment.objects.filter(blog=blog)
-#     comment = get_object_or_404(Comment, pk=pk)
-#     if request.method == 'POST':
-#         reply_form = ReplyForm(data=request.POST)
-#         if form.is_valid():
-#             reply = form.save(commit=False)
-#             reply.comment = comment
-#             reply.save()
-#             return redirect('community', pk=comment.blog.pk)
-#     else:
-#         reply_form = ReplyForm()
-#     return render(request, 'community/community.html', {'reply_form': reply_form,})
