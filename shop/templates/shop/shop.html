@@ -1,247 +1,134 @@
+
+{% extends "base.html" %}
 {% load static %}
 
-<!doctype html>
-<html lang="en">
-    <head>
-
-    {% block meta %}
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    {% endblock %}
-
-    {% block extra_meta %}
-    {% endblock %}
-
-    {% block corecss %}
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&display=swap">
-        <link rel="stylesheet" href="{% static 'css/base.css' %}">
-    {% endblock %}
-
-    {% block extra_css %}
-    {% endblock %}
-
-    {% block corejs %}
-        <script src="https://kit.fontawesome.com/3dac582a5a.js" crossorigin="anonymous"></script>
-        <script src="https://code.jquery.com/jquery-3.7.1.min.js"integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-        <!--Stripe-->
-        <script src="https://js.stripe.com/v3/"></script>
-    {% endblock %}
-
-    {% block extra_js %}
-    {% endblock %}
-
-        <title>Rubys Fitness Plan {% block extra_title %}{% endblock %}</title>
-    </head>
-    <body class="d-flex flex-column h-100 main-bg">
-        <nav class="navbar navbar-expand-lg navbar-light ">
-            <a class="navbar-brand" href="{% url 'home' %}">Rubys <i class="fa-solid fa-dumbbell"></i></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-          
-            <div class="collapse nav-container navbar-collapse" id="navbarSupportedContent">
-                <div>
-                    <ul class="navbar-nav mr-auto">
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="{% url 'shop' %}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            All Products
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                              <a class="dropdown-item" href="{% url 'shop' %}?sort=price&direction=asc">By Price</a>
-                              <a class="dropdown-item" href="{% url 'shop' %}?sort=category&direction=asc">By Category</a>
-                              <a class="dropdown-item" href="{% url 'shop' %}">All products</a>
-                            </div>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Gym wear
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="{% url 'shop' %}?category=gym_wears">gym sets</a>
-                                <a class="dropdown-item" href="{% url 'shop' %}?category=socks">socks</a>
-                                <a class="dropdown-item" href="{% url 'shop' %}?category=trainers">Trainers</a>
-                                <a class="dropdown-item" href="{% url 'shop' %}?category=gym_wears,trainers,socks">All gym wears</a>
-                            </div>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Weights
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="{% url 'shop' %}?category=dumbells">Dumbells</a>
-                                <a class="dropdown-item" href="{% url 'shop' %}?category=kettle_bells">Kettlebells</a>
-                                <a class="dropdown-item" href="{% url 'shop' %}?category=dumbells,kettle_bells">All weights</a>
-                            </div>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Accessories
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="{% url 'shop' %}?category=bottles">Water bottles</a>
-                                <a class="dropdown-item" href="{% url 'shop' %}?category=mats">Yoga mats</a>
-                                <a class="dropdown-item" href="{% url 'shop' %}?category=bags">Gym bag</a>
-                                <a class="dropdown-item" href="{% url 'shop' %}?category=gloves">Gloves</a>
-                                <a class="dropdown-item" href="{% url 'shop' %}?category=jump_ropes">Jump ropes</a>
-                                <a class="dropdown-item" href="{% url 'shop' %}?category=resistance_bands">Resistance bands</a>
-                                <a class="dropdown-item" href="{% url 'shop' %}?category=bottles,mats,bags,gloves,jump_ropes,resistance_bands">All accessories</a>
-                            </div>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fa-solid fa-user"></i>
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                {% if request.user.is_authenticated %}
-                                    {% if request.user.is_superuser %}
-                                <a class="dropdown-item" href="{% url 'add_items' %}">Shop Manager</a>
-                                <a class="dropdown-item" href="{% url 'add_exercise' %}">Exercise Manager</a>
-                                    {% endif %}
-                                <a class="dropdown-item" href="{% url 'account_logout' %}">Logout</a>
-                                {% else %}
-                                <a class="dropdown-item" href="{% url 'account_signup' %}">Register</a>
-                                <a class="dropdown-item" href="{% url 'account_login' %}">Login</a>
-                                {% endif %}
-                            </div>
-                        </li>
-                        <li class="list-inline-item">
-                            <a  class=""href="{% url 'view_cart' %}">
-                                <div class="text-center">
-                                    <div><i class="fas fa-cart-shopping fa-xl mt-3">
-                                        <p class="my-0 cart text-center" id="cart_quantity">
-                                            {{ shop_count }}
-                                        </p>
-                                        </i>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-        <div class="search-dropdowns container">
-            <div class="dropdown">
-                <a href="{% url 'shop' %}" class=" dropdown-toggle"  id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    All Products
-                </a>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                  <a class="dropdown-item" href="#">Action</a>
-                  <a class="dropdown-item" href="#">Another action</a>
-                  <a class="dropdown-item" href="#">Something else here</a>
-                </div>
-            </div>
-    
-            <div class="dropdown">
-                <a class=" dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Dropdown button
-                </a>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                  <a class="dropdown-item" href="#">Action</a>
-                  <a class="dropdown-item" href="#">Another action</a>
-                  <a class="dropdown-item" href="#">Something else here</a>
-                </div>
-            </div>
-            <div class="dropdown">
-                <a class=" dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Dropdown button
-                </a>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                  <a class="dropdown-item" href="#">Action</a>
-                  <a class="dropdown-item" href="#">Another action</a>
-                  <a class="dropdown-item" href="#">Something else here</a>
-                </div>
-            </div>
-            <div class="dropdown">
-                <a class=" dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Dropdown button
-                </a>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                  <a class="dropdown-item" href="#">Action</a>
-                  <a class="dropdown-item" href="#">Another action</a>
-                  <a class="dropdown-item" href="#">Something else here</a>
-                </div>
-            </div>
-        </div> 
-        <div class="justify-content-end">
-            <form method="GET" action="{% url 'shop' %}" class="form-inline search my-2 my-lg-0 justify-content-md-end">
-                <input class="form-control search-form mr-sm-2 me-2" type="search" name="q" placeholder="Search our shop" aria-label="Search">
-                <button class="btn my-2 my-sm-0" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-            </form>
-        </div>     
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <h2 class="logo-font mb-4 text-center font-weight-bold mt-4" style="color: rgb(219, 86, 108)">SHOP
-                    </h2>
-                    <hr  class="w-100 mb-1">
-                </div>
-            </div>
-            <div class="row">
-                <div class="search-container col-10 offset-1">
-                    <div class="row mt-1 mb-2">
-                        <div class="col-12 col-md-6 my-auto order-md-last d-flex justify-content-center justify-content-md-end">
-                            <div class="sort-select-wrapper w-50">
-                                <select id="sort-selector" class="custom-select custom-select-sm rounded-0 border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
-                                    <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
-                                    <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (low to high)</option>
-                                    <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price (high to low)</option>
-                                    <option value="name_asc" {% if current_sorting == 'name_asc' %}selected{% endif %}>Name (A-Z)</option>
-                                    <option value="name_desc" {% if current_sorting == 'name_desc' %}selected{% endif %}>Name (Z-A)</option>
-                                    <option value="category_asc" {% if current_sorting == 'category_asc' %}selected{% endif %}>Category (A-Z)</option>
-                                    <option value="category_desc" {% if current_sorting == 'category_desc' %}selected{% endif %}>Category (Z-A)</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-6 order-md-first">
-                            <p class="text-muted mt-3 text-center text-md-left">
-                                {% if search_term or current_categories or current_sorting != 'None_None' %}
-                                    <span class="small"><a href="{% url 'shop' %}">SHOP</a> | </span>
-                                {% endif %}
-                                {{ shops|length }} item(s) {% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
-                            </p>
-                        </div>
+{% block content %}
+<div class="search-dropdowns container">
+    <div class="dropdown">
+        <a class=" dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            All Products
+        </a>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="{% url 'shop' %}?sort=price&direction=asc">By Price</a>
+            <a class="dropdown-item" href="{% url 'shop' %}?sort=category&direction=asc">By Category</a>
+            <a class="dropdown-item" href="{% url 'shop' %}">All products</a>
+        </div>
+    </div>
+    <div class="dropdown">
+        <a class=" dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Gym wear
+        </a>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="{% url 'shop' %}?category=gym_wears">gym sets</a>
+            <a class="dropdown-item" href="{% url 'shop' %}?category=socks">socks</a>
+            <a class="dropdown-item" href="{% url 'shop' %}?category=trainers">Trainers</a>
+            <a class="dropdown-item" href="{% url 'shop' %}?category=gym_wears,trainers,socks">All gym wears</a>
+        </div>
+    </div>
+    <div class="dropdown">
+        <a class=" dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Weights
+        </a>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="{% url 'shop' %}?category=dumbells">Dumbells</a>
+            <a class="dropdown-item" href="{% url 'shop' %}?category=kettle_bells">Kettlebells</a>
+            <a class="dropdown-item" href="{% url 'shop' %}?category=dumbells,kettle_bells">All weights</a>
+        </div>
+    </div>
+    <div class="dropdown">
+        <a class=" dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Accessories
+        </a>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="{% url 'shop' %}?category=bottles">Water bottles</a>
+            <a class="dropdown-item" href="{% url 'shop' %}?category=mats">Yoga mats</a>
+            <a class="dropdown-item" href="{% url 'shop' %}?category=bags">Gym bag</a>
+            <a class="dropdown-item" href="{% url 'shop' %}?category=gloves">Gloves</a>
+            <a class="dropdown-item" href="{% url 'shop' %}?category=jump_ropes">Jump ropes</a>
+            <a class="dropdown-item" href="{% url 'shop' %}?category=resistance_bands">Resistance bands</a>
+            <a class="dropdown-item" href="{% url 'shop' %}?category=bottles,mats,bags,gloves,jump_ropes,resistance_bands">All accessories</a>
+        </div>
+    </div>
+    <div class="justify-content-end">
+        <form method="GET" action="{% url 'shop' %}" class="form-inline search my-2 my-lg-0 ">
+            <input class="form-control search-form mr-sm-2 me-2" type="search" name="q" placeholder="Search our shop" aria-label="Search">
+            <button class="btn my-2 my-sm-0" type="submit">
+                <span class="icon">
+                    <i class="fa-solid fa-magnifying-glass"></i></button>
+                </span>
+        </form>
+    </div>  
+</div>    
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h2 class="logo-font mb-4 text-center font-weight-bold mt-4" style="color: rgb(219, 86, 108)">SHOP
+            </h2>
+            <hr  class="w-100 mb-1">
+        </div>
+    </div>
+    <div class="row">
+        <div class="search-container col-10 offset-1">
+            <div class="row mt-1 mb-2">
+                <div class="col-12 col-md-6 my-auto order-md-last d-flex justify-content-center justify-content-md-end">
+                    <div class="sort-select-wrapper w-50">
+                        <select id="sort-selector" class="custom-select custom-select-sm rounded-0 border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
+                            <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
+                            <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (low to high)</option>
+                            <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price (high to low)</option>
+                            <option value="name_asc" {% if current_sorting == 'name_asc' %}selected{% endif %}>Name (A-Z)</option>
+                            <option value="name_desc" {% if current_sorting == 'name_desc' %}selected{% endif %}>Name (Z-A)</option>
+                            <option value="category_asc" {% if current_sorting == 'category_asc' %}selected{% endif %}>Category (A-Z)</option>
+                            <option value="category_desc" {% if current_sorting == 'category_desc' %}selected{% endif %}>Category (Z-A)</option>
+                        </select>
                     </div>
                 </div>
-            </div>
-            <div class="row">
-                {% for shop in shops %}
-                    {% if shop.image %}
-                    <div class="col-lg-3 card-body">
-                        <a href="{% url 'item_details' shop.id %}">
-                            <img class="card-img-top mt-3" src="{{ shop.image.url }}" alt="{{ shop.name }}" >    
-                       
-                        {% else %}
-                        <a href="{% url 'item_details' shop.id %}">
-                            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ shop.name }}">
-                    {% endif %}
-                    <div class="box-element shop">
-                        <h6><strong>{{ shop.name }}</strong></h6>
-                        <hr>
-                        <h4>
-                            <p class="text-muted category">{{ shop.category.friendly_name }}</p>
-                            £{{shop.price|floatformat:2}}
-                        </h4>
-                    </div>  
-                    {% if request.user.is_superuser %}
-                    <small class="ml-3">
-                        <a style="color: rgb(189, 58, 80);" href="{% url 'edit_items' shop.id %}">Edit</a> | 
-                        <a style="color: rgb(189, 58, 80);" href="{% url 'delete_items' shop.id %}">Delete</a>
-                    </small>
-                    {% endif %} 
+                <div class="col-12 col-md-6 order-md-first">
+                    <p class="text-muted mt-3 text-center text-md-left">
+                        {% if search_term or current_categories or current_sorting != 'None_None' %}
+                            <span class="small"><a href="{% url 'shop' %}">SHOP</a> | </span>
+                        {% endif %}
+                        {{ shops|length }} item(s) {% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
+                    </p>
                 </div>
-                {% endfor %}
             </div>
-        </div> </a></a>
-        <div class="btt-button shadow-sm rounded-0 border border-black">
-            <a class="btt-link d-flex h-100">
-                <i class="fas fa-arrow-up text-black mx-auto my-auto"></i>
-            </a>	
         </div>
+    </div>
+    <div class="row">
+        {% for shop in shops %}
+            {% if shop.image %}
+            <div class="col-lg-3 card-body">
+                <a href="{% url 'item_details' shop.id %}">
+                    <img class="card-img-top mt-3" src="{{ shop.image.url }}" alt="{{ shop.name }}" >    
+                
+                {% else %}
+                <a href="{% url 'item_details' shop.id %}">
+                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ shop.name }}">
+            {% endif %}
+            <div class="box-element shop">
+                <h6><strong>{{ shop.name }}</strong></h6>
+                <hr>
+                <h4>
+                    <p class="text-muted category">{{ shop.category.friendly_name }}</p>
+                    £{{shop.price|floatformat:2}}
+                </h4>
+            </div>  
+            {% if request.user.is_superuser %}
+            <small class="ml-3">
+                <a style="color: rgb(189, 58, 80);" href="{% url 'edit_items' shop.id %}">Edit</a> | 
+                <a style="color: rgb(189, 58, 80);" href="{% url 'delete_items' shop.id %}">Delete</a>
+            </small>
+            {% endif %} 
+        </div>
+        {% endfor %}
+    </div>
+</div> </a></a>
+<div class="btt-button shadow-sm rounded-0 border border-black">
+    <a class="btt-link d-flex h-100">
+        <i class="fas fa-arrow-up text-black mx-auto my-auto"></i>
+    </a>	
+</div>
+{% endblock %}
     {% block postloadjs %}
 {% include 'shop/includes/quantity_script.html' %}
 

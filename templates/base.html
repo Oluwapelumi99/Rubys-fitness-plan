@@ -50,48 +50,49 @@
                 <div>
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="{% url 'shop' %}">Shop</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="{% url 'shop' %}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Our plan
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                  <a class="dropdown-item" href="{% url 'exercise_page' %}">Programs</a>
-                                  <a class="dropdown-item" href="{% url 'MealPlanList' %}">Meal Plan</a>
-                                </div>
-                            </li>
-                            <li class="nav-item">
-                            <a class="nav-link" href="{% url 'BlogList' %}">Community</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <i class="fa-solid fa-user"></i>
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    {% if request.user.is_authenticated %}
-                                        {% if request.user.is_superuser %}
-                                        <a class="dropdown-item" href="{% url 'add_items' %}">Shop Manager</a>
-                                    <a class="dropdown-item" href="{% url 'add_exercise' %}">Exercises Manager</a>
-                                        {% endif %}
-                                    <a class="dropdown-item" href="{% url 'account_logout' %}">Logout</a>
-                                    {% else %}
-                                    <a class="dropdown-item" href="{% url 'account_signup' %}">Register</a>
-                                    <a class="dropdown-item" href="{% url 'account_login' %}">Login</a>
+                            <a class=" navbar font-weight-bold" href="{% url 'shop' %}">Shop</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="navbar dropdown-toggle font-weight-bold" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Our plan
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="{% url 'exercise_page' %}">Programs</a>
+                                <a class="dropdown-item" href="{% url 'MealPlanList' %}">Meal Plan</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class=" navbar font-weight-bold" href="{% url 'BlogList' %}">Community</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="navbar dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fa-solid fa-user"></i>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                {% if request.user.is_authenticated %}
+                                    {% if request.user.is_superuser %}
+                                    <a class="dropdown-item" href="{% url 'add_items' %}">Shop Manager</a>
+                                <a class="dropdown-item" href="{% url 'add_exercise' %}">Exercises Manager</a>
                                     {% endif %}
+                                <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
+                                <a class="dropdown-item" href="{% url 'account_logout' %}">Logout</a>
+                                {% else %}
+                                <a class="dropdown-item" href="{% url 'account_signup' %}">Register</a>
+                                <a class="dropdown-item" href="{% url 'account_login' %}">Login</a>
+                                {% endif %}
+                            </div>
+                        </li>
+                        <li class="list-inline-item">
+                            <a  class="navbar {% if grand_total %} font-weight-bold{% else %}text-black{% endif %} navbar" href="{% url 'view_cart' %}">
+                                <div class="text-center">
+                                    <div><i class="fas fa-cart-shopping fa-xl mt-3">
+                                        <p class="my-0 cart text-center" id="cart_quantity">
+                                            {{ shop_count }}
+                                        </p>
+                                    </i></div>
                                 </div>
-                            </li>
-                            <li class="list-inline-item">
-                                <a  class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_cart' %}">
-                                    <div class="text-center">
-                                        <div><i class="fas fa-cart-shopping fa-xl mt-3">
-                                            <p class="my-0 cart text-center" id="cart_quantity">
-                                                {{ shop_count }}
-                                            </p>
-                                        </i></div>
-                                    </div>
-                                </a>
-                            </li>
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>

@@ -7,12 +7,29 @@ from shop.models import Shop
 # Create your views here.
 
 def view_cart(request):
-    """ A view to return the cart items page """
+    """ A view to return the cart items page:model:`Shop`
+
+    **Context**
+
+    ``shop``
+    using the :model:`Shop` from the shop app.
+
+    **Template:**
+
+    :template: 'cart/cart.html'`
+    """
 
     return render(request, 'cart/cart.html')
 
 def add_to_cart(request, item_id):
-    """ Add quantity ans sizes to the cart"""
+    """ Add quantity and sizes to the cart:model:`Shop`
+
+    **Context**
+
+    ``shop``
+    using the :model:`Shop` from the shop app.
+
+    """
     shop = get_object_or_404(Shop, pk=item_id)
     quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')
@@ -45,7 +62,13 @@ def add_to_cart(request, item_id):
     return redirect(redirect_url)
 
 def update_cart(request, item_id):
-    """Update the quantity of the cart and update the price accordingly"""
+    """Update the quantity of the cart and update the price accordingly:model:`Shop`
+
+    **Context**
+
+    ``shop``
+    using the :model:`Shop` from the shop app.
+    """
 
     shop = get_object_or_404(Shop, pk=item_id)
     quantity = int(request.POST.get('quantity'))
@@ -76,7 +99,13 @@ def update_cart(request, item_id):
 
 
 def remove_item(request, item_id):
-    """Remove the item from the cart"""
+    """Remove the item from the cart:model:`Shop`
+
+    **Context**
+
+    ``shop``
+    using the :model:`Shop` from the shop app.
+    """
 
     try:
         shop = get_object_or_404(Shop, pk=item_id)
@@ -100,4 +129,16 @@ def remove_item(request, item_id):
     except Exception as e:
         messages.error(request, f'Error removing item: {e}')
         return HttpResponse(status=500)
-    
+
+
+    """ A view to return the cart items page:model:`blog.Post`.
+
+    **Context**
+
+    ``post``
+        An instance of :model:`blog.Post`.
+
+    **Template:**
+
+    :template:`blog/post_detail.html`
+    """

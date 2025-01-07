@@ -35,6 +35,13 @@ button, .btn {
 .navbar {
     background: rgb(219, 86, 108);
     font-size: 1.2rem;
+
+}
+
+.navbar a {
+    outline: none;
+    text-decoration: none;
+    color: black;
 }
 
 .nav-container {
@@ -43,7 +50,7 @@ button, .btn {
     width: 300px;
 }
 
-.nav-link {
+.nav-item {
     margin-left: 30px;
     margin-right: 30px;
 }
@@ -240,13 +247,13 @@ table {
 }
 
 /* Shops page styling*/
+
 .search-dropdowns {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
+    text-align: center;
     width: 70%;
-    font-size: 20px;
+    font-size: 18px;
 }
+
 .category {
     font-size: 15px;
 }
@@ -350,6 +357,14 @@ footer {
     }
     #support {
         margin-top: 0px;
+    }
+
+    .search-dropdowns {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 70%;
+        font-size: 20px;
     }
 }
 

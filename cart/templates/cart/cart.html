@@ -10,8 +10,7 @@
             <h2 class="logo-font mb-4 text-center mt-4">Your Cart</h2>
         </div>
     </div>
-    <div class="col-lg-12">
-     
+    <div class="col-lg-12">    
         <div class="box-element">
             <div class="cart-row">
                 <div style="flex:2"></div>
@@ -64,7 +63,7 @@
                 <a class="remove-item btn-outline-black float-right mt-5" id="remove_{{ item.item_id }}" data-shop_ttttsize="{{ item.size }}"><small>Remove</small></a>
             </div>
             {% endfor %}
-            <h5 class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %}"><strong>Grand total:</strong>           
+            <h5 class="{% if grand_total %} font-weight-bold{% else %}text-black{% endif %}" style="color:  rgb(189, 58, 80);"><strong>Grand total:</strong>           
                 <span class="my-0">
                     {% if grand_total %}
                         £{{ grand_total|floatformat:2 }}
@@ -90,14 +89,14 @@
             </a>
             {% else %}
                     <p class="lead mb-5">Your bag is empty.</p>
-                    <a href="{% url 'shop' %}" class="btn btn-outline-black rounded-0 btn-lg">
+                    <a href="{% url 'shop' %}" class="btn btn-outline-black rounded-0 btn-lg text-center">
                         <span class="icon">
                             <i class="fas fa-chevron-left"></i>
                         </span>
-                        <span class="text-uppercase">Keep Shopping</span>
+                        <span class="text-uppercase ">Keep Shopping</span>
                     </a>
             {% endif %}
-
+        </div>
     </div>
 </div>
       

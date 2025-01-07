@@ -13,8 +13,17 @@ class BlogList(generic.ListView):
 
 
 def community(request, slug):
-    """ A view to return the community page
-    and to add comments """
+    """ A view to return the community page: model:`Blog`.
+
+    **Context**
+
+    ``post``
+        An instance of :model:`Blog`.
+
+    **Template:**
+
+    :template:`community/community.html`
+    """
     comment_form = CommentForm(request.POST)
     queryset = Blog.objects.all()
     blog = get_object_or_404(queryset, slug=slug)
@@ -52,7 +61,17 @@ def community(request, slug):
 
 def comment_edit(request, slug, comment_id):
     """
-    view to edit comments
+    view to edit comments: model:`Blog and Comment`.
+
+    **Context**
+
+    ``post``
+    An instance of :model:`Blog and Comment`.
+
+    **Template:**
+
+    :template:`community/community.html`
+    
     """
 
     queryset = Blog.objects.all()
@@ -78,7 +97,16 @@ def comment_edit(request, slug, comment_id):
 
 def comment_delete(request, slug, comment_id):
     """
-    view to delete comment
+    view to delete comment:`Blog and Comment`.
+
+    **Context**
+
+    ``post``
+    An instance of :model:`Blog and Comment`.
+
+    **Template:**
+
+    :template:`community/community.html`
     """
 
     queryset = Blog.objects.all()

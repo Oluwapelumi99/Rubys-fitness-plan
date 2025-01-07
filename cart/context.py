@@ -2,11 +2,14 @@ from decimal import Decimal
 from django.conf import settings
 from django.shortcuts import get_object_or_404
 from shop.models import Shop
-from .cart import Cart
+
 
 
 def cart_contents(request):
-
+    """
+    views to make the carts content visible on all pages
+    of the app when users wants to view their cart.
+    """
     cart_items = []
     total = 0
     shop_count = 0
