@@ -6,11 +6,11 @@ urlpatterns = [
     path('glutes_exercises/', views.glutes_exercises, name='glutes_exercises'),
     path('abs_exercises/', views.abs_exercises, name='abs_exercises'),
     path('', views.MealPlanList.as_view(), name='MealPlanList'),
-    path('add/', views.add_exercise, name='add_exercise'),
-    path('edit/<int:exercise_id>/', views.edit_exercise, name='edit_exercise'),
+    path('add/', views.add_glutes_exercise, name='add_glutes_exercise'),
+    path('edit/<int:glutes_exercise_id>/', views.edit_glutes_exercise, name='edit_glutes_exercise'),
     path(
-        'delete_exercise/<str:pk>/',
-        views.delete_exercise, name='delete_exercise'),
+        'delete_glutes_exercise/<str:pk>/',
+        views.delete_glutes_exercise, name='delete_glutes_exercise'),
 
     path('<slug:slug>/', views.mealplan, name='mealplan'),
 ]

@@ -2,8 +2,8 @@ from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.views import generic
-from .models import Exercise, MealPlan
-from .forms import MealPlanForm, ExerciseForm, DeleteExerciseForm
+from .models import GlutesExercise, AbsExercise, MealPlan
+from .forms import GlutesExerciseForm, AbsExerciseForm, DeleteAbsExerciseForm, DeleteGlutesExerciseForm
 
 # Create your views here.
 
@@ -14,13 +14,13 @@ def exercise_page(request):
 
 
 def glutes_exercises(request): 
-    exercises = Exercise.objects.all()
-    return render(request, 'plans/glutes_exercises.html', {"exercises": exercises},)
+    glutes_exercises = GlutesExercise.objects.all()
+    return render(request, 'plans/glutes_exercises.html', {"glutes_exercises": glutes_exercises},)
 
 
 def abs_exercises(request):
-    exercises = Exercise.objects.all()
-    return render (request, 'plans/abs_exercises.html', {"exercises": exercises},)
+    abs_exercises = AbsExercise.objects.all()
+    return render (request, 'plans/abs_exercises.html', {"abs_exercises": abs_exercises},)
 
 
 class MealPlanList(generic.ListView):
@@ -39,22 +39,22 @@ def mealplan(request, slug):
 
 
 @login_required
-def add_exercise(request):
-    """ Add a exercise to the app """
+def add_glutes_exercise(request):
+    """ Add a glute exercise to the app """
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only authorized users can do this.')
         return redirect('home')
 
     if request.method == 'POST':
-        form = ExerciseForm(request.POST, request.FILES)
+        form = GlutesExerciseForm(request.POST, request.FILES)
         if form.is_valid():
-            exercise = form.save()
+            glutes_exercise = form.save()
             messages.success(request, 'Successfully added exercise!')
             return redirect('exercise_page')
         else:
             messages.error(request, 'Failed to add exercise. Please ensure the form is valid.')
     else:
-        form = ExerciseForm()
+        form = GlutesExerciseForm()
         
     template = 'plans/add_exercises.html'
     context = {
@@ -65,15 +65,15 @@ def add_exercise(request):
 
 
 @login_required
-def edit_exercise(request, exercise_id):
-    """ Edit a Exercise """
+def edit_glutes_exercise(request, exercise_id):
+    """ Edit a Glute Exercise """
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only authorized users can do this.')
         return redirect(reverse('home'))
 
-    exercise = get_object_or_404(Exercise, pk=exercise_id)
+    glutes_exercise = get_object_or_404(GlutesExercise, pk=glutes_exercise_id)
     if request.method == 'POST':
-        form = ExerciseForm(request.POST, request.FILES, instance=exercise)
+        form = GlutesExerciseForm(request.POST, request.FILES, instance=glutes_exercise)
         if form.is_valid():
             form.save()
             messages.success(request, 'Successfully updated exercises!')
@@ -81,40 +81,40 @@ def edit_exercise(request, exercise_id):
         else:
             messages.error(request, 'Failed to update. Please ensure the form is valid.')
     else:
-        form = ExerciseForm(instance=exercise)
-        messages.info(request, f'You are editing {exercise.name}')
+        form = GlutesExerciseForm(instance=glutes_exercise)
+        messages.info(request, f'You are editing {glutes_exercise.name}')
 
     template = 'plans/edit_exercises.html'
     context = {
         'form': form,
-        'exercise': exercise,
+        'glutes_exercise': glutes_exercise,
     }
 
     return render(request, template, context)
 
 
 @login_required
-def delete_exercise(request, pk):
-    """ Delete an exercise from the app """
+def delete_glutes_exercise(request, pk):
+    """ Delete a glutes exercise from the app """
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only authorized users can do this.')
         return redirect(reverse('home'))
 
-    exercise= get_object_or_404(Exercise, id=pk)
+    glutes_exercise= get_object_or_404(GlutesExercise, id=pk)
     if request.method == 'POST':
-        form = DeleteExerciseForm(request.POST, instance=exercise)
+        form = DeleteGlutesExerciseForm(request.POST, instance=glutes_exercise)
         if form.is_valid():
             deleted_exercise = form.save(commit=False)
-            exercise = get_object_or_404(Exercise, id=deleted_exercise.id)
-            exercise.delete()
+            glutes_exercise = get_object_or_404(GlutesExercise, id=deleted_exercise.id)
+            glutes_exercise.delete()
             messages.add_message(
                 request, messages.SUCCESS, 'Exercise deleted')
             return redirect('exercise_page')
     else:
-        form = DeleteExerciseForm(instance=exercise)
+        form = DeleteGlutesExerciseForm(instance=glutes_exercise)
         context = {
             'form': form,
-            'exercise': exercise
+            'glutes_exercise': glutes_exercise
         }
 
         return render(request, 'plans/delete_exercises.html', context)

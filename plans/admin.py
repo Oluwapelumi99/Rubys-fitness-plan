@@ -1,12 +1,17 @@
 from django.contrib import admin
-from .models import Exercise, MealPlan
+from .models import GlutesExercise, AbsExercise, MealPlan
 from django_summernote.admin import SummernoteModelAdmin
 
 # Register your models here.
 
-@admin.register(Exercise)
+@admin.register(GlutesExercise)
 class ExerciseAdmin(SummernoteModelAdmin):
-    summernote_fields = ('description','abs_description',)
+    summernote_fields = ('description')
+
+
+@admin.register(AbsExercise)
+class ExerciseAdmin(SummernoteModelAdmin):
+    summernote_fields = ('description')
 
 
 @admin.register(MealPlan)
