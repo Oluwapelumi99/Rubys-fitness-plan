@@ -104,7 +104,7 @@ At the top of the page, we can see 'Rubys', which is the appp's name, clicking o
 <img width="1693" alt="Screenshot 2025-01-02 at 18 45 46" src="https://github.com/user-attachments/assets/c50e128b-2c03-4f7a-a4db-9c43b5feb9cd" />
 
 - Clicking on the 'shop' takes us to the shopping page. As seen below:
-<img width="1693" alt="Screenshot 2025-01-02 at 18 45 46" src="https://github.com/user-attachments/assets/c50e128b-2c03-4f7a-a4db-9c43b5feb9cd" />
+<img width="1687" alt="Screenshot 2025-01-09 at 22 11 41" src="https://github.com/user-attachments/assets/d5817401-6a46-4ec1-b015-4581efd1956e" />
 
 - Clicking on the 'commmunity' takes us to the blog page where people can make comments on blog posts
 
@@ -168,7 +168,7 @@ I tested the python files in this project with https://pep8ci.herokuapp.com/
 - ### CHECKOUTS APP
 
 - admin.py 
-- These page had some errors has seen below.
+- This page had some errors has seen below.
 <img width="1449" alt="Screenshot 2025-01-07 at 21 19 47" src="https://github.com/user-attachments/assets/a00bab60-a16e-4d3e-883b-4c4ab5838c87" />
 
 - However, these errors have been fixed. Image below
