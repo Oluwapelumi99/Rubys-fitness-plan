@@ -261,3 +261,86 @@ I tested the python files in this project with https://pep8ci.herokuapp.com/
 
 - These errors have been fixed.
 <img width="1322" alt="Screenshot 2025-01-08 at 01 55 42" src="https://github.com/user-attachments/assets/b35335af-4bca-433a-8624-c3b5ac914331" />
+
+- ### HOME APP.
+- urls.py
+- This file had one error.
+<img width="1481" alt="Screenshot 2025-01-08 at 22 39 19" src="https://github.com/user-attachments/assets/6375d19e-f201-47c8-a661-3b5f1ac964d4" />
+
+- error has been fixed as seen below
+<img width="1288" alt="Screenshot 2025-01-08 at 22 41 32" src="https://github.com/user-attachments/assets/4369740e-0f1c-463d-b613-fa72f4bdaedb" />
+
+- views.py
+- this file showed no errors on first test
+<img width="1256" alt="Screenshot 2025-01-08 at 22 43 13" src="https://github.com/user-attachments/assets/6897f874-b982-4263-bdb3-c67545df47aa" />
+
+- ### PLANS APP
+
+- ### PROFILE APP
+- admin.py
+- This file had one error in the code
+<img width="1448" alt="Screenshot 2025-01-08 at 23 46 03" src="https://github.com/user-attachments/assets/cf4e5a4d-a0e8-428a-a2f1-52745c9f93d1" />
+
+- This code has been fixed as see below
+<img width="1323" alt="Screenshot 2025-01-08 at 23 46 17" src="https://github.com/user-attachments/assets/c31cfac6-6e27-4070-afbe-b2acb147baff" />
+
+- forms.py
+- This file had one error
+<img width="1407" alt="Screenshot 2025-01-08 at 23 52 54" src="https://github.com/user-attachments/assets/4968150b-7a9a-4148-9abf-b18f2e4036b2" />
+
+- And this error has been fixed as seen below.
+<img width="1286" alt="Screenshot 2025-01-08 at 23 53 16" src="https://github.com/user-attachments/assets/425232ae-7129-40c0-8385-a67a5e665c6a" />
+
+- models.py 
+- These file had some errors as seen below:
+<img width="1414" alt="Screenshot 2025-01-08 at 23 56 34" src="https://github.com/user-attachments/assets/7035b98b-f608-4920-8fe5-7fe275eda349" />
+
+- These errors have been fixed as seen below:
+<img width="1377" alt="Screenshot 2025-01-08 at 23 58 21" src="https://github.com/user-attachments/assets/67a7d09c-60a4-4da1-88a2-757f5eb98d7f" />
+
+- urls.py
+- The file had some errors as seen below:
+<img width="1287" alt="Screenshot 2025-01-09 at 00 03 44" src="https://github.com/user-attachments/assets/c2a5c5f4-b589-4e97-814f-57f84949f60b" />
+
+- These errors have been fixed as seen below:
+<img width="1273" alt="Screenshot 2025-01-09 at 00 04 09" src="https://github.com/user-attachments/assets/798988bc-f328-4170-892b-5540edca0e2a" />
+
+- views.py 
+- These file had a few errors as seen below:
+<img width="1392" alt="Screenshot 2025-01-09 at 00 07 21" src="https://github.com/user-attachments/assets/443eb52d-6181-414c-a156-7c213c3c9462" />
+
+- These errors have all been cleared now:
+<img width="1393" alt="Screenshot 2025-01-09 at 00 07 56" src="https://github.com/user-attachments/assets/8041ee3c-42e6-44c5-836f-7c47df9c64ba" />
+
+- ### SHOP APP
+- admin.py 
+- The file had no errors as seen belo:
+<img width="1320" alt="Screenshot 2025-01-09 at 00 25 31" src="https://github.com/user-attachments/assets/9b8785c0-26a0-45f1-b156-e0a73981d285" />
+
+- forms.py 
+- File had some errors 
+<img width="1395" alt="Screenshot 2025-01-09 at 00 28 34" src="https://github.com/user-attachments/assets/7f5dd665-a4d8-426b-8117-cd45fa324b20" />
+
+- These errors have been fixed as seen below:
+<img width="1384" alt="Screenshot 2025-01-09 at 00 29 05" src="https://github.com/user-attachments/assets/731d0c2d-30d0-453a-9200-4f73761303ee" />
+
+- models.py 
+- This file had the following errors:
+<img width="1387" alt="Screenshot 2025-01-09 at 00 34 41" src="https://github.com/user-attachments/assets/be2cdeeb-822e-4481-96a4-18b3bef0783c" />
+
+- All which have now been cleared as seen below
+<img width="1504" alt="Screenshot 2025-01-09 at 00 35 45" src="https://github.com/user-attachments/assets/5f865d6c-0e59-409c-ad6b-a43ef623adb5" />
+
+- urls.py 
+- This file had one error 
+<img width="1354" alt="Screenshot 2025-01-09 at 00 38 42" src="https://github.com/user-attachments/assets/a2e7df43-a45e-4309-82a5-1f667cda6f6b" />
+
+- which have now been fixed.
+<img width="1367" alt="Screenshot 2025-01-09 at 00 38 51" src="https://github.com/user-attachments/assets/107e7097-2146-48e3-a529-b66375831a3e" />
+
+- views.py
+- This file has a few errors as seen in the picture below
+<img width="1434" alt="Screenshot 2025-01-09 at 00 43 22" src="https://github.com/user-attachments/assets/284b79e9-668d-470a-9ae9-dbd1cd1152e4" />
+
+- I have fixed the errors and all errors are now cleared. Image below
+<img width="1358" alt="Screenshot 2025-01-09 at 00 45 07" src="https://github.com/user-attachments/assets/677eec8c-0c43-4ec0-96fd-b42844547cdf" />

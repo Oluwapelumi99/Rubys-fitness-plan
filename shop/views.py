@@ -7,15 +7,16 @@ from .models import Shop, Category
 from .forms import ShopForm
 # Create your views here.
 
+
 def view_shop(request):
-    """ A view to return all shopping list,  including sorting and search queries  """
+    """ A view to return all shopping list,
+    including sorting and search queries  """
 
     shops = Shop.objects.all()
     query = None
     categories = None
     sort = None
     direction = None
-
 
     if request.GET:
         if 'sort' in request.GET:
@@ -43,7 +44,8 @@ def view_shop(request):
                 messages.error(request, "Please enter a search criteria!")
                 return redirect(reverse('shop'))
 
-            queries = Q(name__icontains=query) | Q(description__icontains=query)
+            queries = Q(
+                name__icontains=query) | Q(description__icontains=query)
             shops = shops.filter(queries)
 
     current_sorting = f'{sort}_{direction}'
@@ -54,7 +56,7 @@ def view_shop(request):
         'current_categories': categories,
         'current_sorting': current_sorting
     }
-    
+
     return render(request, 'shop/shop.html', context)
 
 
@@ -81,10 +83,12 @@ def add_items(request):
             messages.success(request, 'Successfully added item!')
             return redirect(reverse('item_details', args=[shop.id]))
         else:
-            messages.error(request, 'Failed to add item. Please ensure the form is valid.')
+            messages.error(
+                request,
+                'Failed to add item. Please ensure the form is valid.')
     else:
         form = ShopForm()
-        
+
     template = 'shop/add_items.html'
     context = {
         'form': form,
@@ -108,7 +112,9 @@ def edit_items(request, shop_id):
             messages.success(request, 'Successfully updated item!')
             return redirect(reverse('item_details', args=[shop.id]))
         else:
-            messages.error(request, 'Failed to update item. Please ensure the form is valid.')
+            messages.error(
+                request,
+                'Failed to update item. Please ensure the form is valid.')
     else:
         form = ShopForm(instance=shop)
         messages.info(request, f'You are editing {shop.name}')

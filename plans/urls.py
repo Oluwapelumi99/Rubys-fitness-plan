@@ -11,6 +11,11 @@ urlpatterns = [
     path(
         'delete_glutes_exercise/<str:pk>/',
         views.delete_glutes_exercise, name='delete_glutes_exercise'),
+    path('add/', views.add_abs_exercise, name='add_abs_exercise'),
+    path('edit/<int:abs_exercise_id>/', views.edit_abs_exercise, name='edit_abs_exercise'),
+    path(
+        'delete_abs_exercise/<str:pk>/',
+        views.delete_glutes_exercise, name='delete_abs_exercise'),
 
     path('<slug:slug>/', views.mealplan, name='mealplan'),
 ]

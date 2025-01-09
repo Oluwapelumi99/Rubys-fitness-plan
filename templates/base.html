@@ -72,8 +72,8 @@
                                 {% if request.user.is_authenticated %}
                                     {% if request.user.is_superuser %}
                                 <a class="dropdown-item" href="{% url 'add_items' %}">Shop Manager</a>
-                                <a class="dropdown-item" href="{% url 'add_glutes_exercise' %}">Exercises Manager</a>
-                                <!-- <a class="dropdown-item" href="">Exercises Manager</a> -->
+                                <a class="dropdown-item" href="{% url 'add_glutes_exercise' %}">Add a new glutes workout</a>
+                                <a class="dropdown-item" href="{% url 'add_abs_exercise' %}">Add a new abs workout</a>
                                     {% endif %}
                                 <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
                                 <a class="dropdown-item" href="{% url 'account_logout' %}">Logout</a>

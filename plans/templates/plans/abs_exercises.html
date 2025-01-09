@@ -21,8 +21,8 @@
         </div>
         {% if request.user.is_superuser %}
         <small class="ml-3">
-        <a class="btn-outline-black" href="{% url 'edit_abs_exercise' abs_exercise.id %}">Edit</a> | 
-        <a class="btn-outline-black" href="{% url 'delete_abs_exercise' abs_exercise.id %}">Delete</a>
+        <a class="" href="{% url 'edit_abs_exercise' abs_exercise.id %}">Edit</a> | 
+        <a class="" href="{% url 'delete_abs_exercise' abs_exercise.id %}">Delete</a>
         </small>
     {% endif %}
         {% endfor %}
