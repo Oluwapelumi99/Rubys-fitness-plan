@@ -134,11 +134,38 @@ At the top of the page, we can see 'Rubys', which is the appp's name, clicking o
 # Validator Testing
 - HTML
 
-- CSS
+- # CSS
+- I tested the css with https://www.w3.org/
 
-- JAVASCRIPT
+- ### CHECKOUT.CSS
+- This file had no errors
+<img width="1641" alt="Screenshot 2025-01-09 at 22 40 26" src="https://github.com/user-attachments/assets/9420dfa8-6183-4f45-8cd0-9e86b7755d17" />
 
-- PYTHON
+- ### PROFILE.CSS
+- This file had no errors
+<img width="1689" alt="Screenshot 2025-01-09 at 22 48 41" src="https://github.com/user-attachments/assets/1f735e9f-fa58-47f5-afa4-331290c03323" />
+
+- ### BASE.CSS
+- This file had no errors
+<img width="1678" alt="Screenshot 2025-01-09 at 23 12 42" src="https://github.com/user-attachments/assets/8f3562c5-03b2-4722-a75f-4e6f052b8083" />
+
+
+- # JAVASCRIPT
+- ### STRIPE_ELEMENTS.JS
+- This file gave some warnings saying 	'template literal syntax' is only available in ES6 (use 'esversion: 6').
+<img width="1691" alt="Screenshot 2025-01-09 at 23 22 11" src="https://github.com/user-attachments/assets/da847700-b10f-496d-9169-4aea7a8a1967" />
+
+- I have added '// jshint esversion: 6' and this solved the problem as seen below.
+<img width="1685" alt="Screenshot 2025-01-09 at 23 22 39" src="https://github.com/user-attachments/assets/9dccf897-cef5-4972-9114-7c5549a2becb" />
+
+- ### COUNTRYFEILD.JS
+- This file had some warnings 
+<img width="1239" alt="Screenshot 2025-01-09 at 23 27 35" src="https://github.com/user-attachments/assets/95a67963-c94d-46f9-ad41-8582bcba1019" />
+
+- Adding '// jshint esversion: 6' or clicking on configure on the jshint app and clicking the checkbox beside 'New JavaScript features (ES6)' solved the problem as seen below.
+<img width="1274" alt="Screenshot 2025-01-09 at 23 29 14" src="https://github.com/user-attachments/assets/073b9402-1b64-4592-a7c8-e312a7b093f0" />
+
+- # PYTHON
 
 I tested the python files in this project with https://pep8ci.herokuapp.com/
 
@@ -344,3 +371,56 @@ I tested the python files in this project with https://pep8ci.herokuapp.com/
 
 - I have fixed the errors and all errors are now cleared. Image below
 <img width="1358" alt="Screenshot 2025-01-09 at 00 45 07" src="https://github.com/user-attachments/assets/677eec8c-0c43-4ec0-96fd-b42844547cdf" />
+
+# Lighthouse
+- I confrimed that the colors and font chosen are easy to read and accessible by running it through lighthose in dev tools. And I also made sure all buttons were asseccible by screen readers by adding an aria-label attribute to each button and image.
+
+- ## Home page 
+
+
+# Wave Webaim - accessibility testing
+- I tested the pages using the https://wave.webaim.org
+
+
+- ### Footer
+<img width="1693" alt="Screenshot 2025-01-10 at 00 38 03" src="https://github.com/user-attachments/assets/b9ff45cd-f43a-42b9-a8d5-d82425e3553b" />
+- The footer contains a block copyright of the apps name 'Rubys' with a dumbell icon.
+- It also contains links to facebook, instagram, twitter and youtube which are social media and they are working as seen in the pictures below.
+<img width="1701" alt="Screenshot 2024-10-11 at 03 29 48" src="https://github.com/user-attachments/assets/ae5ad45c-291d-47ba-add4-d2e46b02fb2d">
+<img width="1708" alt="Screenshot 2024-10-11 at 03 30 22" src="https://github.com/user-attachments/assets/9a9266b9-f5c6-4f23-8bca-a71fdb430a00">
+<img width="1708" alt="Screenshot 2024-10-11 at 03 30 40" src="https://github.com/user-attachments/assets/1128bf40-3d5a-4249-9e7d-43cd7f0c452d">
+<img width="1708" alt="Screenshot 2024-10-11 at 03 30 54" src="https://github.com/user-attachments/assets/bf7e90e2-8e0e-4fbd-b119-0b7b6ee508aa">
+
+
+## Technologies Used
+- https://www.gitpod.io/
+- https://code.visualstudio.com
+- https://www.heroku.com
+- https://pep8ci.herokuapp.com/
+- https://djangoproject.com
+- https://wave.webaim.org
+- Lighthouse on google chrome
+- Chrome dev tools
+- https://jshint.com
+- https://ui.dev/amiresponsive
+
+## Cloning and forking.
+### CLONING
+- On (https://github.com), navigate to the greeen <> code button on the right side of the page.
+- copy the URL for the repository.
+- To clone the repository using HTTPS, under HTTPS copy the URL
+- To clone the repository using an SSH key, Click SSH then copy the URL.
+- To clone a repository using github cli, click github cli then copy the URL.
+- Open Terminal
+- Change the current working directory to the location where you want the cloned directory.
+- Type 'git clone', and then pate the URL you copied earlier.
+- Press enter to create a local clone.
+
+### FORKING
+- On (https://github.com), navigate to the repository.
+- In the top-right corner of the page, click Fork.
+- Under 'owner', select the dropdown menu and click an owner for forked repository.
+- By default, forks are named the same as their upstream repositories. Optionally, to further distinguish your fork, in the 'Repository name' field,type a name.
+- Optionally, in the 'Description' field, type a description of your fork.
+- Optionally, select copy the default branch only.
+- Click create fork.
