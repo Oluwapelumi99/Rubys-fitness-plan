@@ -200,51 +200,84 @@ def mealplan(request, slug):
     {'meal': meal})
 
 
+@login_required
+def add_meals(request):
+    """ Add a new meal plan to the app """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only authorized users can do this.')
+        return redirect('home')
+
+    if request.method == 'POST':
+        form = MealPlanForm(request.POST, request.FILES)
+        if form.is_valid():
+            mealplan = form.save()
+            messages.success(request, 'Successfully added new mealplan!')
+            return redirect('MealPlanList')
+        else:
+            messages.error(request, 'Failed to add mealplan. Please ensure the form is valid.')
+    else:
+        form = MealPlanForm()
+        
+    template = 'plans/add_meals.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)
 
 
 @login_required
-def add_meals(request):
-    """ Add a product to the store """
+def edit_meals(request, mealplan_id):
+    """ Edit a meal plan"""
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry, only store owners can do that.')
+        messages.error(request, 'Sorry, only authorized users can do this.')
         return redirect(reverse('home'))
-    
-    mealplan_form = MealPlanForm(request.POST, request.FILES)
-    queryset = MealPlan.objects.all()
-    mealplan = get_object_or_404(queryset)
-    mealplan_count = MealPlan.objects.all().count()
 
-    if request.method == "POST":
-        mealplan_form = MealPlanForm(request.POST, request.FILES)
-        if mealplan_form.is_valid():
-            mealplan.save()
+    mealplan = get_object_or_404(MealPlan, pk=mealplan_id)
+    if request.method == 'POST':
+        form = MealPlanForm(request.POST, request.FILES, instance=mealplan)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully updated mealplan!')
+            return redirect('MealPlanList')
+        else:
+            messages.error(request, 'Failed to update. Please ensure the form is valid.')
+    else:
+        form = AbsExerciseForm(instance=mealplan)
+        messages.info(request, f'You are editing {mealplan.name}')
+
+    template = 'plans/edit_meals.html'
+    context = {
+        'form': form,
+        'mealplan': mealplan,
+    }
+
+    return render(request, template, context)
+
+
+@login_required
+def delete_meals(request, pk):
+    """ Delete an abs exercise from the app """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only authorized users can do this.')
+        return redirect(reverse('home'))
+
+    mealplan= get_object_or_404(MealPlan, id=pk)
+    if request.method == 'POST':
+        form = MealPlanForm(request.POST, instance=mealplan)
+        if form.is_valid():
+            deleted_mealplan = form.save(commit=False)
+            mealplan = get_object_or_404(MealPlan, id=deleted_mealplan.id)
+            mealplan.delete()
             messages.add_message(
-        request, messages.SUCCESS,
-        'Successfully added meal'
-    )
+                request, messages.SUCCESS, 'Meal deleted')
+            return redirect('MealPlanList')
+    else:
+        form = MealPlanForm(instance=mealplan)
+        context = {
+            'form': form,
+            'mealplan': mealplan
+        }
 
-    return render(request, 'plans/add_meals.html', 
-    {
-    "mealplan": mealplan,
-    "mealplan_count": mealplan_count,
-    "mealplan_form": mealplan_form,})
-#     # if request.method == 'POST':
-#     #     form = MealPlanForm(request.POST, request.FILES)
-#     #     if form.is_valid():
-#     #         mealplan = form.save()
-#     #         messages.success(request, 'Successfully added meal!')
-#     #         return redirect(reverse('mealplan', args=[mealplan.id]))
-#     #     else:
-#     #         messages.error(request, 'Failed to add product. Please ensure the form is valid.')
-#     # else:
-#     #     form = MealPlanForm()
-        
-#     # template = 'plans/add_meals.html'
-#     # context = {
-#     #     'form': form,
-#     # }
-
-#     return render(request, template, context)
-
-
+        return render(request, 'plans/delete_meal.html', context)
         
