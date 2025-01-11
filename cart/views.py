@@ -90,9 +90,7 @@ def update_cart(request, item_id):
             cart[item_id]['items_by_size'][size] = quantity
             messages.success(
                 request,
-                f'Updated size {size} {shop.name} quantity to{cart[
-                                                item_id]["items_by_size"][
-                                                size]}')
+                f'Updated size {size} {shop.name} quantity to{cart[item_id]["items_by_size"][size]}')
         else:
             del cart[item_id]['items_by_size'][size]
             if not cart[item_id]['items_by_size']:
