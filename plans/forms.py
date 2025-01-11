@@ -2,15 +2,13 @@ from .models import MealPlan, GlutesExercise, AbsExercise
 from django import forms
 
 
-# class MealPlanForm(forms.ModelForm):
+class MealPlanForm(forms.ModelForm):
 
 
-#     class Meta:
-#         model = MealPlan
-#         fields = ('name','slug','image','description','calories')
+    class Meta:
+        model = MealPlan
+        fields = ('name','slug','image','description','calories')
 
-
-#     image = forms.ImageField(label='Image', required=False,)
 
 
 class GlutesExerciseForm(forms.ModelForm):

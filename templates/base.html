@@ -64,7 +64,7 @@
                         <li class="nav-item">
                             <a class=" navbar font-weight-bold" href="{% url 'BlogList' %}">Community</a>
                         </li>
-                        <li class="nav-item dropdown">
+                        <li class="nav-item dropdown mt-2">
                             <a class="navbar dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="fa-solid fa-user"></i>
                             </a>
@@ -74,6 +74,7 @@
                                 <a class="dropdown-item" href="{% url 'add_items' %}">Shop Manager</a>
                                 <a class="dropdown-item" href="{% url 'add_glutes_exercise' %}">Add a new glutes workout</a>
                                 <a class="dropdown-item" href="{% url 'add_abs_exercise' %}">Add a new abs workout</a>
+                                <a class="dropdown-item" href="{% url 'add_meals' %}">Add a meal plan</a>
                                     {% endif %}
                                 <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
                                 <a class="dropdown-item" href="{% url 'account_logout' %}">Logout</a>

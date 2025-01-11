@@ -118,10 +118,9 @@ At the top of the page, we can see 'Rubys', which is the appp's name, clicking o
 
 
 
-
-
 - Shop page
-
+- Clicking on the shop link takes user to the shop page as seen below:
+<img width="1689" alt="Screenshot 2025-01-11 at 02 15 10" src="https://github.com/user-attachments/assets/c5b87b9c-12e3-450a-b044-9f3dc716bf6d" />
 
 
 # Testing
