@@ -227,15 +227,15 @@ def add_meals(request):
 
 
 @login_required
-def edit_meals(request, mealplan_id):
+def edit_meal(request, meal_id):
     """ Edit a meal plan"""
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only authorized users can do this.')
         return redirect(reverse('home'))
 
-    mealplan = get_object_or_404(MealPlan, pk=mealplan_id)
+    meal = get_object_or_404(MealPlan, pk=meal_id)
     if request.method == 'POST':
-        form = MealPlanForm(request.POST, request.FILES, instance=mealplan)
+        form = MealPlanForm(request.POST, request.FILES, instance=meal)
         if form.is_valid():
             form.save()
             messages.success(request, 'Successfully updated mealplan!')
@@ -243,40 +243,40 @@ def edit_meals(request, mealplan_id):
         else:
             messages.error(request, 'Failed to update. Please ensure the form is valid.')
     else:
-        form = AbsExerciseForm(instance=mealplan)
-        messages.info(request, f'You are editing {mealplan.name}')
+        form = MealPlanForm(instance=meal)
+        messages.info(request, f'You are editing {meal.name}')
 
     template = 'plans/edit_meals.html'
     context = {
         'form': form,
-        'mealplan': mealplan,
+        'meal': meal,
     }
 
     return render(request, template, context)
 
 
 @login_required
-def delete_meals(request, pk):
-    """ Delete an abs exercise from the app """
+def delete_meal(request, pk):
+    """ Delete a meal """
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only authorized users can do this.')
         return redirect(reverse('home'))
 
-    mealplan= get_object_or_404(MealPlan, id=pk)
+    meal= get_object_or_404(MealPlan, id=pk)
     if request.method == 'POST':
-        form = MealPlanForm(request.POST, instance=mealplan)
+        form = MealPlanForm(request.POST, instance=meal)
         if form.is_valid():
-            deleted_mealplan = form.save(commit=False)
-            mealplan = get_object_or_404(MealPlan, id=deleted_mealplan.id)
-            mealplan.delete()
+            deleted_meal = form.save(commit=False)
+            meal = get_object_or_404(MealPlan, id=deleted_meal.id)
+            meal.delete()
             messages.add_message(
                 request, messages.SUCCESS, 'Meal deleted')
             return redirect('MealPlanList')
     else:
-        form = MealPlanForm(instance=mealplan)
+        form = MealPlanForm(instance=meal)
         context = {
             'form': form,
-            'mealplan': mealplan
+            'meal': meal
         }
 
         return render(request, 'plans/delete_meal.html', context)

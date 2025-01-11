@@ -18,9 +18,9 @@ urlpatterns = [
         views.delete_glutes_exercise, name='delete_abs_exercise'),
 
     path('<slug:slug>/', views.mealplan, name='mealplan'),
-    path('add/meals', views.add_meals, name='add_meals'),
-    path('edit/<int:mealplan_id>/', views.edit_meals, name='edit_mealplan'),
-    # path(
-#         'delete_abs_exercise/<str:pk>/',
-#         views.delete_glutes_exercise, name='delete_abs_exercise'),
+    path('add/meals/', views.add_meals, name='add_meals'),
+    path('edit/<int:meal_id>/', views.edit_meal, name='edit_meal'),
+    path(
+        'delete_meal/<str:pk>/',
+        views.delete_meal, name='delete_meal'),
 ]
