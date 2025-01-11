@@ -7,7 +7,7 @@ from profiles.models import UserProfile
 from .models import Order, OrderLineItem
 from shop.models import Shop
 
-
+import stripe
 import json
 import time
 
