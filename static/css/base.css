@@ -58,18 +58,6 @@ a {
     color: black;
 }
 
-.card-body a {
-    outline: none;
-    text-decoration: none;
-    color: black;
-}
-
-.plan-container a {
-    outline: none;
-    text-decoration: none;
-    color: black;
-}
-
 .btt-link,
 .update-link,
 .remove-item,
@@ -144,6 +132,18 @@ a {
     transition: 0.5s;
 }
 
+.card-body a {
+    outline: none;
+    text-decoration: none;
+    color: black;
+}
+
+.plan-container a {
+    outline: none;
+    text-decoration: none;
+    color: black;
+}
+
 .float-left {
     float: left;
     width: 100%;
@@ -196,6 +196,9 @@ h5, h1 {
     right: 15px;
     z-index: 99999999999;
 }
+
+/*cart.html css*/
+
 
 /*exercise page styling*/
 section {
