@@ -123,6 +123,7 @@ def remove_item(request, item_id):
     try:
         shop = get_object_or_404(Shop, pk=item_id)
         size = None
+
         if 'shop_size' in request.POST:
             size = request.POST['shop_size']
         cart = request.session.get('cart', {})

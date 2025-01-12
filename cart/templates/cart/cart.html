@@ -69,7 +69,7 @@
                             </div>
                         </form>
                         <a class="update-link"><small>Update</small></a>
-                        <a class="remove-item float-right" id="remove_{{ item.item_id }}" data-product_size="{{ item.size }}"><small><i class="fa-solid fa-trash-can"></i></small></small></a>
+                        <a class="remove-item float-right" id="remove_{{ item.item_id }}" data-shop_size="{{ item.size }}"><small><i class="fa-solid fa-trash-can"></i></small></small></a>
                     </div>
                     <div class="row">
                         <div class="col">
@@ -164,7 +164,7 @@
                         </div>
                     </form>
                     <a class="update-link mt-5"><small>Update </small></a> 
-                    <a class="remove-item float-right" id="remove_{{ item.item_id }}" data-shop_ttttsize="{{ item.size }}"><small> <i class="fa-solid fa-trash-can"></i></small></a>
+                    <a class="remove-item float-right" id="remove_{{ item.item_id }}" data-shop_size="{{ item.size }}"><small> <i class="fa-solid fa-trash-can"></i></small></a>
                 </div>
             </div>
             {% endfor %}
@@ -227,7 +227,7 @@
 
         $.post(url, data)
          .done(function() {
-             location.reload();
+            location.reload();
          });
     })
 </script>
