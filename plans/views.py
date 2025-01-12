@@ -3,7 +3,7 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.views import generic
 from .models import GlutesExercise, AbsExercise, MealPlan
-from .forms import GlutesExerciseForm, AbsExerciseForm, DeleteAbsExerciseForm, DeleteGlutesExerciseForm, MealPlanForm
+from .forms import GlutesExerciseForm, AbsExerciseForm, DeleteAbsExerciseForm, DeleteGlutesExerciseForm, DeleteMealPlanForm, MealPlanForm
 
 # Create your views here.
 

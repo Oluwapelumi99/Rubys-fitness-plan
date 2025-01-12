@@ -9,32 +9,34 @@ This site was created to show case what a B2C ecommerce store looks like.
 
 # Table of Contents
 ### User Stroies
-. User Goals
-. Site owner goals
+- User Goals
+- Site owner goals
 # Design
-. Colour Scheme
-. Typography
-. Imagery
+- Colour Scheme
+- Typography
+- Imagery
 # Features
-. Favicon
-. Navigation
-. Home page
-. Bookings page
-. Reviews page
-. Register page
-. Sign up page
-. Email verification page
+- Favicon
+- Navigation
+- Home page
+- Shop page
+- Profile page
+- Exercise page
+- Meal plan page
+- Register page
+- Sign up page
+- Email verification page
 # Testing
-. Manual testing
-. Automated testing
+- Manual testing
+- Automated testing
 # Bugs
-. Solved bugs
+- Solved bugs
 - Unsolved bugs
 # Validator testing
-. HTML
-. CSS
-. JAVASCRIPT
-. PYTHON
+- HTML
+- CSS
+- JAVASCRIPT
+- PYTHON
 # Accessibility
 # Unfixed bugs
 # Cloning and Forking
@@ -112,20 +114,93 @@ At the top of the page, we can see 'Rubys', which is the appp's name, clicking o
 
 - Clicking on the 'User icon' it leads pops up the option of register or sign in depending on whether the user is logged in or not. As seen below:
 <img width="1680" alt="Screenshot 2025-01-02 at 19 06 07" src="https://github.com/user-attachments/assets/abe90379-1665-4775-87af-4be8fe772d4a" />
--  If they are logged in, it only pops option to logout. As seen below:
 
+-  If they are logged in, it only pops option to logout. As seen below:
 <img width="1654" alt="Screenshot 2025-01-02 at 19 12 57" src="https://github.com/user-attachments/assets/6cc53a2f-4b8c-4017-864f-03d77e9c688f" />
 
-
+- Superuser have the ability to keep the app upto date when they click on the user icon, they have the option to update,add and delete items, exercises and meal  as seen below.
+<img width="1701" alt="Screenshot 2025-01-12 at 18 44 55" src="https://github.com/user-attachments/assets/0909f851-12e8-4ffb-8eb6-ca294e0d23a5" />
 
 - Shop page
 - Clicking on the shop link takes user to the shop page as seen below:
 <img width="1689" alt="Screenshot 2025-01-11 at 02 15 10" src="https://github.com/user-attachments/assets/c5b87b9c-12e3-450a-b044-9f3dc716bf6d" />
 
+- Exercise page
+- Clicking on program under the Our plans dropdown menu took us to this page
+<img width="1634" alt="Screenshot 2025-01-12 at 18 37 28" src="https://github.com/user-attachments/assets/e51cb386-a3af-4b5e-af09-00f45f475ab5" />
+
+- Meal plan page.
+- Clicking on meal plan under the Our plans dropdown menu in the nav bar took us to this page
+
+<img width="1695" alt="Screenshot 2025-01-12 at 18 40 28" src="https://github.com/user-attachments/assets/18a7823f-728e-49d3-ad4b-8d2bad806533" />
+
+- Profile page
+- Clicking on my profile under the users drop down menu took us to profile page as seen below:
+<img width="1693" alt="Screenshot 2025-01-12 at 18 34 49" src="https://github.com/user-attachments/assets/2594d246-40f5-4bb7-947c-803c7502b2f1" />
+
+- cart page 
+- Clicking on the cart icon in the nav bar took us to the cart page
+<img width="1704" alt="Screenshot 2025-01-12 at 18 42 20" src="https://github.com/user-attachments/assets/4f155f28-fc9b-4b1e-baec-20575284188d" />
+
 
 # Testing
 
-- Manual Testing
+- ## Manual Testing
+- ### Home page
+- Clicking on the site logo takes us to the home page as seen below
+<img width="1692" alt="Screenshot 2025-01-02 at 18 36 07" src="https://github.com/user-attachments/assets/d6fab2e3-6f4c-4f52-a052-aee580ecfbfc" />
+
+- ### On the home page, we have links to the exercise page, clicking on exercise plan will take us to the exercise page
+<img width="1704" alt="Screenshot 2025-01-12 at 18 50 49" src="https://github.com/user-attachments/assets/238381f8-644c-4ca7-92c6-d80b62d5ea00" />
+
+- ### and link to the meal plan page, clicking on meal plan will take us to the meal plan page
+<img width="1647" alt="Screenshot 2025-01-12 at 18 53 24" src="https://github.com/user-attachments/assets/55f08435-642a-4775-91e1-2834957246e9" />
+
+- ### At the bottom of the page we have links to the shop page.
+<img width="1704" alt="Screenshot 2025-01-12 at 18 51 05" src="https://github.com/user-attachments/assets/fb65edf1-1848-440d-be0a-2e6cc277cf07" />
+
+- Clicking on any of the items below will take us directly to the categories of the shop displayed as seen below.
+- clicking the bag image takes us to the bag categories
+<img width="1645" alt="Screenshot 2025-01-12 at 18 56 41" src="https://github.com/user-attachments/assets/c82973f6-656d-45ac-9aca-efc753616588" />
+
+- clicking on the resistance band image takes us to the resistance bands categories 
+<img width="1685" alt="Screenshot 2025-01-12 at 18 56 50" src="https://github.com/user-attachments/assets/de0b9a65-b654-47c8-bd76-827ed060cba1" />
+
+- clicking on the bottles images takes us to the water bottles category.
+<img width="1710" alt="Screenshot 2025-01-12 at 18 56 59" src="https://github.com/user-attachments/assets/9d69a43c-b8a8-47bd-bcde-b676153382c2" />
+
+- and lastly a link that takes us to all the shop items page 
+<img width="1377" alt="Screenshot 2025-01-12 at 19 00 03" src="https://github.com/user-attachments/assets/d3837561-822a-40f7-891f-c4d671ed1068" />
+<img width="1689" alt="Screenshot 2025-01-11 at 02 15 10" src="https://github.com/user-attachments/assets/c5b87b9c-12e3-450a-b044-9f3dc716bf6d" />
+
+
+- ### Shop page 
+<img width="1689" alt="Screenshot 2025-01-11 at 02 15 10" src="https://github.com/user-attachments/assets/c5b87b9c-12e3-450a-b044-9f3dc716bf6d" />
+
+- ### On the shop page, we are able to navigate through products on the app, by sort through price and categories as seen below.
+<img width="1693" alt="Screenshot 2025-01-12 at 19 03 15" src="https://github.com/user-attachments/assets/988ba149-449b-4e76-8fbf-7867688a41e5" />
+
+- Sorting through price will arrange items from the least expensive to the most expensive, as seen below.
+<img width="1710" alt="Screenshot 2025-01-12 at 19 06 42" src="https://github.com/user-attachments/assets/69c15094-6676-4295-b3b5-fe625e54d4dc" />
+
+- and sorting through categories will arrange items in alphabetical order accordint to the category names. Image shown below
+<img width="1690" alt="Screenshot 2025-01-12 at 19 08 15" src="https://github.com/user-attachments/assets/4ba33401-4d1b-4a3b-9734-ddc2c6a90dc9" />
+
+- We can also sort through Gym wears as seen below:
+<img width="1645" alt="Screenshot 2025-01-12 at 19 09 41" src="https://github.com/user-attachments/assets/ec548d93-279c-4890-b7e1-aebcdd6b5e64" />
+
+- sorting through gym sets shows all the items in gym sets category
+<img width="1693" alt="Screenshot 2025-01-12 at 19 11 35" src="https://github.com/user-attachments/assets/425fa356-b846-4c4e-9888-817b5306514f" />
+
+- sortting through socks shows items under the socks category
+<img width="1476" alt="Screenshot 2025-01-12 at 19 13 23" src="https://github.com/user-attachments/assets/3e4988cb-08c8-4281-9026-9f149600ba95" />
+
+- sorting through trainers shows all items in the trainers category
+<img width="1495" alt="Screenshot 2025-01-12 at 19 13 32" src="https://github.com/user-attachments/assets/484d22e8-e11f-4726-aa9d-3522836565be" />
+
+- All gym wears shows all items in the gym wear category
+<img width="1707" alt="Screenshot 2025-01-12 at 19 13 48" src="https://github.com/user-attachments/assets/3e2dfa17-d121-48eb-8694-0e71a9188b3c" />
+
 
 - Automated Testing
 

@@ -27,6 +27,17 @@ class AbsExerciseForm(forms.ModelForm):
         fields = '__all__'
 
 
+class DeleteMealPlanForm(forms.ModelForm):
+    class Meta:
+        model = MealPlan
+        fields = []
+
+    def __init__(self, *args, **kwargs):
+        super(DeleteMealPlanForm, self).__init__(*args, **kwargs)
+        self.fields['id'] = forms.IntegerField(widget=forms.HiddenInput())
+        if self.instance and self.instance.pk:
+            self.fields['id'].initial = self.instance.pk
+
 
 class DeleteGlutesExerciseForm(forms.ModelForm):
     class Meta:

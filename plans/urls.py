@@ -15,7 +15,7 @@ urlpatterns = [
     path('edit_abs<int:abs_exercise_id>/', views.edit_abs_exercise, name='edit_abs_exercise'),
     path(
         'delete_abs_exercise/<str:pk>/',
-        views.delete_glutes_exercise, name='delete_abs_exercise'),
+        views.delete_abs_exercise, name='delete_abs_exercise'),
 
     path('<slug:slug>/', views.mealplan, name='mealplan'),
     path('add/meals/', views.add_meals, name='add_meals'),
