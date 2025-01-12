@@ -186,7 +186,7 @@ At the top of the page, we can see 'Rubys', which is the appp's name, clicking o
 - and sorting through categories will arrange items in alphabetical order accordint to the category names. Image shown below
 <img width="1690" alt="Screenshot 2025-01-12 at 19 08 15" src="https://github.com/user-attachments/assets/4ba33401-4d1b-4a3b-9734-ddc2c6a90dc9" />
 
-- We can also sort through Gym wears as seen below:
+- ### We can also sort through Gym wears as seen below:
 <img width="1645" alt="Screenshot 2025-01-12 at 19 09 41" src="https://github.com/user-attachments/assets/ec548d93-279c-4890-b7e1-aebcdd6b5e64" />
 
 - sorting through gym sets shows all the items in gym sets category
@@ -200,6 +200,19 @@ At the top of the page, we can see 'Rubys', which is the appp's name, clicking o
 
 - All gym wears shows all items in the gym wear category
 <img width="1707" alt="Screenshot 2025-01-12 at 19 13 48" src="https://github.com/user-attachments/assets/3e2dfa17-d121-48eb-8694-0e71a9188b3c" />
+
+
+- ### We can sort through items by weights
+<img width="1642" alt="Screenshot 2025-01-12 at 19 31 22" src="https://github.com/user-attachments/assets/63d37fec-0cc3-47ec-8fec-2cba07ab9d96" />
+
+- sorting by dumbells show items in the dumbell category
+<img width="1688" alt="Screenshot 2025-01-12 at 19 34 18" src="https://github.com/user-attachments/assets/55ff62f6-67d2-4d5c-961f-10063b759468" />
+
+- sorting by kettlebells show items in the kettle bell category
+<img width="1488" alt="Screenshot 2025-01-12 at 19 34 26" src="https://github.com/user-attachments/assets/750a991f-db97-4ae2-aadf-0853334a51f2" />
+
+- All weights shows all categories of items in the weight link
+<img width="1632" alt="Screenshot 2025-01-12 at 19 34 53" src="https://github.com/user-attachments/assets/77e676f4-0ce0-4ce5-bdae-54734c3bc50e" />
 
 
 - Automated Testing
