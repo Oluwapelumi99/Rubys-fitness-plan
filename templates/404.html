@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+<main class="bg-base">
+    <h1>Oh No! 404 Error</h1>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 col-md-10 col-xl-8 mt-4 d-flex flex-column gap align-items-center mx-auto">
+                <h3>There isn't anything there!</h3>
+                <p>There is nothing at the address you were trying to get to. It's most likely a mistake at our end, but if you did manually enter the address, try accessing the page you are looking for from the navigation bar at the top or bottom of the page.</p>
+                <p>If you have any further issues, please contact us through the contact page. Link is at the top of this page.</p>
+                <p>Alternatively you can head back to safety here <a href="{% url 'home' %}" class="btn btn-primary">Back to Homepage</a></p>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}
+{% block postloadjs %}
+{% endblock %}
+

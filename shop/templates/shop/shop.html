@@ -97,7 +97,7 @@
     <div class="row">
         {% for shop in shops %}
             {% if shop.image %}
-            <div class="col-lg-3 card-body">{{ shop.name }}
+            <div class="col-lg-3 card-body">
                 <a href="{% url 'item_details' shop.id %}" aria-label="shop link">
                     <img class="card-img-top mt-3" src="{{ shop.image.url }}" alt="{{ shop.name }}" >    
                 
