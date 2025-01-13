@@ -26,7 +26,7 @@
 
     {% block corejs %}
         <script src="https://kit.fontawesome.com/3dac582a5a.js" crossorigin="anonymous"></script>
-        <script src="https://code.jquery.com/jquery-3.7.1.min.js"integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
         <!--Stripe-->
@@ -65,7 +65,7 @@
                             <a class=" navbar font-weight-bold" href="{% url 'BlogList' %}">Community</a>
                         </li>
                         <li class="nav-item dropdown mt-2">
-                            <a class="navbar dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a class="navbar dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="fa-solid fa-user"></i>
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -88,9 +88,9 @@
                             <a  class="navbar {% if grand_total %} font-weight-bold{% else %}text-black{% endif %} navbar" href="{% url 'view_cart' %}">
                                 <div class="text-center">
                                     <div><i class="fas fa-cart-shopping fa-xl mt-3">
-                                        <p class="my-0 cart text-center" id="cart_quantity">
+                                        <h6 class="my-0 cart text-center" id="cart_quantity">
                                             {{ shop_count }}
-                                        </p>
+                                        </h6>
                                     </i></div>
                                 </div>
                             </a>
