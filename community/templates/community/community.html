@@ -63,14 +63,6 @@
                 This comment is awaiting approval
               </p>
               {% endif %}
-                {% for reply in comment.replies.all %}
-                  <p class="info">{{ reply.author }} | {{ reply.created_on }}</p>
-                  <li>{{ reply.body }}</li>
-                {% endfor %}
-                <h5> Reply </h5>
-                <form action="." method="post">
-
-                </form>
               {% if user.is_authenticated and comment.author == user %}
               <a href="{% url 'comment_delete' blog.slug comment.id %}" class="btn btn-outline-black btn-delete mt-3">Delete</a>
               <a href="{% url 'comment_edit' blog.slug comment.id %}" class="btn btn-outline-black btn-edit mt-3">Edit</a>

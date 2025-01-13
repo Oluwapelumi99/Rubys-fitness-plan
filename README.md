@@ -159,7 +159,7 @@ At the top of the page, we can see 'Rubys', which is the appp's name, clicking o
 - ### At the bottom of the page we have links to the shop page.
 <img width="1704" alt="Screenshot 2025-01-12 at 18 51 05" src="https://github.com/user-attachments/assets/fb65edf1-1848-440d-be0a-2e6cc277cf07" />
 
-- Clicking on any of the items below will take us directly to the categories of the shop displayed as seen below.
+- Clicking on any of the items below will take us directly to the category of the item displayed as seen below.
 - clicking the bag image takes us to the bag categories
 <img width="1645" alt="Screenshot 2025-01-12 at 18 56 41" src="https://github.com/user-attachments/assets/c82973f6-656d-45ac-9aca-efc753616588" />
 
@@ -213,6 +213,96 @@ At the top of the page, we can see 'Rubys', which is the appp's name, clicking o
 
 - All weights shows all categories of items in the weight link
 <img width="1632" alt="Screenshot 2025-01-12 at 19 34 53" src="https://github.com/user-attachments/assets/77e676f4-0ce0-4ce5-bdae-54734c3bc50e" />
+
+- ### We can sort through the shop through accessories.
+<img width="1677" alt="Screenshot 2025-01-13 at 00 14 58" src="https://github.com/user-attachments/assets/7b626b24-2297-4d73-b9dd-ff9f55b08fc6" />
+
+- sorting by bottles brings items in the bottles category
+<img width="1710" alt="Screenshot 2025-01-12 at 18 56 59" src="https://github.com/user-attachments/assets/9d69a43c-b8a8-47bd-bcde-b676153382c2" />
+
+- sorting by yoga mats brings items in the mats category
+<img width="1502" alt="Screenshot 2025-01-13 at 00 22 41" src="https://github.com/user-attachments/assets/a86e2bdd-484b-4782-b258-3f1e44c2e0ca" />
+
+- sorting by gym bags brings items in the  bags category
+<img width="1645" alt="Screenshot 2025-01-12 at 18 56 41" src="https://github.com/user-attachments/assets/c82973f6-656d-45ac-9aca-efc753616588" />
+
+
+- sorting by  gloves brings items in the gloves category
+<img width="1663" alt="Screenshot 2025-01-13 at 00 22 31" src="https://github.com/user-attachments/assets/c51cc805-f33c-4a18-8101-38f21462a3da" />
+
+- sorting by jump ropes brings items in the  jump ropes category
+<img width="1695" alt="Screenshot 2025-01-13 at 00 23 57" src="https://github.com/user-attachments/assets/d23c8ecd-e766-4f6c-acdf-16eae7b66158" />
+
+- sorting by  resistance bands brings items in the resistance bands category
+<img width="1685" alt="Screenshot 2025-01-12 at 18 56 50" src="https://github.com/user-attachments/assets/de0b9a65-b654-47c8-bd76-827ed060cba1" />
+
+- sorting by all accessories brings all categories of item in the accessories link
+<img width="1698" alt="Screenshot 2025-01-13 at 00 24 18" src="https://github.com/user-attachments/assets/e1789550-7837-4600-9b89-2976aab23817" />
+
+- We have a search bar and a search icon on the top right of the shop page. This is to help users serach through products quicker. This search function search the products name and description.
+<img width="680" alt="Screenshot 2025-01-13 at 00 26 53" src="https://github.com/user-attachments/assets/4310123a-0d22-4b94-b971-482dd6e78f4f" />
+
+- Searching for gloves from the search bar returned items with gloves 
+<img width="1570" alt="Screenshot 2025-01-13 at 00 29 28" src="https://github.com/user-attachments/assets/7bb9e356-ba7e-45d0-843f-a2c9402d931c" />
+
+- Searching for durable returned all items with durable in the description
+<img width="1542" alt="Screenshot 2025-01-13 at 00 29 19" src="https://github.com/user-attachments/assets/d60e6139-4a4c-4288-9821-e7ed6322c9c2" />
+
+- We can further sort through products by price, name and categories from ascending or descending order. As seen below.
+<img width="368" alt="Screenshot 2025-01-13 at 00 32 05" src="https://github.com/user-attachments/assets/7e64387a-f07f-4c8f-b172-2a89f790253f" />
+
+- ### Our plans page
+- clicking on programs on our plans dropdown menu takes us to the exercises page where users can choose between glutes or abs workout
+<img width="1576" alt="Screenshot 2025-01-13 at 00 36 29" src="https://github.com/user-attachments/assets/13853262-1e78-4c35-bcdf-8a9d7c297ad7" />
+
+- clicking meal plan on the our plan drop down menu takes us to the meal plan page.
+The meal plan page has an example of a comprehensive weekly food timetable. As seen below
+<img width="1277" alt="Screenshot 2025-01-13 at 00 45 01" src="https://github.com/user-attachments/assets/3bc8376f-a732-4ac7-8628-df213c888296" />
+
+- And below the time table, we have a list of meals.
+<img width="1607" alt="Screenshot 2025-01-13 at 00 42 10" src="https://github.com/user-attachments/assets/09a1aed6-7313-47a3-9648-92a65011fe88" />
+
+- Clicking on each meal takes us to the recipe and guide on how to cook page.
+<img width="1602" alt="Screenshot 2025-01-13 at 00 48 12" src="https://github.com/user-attachments/assets/66075e37-7c6f-4aa5-8664-d461d3a7561a" />
+
+- ### Community page.
+- On the community page, we have a list of blog posts
+<img width="1590" alt="Screenshot 2025-01-13 at 00 48 53" src="https://github.com/user-attachments/assets/ea1c2c07-5cf7-43f8-a816-a7cea9cdea72" />
+
+- clicking on each post will take us to the blog page, where we can read blogs and comment on each blogs.
+<img width="1585" alt="Screenshot 2025-01-13 at 01 13 57" src="https://github.com/user-attachments/assets/36345aea-c9f5-408b-bda0-377f029ad80f" />
+<img width="1187" alt="Screenshot 2025-01-13 at 01 17 01" src="https://github.com/user-attachments/assets/71f615ef-8ee0-42de-8ef4-12a0e4138ef9" />
+
+- clicking on the user icon as a superuser give staff and managers to update the page.
+- Shop manager allows them to add new items to the shop as seen below:
+<img width="1123" alt="Screenshot 2025-01-13 at 01 18 12" src="https://github.com/user-attachments/assets/cdbbdecd-7288-4c31-a9e7-662833749d54" />
+
+- Clicking on add a new glutes workout will let managers add new glutes workout
+<img width="1012" alt="Screenshot 2025-01-13 at 01 18 20" src="https://github.com/user-attachments/assets/ce8b1ff1-15bd-4493-b7de-b6c42cccd4ce" />
+
+- clicking on add new abs workout lets managers add new abs exercise 
+<img width="1144" alt="Screenshot 2025-01-13 at 01 18 30" src="https://github.com/user-attachments/assets/7160cb86-cccd-4c37-bf30-7648eb2679c8" />
+
+- clicking on add new meal plan let manager add new meal plan to the site.
+<img width="893" alt="Screenshot 2025-01-13 at 01 18 39" src="https://github.com/user-attachments/assets/ee6f99b2-23fb-4196-bb12-9d67c7c65bd9" />
+
+- clicking on My profile will take users to their profile page, showing all their order history
+<img width="1572" alt="Screenshot 2025-01-13 at 01 40 45" src="https://github.com/user-attachments/assets/3e507961-3358-4453-a5aa-de01da11b4e7" />
+
+- clicking on log out will ask them if they want to sign out
+<img width="1599" alt="Screenshot 2025-01-13 at 01 42 13" src="https://github.com/user-attachments/assets/4d014c7a-e275-4d05-8cce-0696cdac44a4" />
+
+- If they choose to sign out, it sends a confirmation message.
+<img width="498" alt="Screenshot 2025-01-13 at 01 43 39" src="https://github.com/user-attachments/assets/f31c5c17-b3b6-4cac-b726-af288de9cf3b" />
+
+- ## Creating an account as a new user
+<img width="451" alt="Screenshot 2025-01-13 at 01 44 53" src="https://github.com/user-attachments/assets/cb3ef6b8-7099-423b-a85d-5c2e26d2b33d" />
+
+- Clicking on register takes us to the sign up page.
+<img width="981" alt="Screenshot 2025-01-13 at 01 45 29" src="https://github.com/user-attachments/assets/8cf9847b-3085-493a-95c4-e28073e4247b" />
+<img width="1316" alt="Screenshot 2025-01-13 at 01 46 33" src="https://github.com/user-attachments/assets/61572fa8-1b74-44cd-94dd-afbbbb0c1fe8" />
+
+- After inputing your details a verificatioin email is sent to your email. As seen below:
 
 
 - Automated Testing
