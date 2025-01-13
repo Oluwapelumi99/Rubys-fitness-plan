@@ -385,13 +385,6 @@ The meal plan page has an example of a comprehensive weekly food timetable. As s
 # Validator Testing
 - HTML
 
-- ### Home page
-- I tested the home page with the home page url of the deployed site on https://www.w3.org/ and it provided the errors as seen below:
-<img width="1330" alt="Screenshot 2025-01-13 at 18 36 37" src="https://github.com/user-attachments/assets/ea0d823f-2863-4ff1-9777-5d19fd5c561f" />
-
-- These errors have been fixed as seen below:
-<img width="1697" alt="Screenshot 2025-01-13 at 19 03 50" src="https://github.com/user-attachments/assets/68bb6021-e996-404f-b76c-58c13074a25b" />
-
 - ### Cart page
 - Testing this page returned some errors.
 <img width="1300" alt="Screenshot 2025-01-13 at 19 49 31" src="https://github.com/user-attachments/assets/77bc8cd8-1977-4919-a273-7ea53351d6e5" />
@@ -411,9 +404,38 @@ The meal plan page has an example of a comprehensive weekly food timetable. As s
 <img width="1696" alt="Screenshot 2025-01-13 at 20 35 13" src="https://github.com/user-attachments/assets/32cffb9f-fb71-4641-b1da-85324c0289ec" />
 
 - ### blog list page 
-- 
+- This page add some errors as seen below:
+<img width="1674" alt="Screenshot 2025-01-13 at 20 38 19" src="https://github.com/user-attachments/assets/c93891a2-6fa6-4b42-9f01-89cf56848b8c" />
 
+- These errors have been fixed as seen below:
+<img width="1700" alt="Screenshot 2025-01-13 at 20 57 05" src="https://github.com/user-attachments/assets/5fff5aa3-e6aa-4100-b9c2-2da2e6df7368" />
 
+- ### Community blog page 
+- This page had the following errors that could not be fixed because of summernotes was used to fill in the content as seen below:
+<img width="1683" alt="Screenshot 2025-01-13 at 21 00 36" src="https://github.com/user-attachments/assets/4b1933d5-9390-446c-ae44-a737b0ecaca3" />
+
+- ### Home page
+- I tested the home page with the home page url of the deployed site on https://www.w3.org/ and it provided the errors as seen below:
+<img width="1330" alt="Screenshot 2025-01-13 at 18 36 37" src="https://github.com/user-attachments/assets/ea0d823f-2863-4ff1-9777-5d19fd5c561f" />
+
+- These errors have been fixed as seen below:
+<img width="1697" alt="Screenshot 2025-01-13 at 19 03 50" src="https://github.com/user-attachments/assets/68bb6021-e996-404f-b76c-58c13074a25b" />
+
+- ### Plans App
+- Exercises page 
+- This page had no errors when tested.
+<img width="1690" alt="Screenshot 2025-01-13 at 22 00 08" src="https://github.com/user-attachments/assets/f3736944-ffb0-4cb1-bf79-66f486251caf" />
+
+- Abs exercise page 
+- This page had a few errors
+<img width="1679" alt="Screenshot 2025-01-13 at 21 17 37" src="https://github.com/user-attachments/assets/480d34e0-08f7-4ad1-afff-b27507141e18" />
+
+- These errors have been fixed as seen below:
+<img width="1702" alt="Screenshot 2025-01-13 at 21 39 49" src="https://github.com/user-attachments/assets/7466109d-8ce2-4bf3-bae4-1f46baa10d2f" />
+
+- Glutes_exercise page 
+- This page had no errors as seen below:
+<img width="1690" alt="Screenshot 2025-01-13 at 21 57 11" src="https://github.com/user-attachments/assets/49c69fa0-3e0f-4dc0-ad87-3f759c3ba382" />
 
 
 - # CSS

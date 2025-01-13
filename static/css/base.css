@@ -214,6 +214,11 @@ section {
     justify-content: center;
     margin-left: 25%;
 }
+
+video {
+    height: 375px;
+    width: 90vw
+}
 /* Meal plan page styling*/
 
 .mainmeal {
@@ -354,10 +359,6 @@ footer {
         border-radius: 60px;
     }
 
-    video {
-        height: 375px;
-        width: 666px
-    }
 
    /* meal plan pge*/
     #meal-text {
@@ -406,6 +407,11 @@ footer {
         justify-content: center;
         margin-left: 30%;
         margin-bottom: 20px;   
-    }  
+    } 
+
+    video {
+        height: 375px;
+        width: 50vw
+    }
 }
 

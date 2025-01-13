@@ -9,15 +9,15 @@
         <h1 class="">{{ glutes_exercise.name }}</h1>
         {% if glutes_exercise.video %}
         <a href="{{ glutes_exercise.video.url }} " target="_blank">
-        <video class="text-center curved-edges" src="{{ glutes_exercise.video.url }}" autoplay muted loop fit height="250px" width="250px">
+        <video class="text-center curved-edges" src="{{ glutes_exercise.video.url }}" autoplay muted loop>
         </video></a>
             {% else %}
         <p>No video available</p>
         {% endif %}
-        <div id="plans" class="">
-            <p>{{ glutes_exercise.description | safe }}</p>
-            <p style='color:  rgb(189, 58, 80);'>SETS:{{ glutes_exercise.sets }}</p>
-            <p style='color:  rgb(189, 58, 80);'>REPS:{{ glutes_exercise.reps }}</p>
+        <div class="plans">
+            <p>{{ glutes_exercise.description | safe }}
+            <p>SETS:{{ glutes_exercise.sets }}</p>
+            <p >REPS:{{ glutes_exercise.reps }}</p>
         </div>
         {% if request.user.is_superuser %}
             <small class="ml-3">

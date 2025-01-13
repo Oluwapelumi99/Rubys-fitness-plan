@@ -6,23 +6,22 @@
 <div class="plan-container">
     <div class="container mt-5 text-center">
         {% for abs_exercise in abs_exercises %}
-        <h1 class="mt-5" style='color:  rgb(189, 58, 80);'>{{ abs_exercise.name }}</h1>
+        <h1 class="mt-5">{{ abs_exercise.name }}</h1>
         {% if abs_exercise.video %}
         <a href="{{ abs_exercise.video.url }} " target="_blank">
-        <video class="text-center curved-edges" src="{{ abs_exercise.video.url }}" autoplay muted loop fit>
+        <video class="text-center curved-edges" src="{{ abs_exercise.video.url }}" autoplay muted loop>
         </video></a>
             {% else %}
         <p>No video available</p>
         {% endif %}
         <div id="plans" class="mt-5 mb-4">
-            <p>{{ abs_exercise.description | safe }}</p>
+            <p>{{ abs_exercise.description | safe }}
             <p style='color:  rgb(189, 58, 80);'>SETS:{{ abs_exercise.sets }}</p>
             <p style='color:  rgb(189, 58, 80);'>REPS:{{ abs_exercise.reps }}</p>
         </div>
         {% if request.user.is_superuser %}
         <small class="ml-3">
-        <a class="" href="{% url 'edit_abs_exercise' abs_exercise.id %}">Edit</a> | 
-        <a class="" href="{% url 'delete_abs_exercise' abs_exercise.id %}">Delete</a>
+        <a class="" href="{% url 'edit_abs_exercise' abs_exercise.id %}">Edit</a>
         </small>
     {% endif %}
         {% endfor %}
