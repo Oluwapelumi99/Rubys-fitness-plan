@@ -400,6 +400,20 @@ The meal plan page has an example of a comprehensive weekly food timetable. As s
 <img width="1708" alt="Screenshot 2025-01-13 at 19 55 09" src="https://github.com/user-attachments/assets/8666f72e-88dc-48ad-ad7c-0a506ba43859" />
 
 - ### Checkout page
+- The checkout page had errors as seen in the image below:
+<img width="1679" alt="Screenshot 2025-01-13 at 20 09 15" src="https://github.com/user-attachments/assets/53fb6cd9-09da-444a-a798-d8b58f368b43" />
+
+- These errors have been fixed as seen below:
+<img width="1693" alt="Screenshot 2025-01-13 at 20 30 58" src="https://github.com/user-attachments/assets/76f01efa-74d1-4cd0-9a4c-be8a50de060b" />
+
+- ### Checkout success page.
+- This page had no errors as seen below
+<img width="1696" alt="Screenshot 2025-01-13 at 20 35 13" src="https://github.com/user-attachments/assets/32cffb9f-fb71-4641-b1da-85324c0289ec" />
+
+- ### blog list page 
+- 
+
+
 
 
 - # CSS
