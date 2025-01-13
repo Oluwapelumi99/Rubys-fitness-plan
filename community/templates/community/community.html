@@ -11,8 +11,6 @@
                 <p class="blog-subtitle ">{{ blog.author }} | {{ blog.created_on }}</p>
                 {% if blog.image %}
                 <img class="card-img-top mt-3 float-left glutes-container" src="{{ blog.image.url }}" alt="{{ blog.name }}" >    
-                {% else %}
-                <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ blog.name }}">
                 {% endif %}
             </div>
         </div>

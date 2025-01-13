@@ -31,7 +31,7 @@ def add_glutes_exercise(request):
         if form.is_valid():
             glutes_exercise = form.save()
             messages.success(request, 'Successfully added exercise!')
-            return redirect('exercise_page')
+            return redirect('glutes_exercises')
         else:
             messages.error(request, 'Failed to add exercise. Please ensure the form is valid.')
     else:
@@ -58,7 +58,7 @@ def edit_glutes_exercise(request, glutes_exercise_id):
         if form.is_valid():
             form.save()
             messages.success(request, 'Successfully updated exercises!')
-            return redirect('exercise_page')
+            return redirect('glutes_exercises')
         else:
             messages.error(request, 'Failed to update. Please ensure the form is valid.')
     else:
@@ -90,7 +90,7 @@ def delete_glutes_exercise(request, pk):
             glutes_exercise.delete()
             messages.add_message(
                 request, messages.SUCCESS, 'Exercise deleted')
-            return redirect('exercise_page')
+            return redirect('glutes_exercises')
     else:
         form = DeleteGlutesExerciseForm(instance=glutes_exercise)
         context = {
@@ -117,7 +117,7 @@ def add_abs_exercise(request):
         if form.is_valid():
             abs_exercise = form.save()
             messages.success(request, 'Successfully added exercise!')
-            return redirect('exercise_page')
+            return redirect('abs_exercises')
         else:
             messages.error(request, 'Failed to add exercise. Please ensure the form is valid.')
     else:
@@ -144,7 +144,7 @@ def edit_abs_exercise(request, abs_exercise_id):
         if form.is_valid():
             form.save()
             messages.success(request, 'Successfully updated exercises!')
-            return redirect('exercise_page')
+            return redirect('abs_exercises')
         else:
             messages.error(request, 'Failed to update. Please ensure the form is valid.')
     else:
@@ -176,7 +176,7 @@ def delete_abs_exercise(request, pk):
             abs_exercise.delete()
             messages.add_message(
                 request, messages.SUCCESS, 'Exercise deleted')
-            return redirect('exercise_page')
+            return redirect('abs_exercises')
     else:
         form = DeleteAbsExerciseForm(instance=abs_exercise)
         context = {

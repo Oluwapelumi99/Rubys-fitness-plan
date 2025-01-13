@@ -273,6 +273,15 @@ The meal plan page has an example of a comprehensive weekly food timetable. As s
 <img width="1585" alt="Screenshot 2025-01-13 at 01 13 57" src="https://github.com/user-attachments/assets/36345aea-c9f5-408b-bda0-377f029ad80f" />
 <img width="1187" alt="Screenshot 2025-01-13 at 01 17 01" src="https://github.com/user-attachments/assets/71f615ef-8ee0-42de-8ef4-12a0e4138ef9" />
 
+- Logged in users are able to leave comments.
+<img width="567" alt="Screenshot 2025-01-13 at 04 07 35" src="https://github.com/user-attachments/assets/448c76ff-8e3e-43ab-9e73-e7ab356a87c6" />
+
+- able to edit their comments 
+<img width="653" alt="Screenshot 2025-01-13 at 04 06 36" src="https://github.com/user-attachments/assets/6e4d421d-f79f-455a-9fe8-580cb5f31661" />
+
+- And delete their comments
+<img width="399" alt="Screenshot 2025-01-13 at 04 08 01" src="https://github.com/user-attachments/assets/b3a85944-40d4-4e4e-bf56-82b03beaa2f7" />
+
 - clicking on the user icon as a superuser give staff and managers to update the page.
 - Shop manager allows them to add new items to the shop as seen below:
 <img width="1123" alt="Screenshot 2025-01-13 at 01 18 12" src="https://github.com/user-attachments/assets/cdbbdecd-7288-4c31-a9e7-662833749d54" />
@@ -303,6 +312,66 @@ The meal plan page has an example of a comprehensive weekly food timetable. As s
 <img width="1316" alt="Screenshot 2025-01-13 at 01 46 33" src="https://github.com/user-attachments/assets/61572fa8-1b74-44cd-94dd-afbbbb0c1fe8" />
 
 - After inputing your details a verificatioin email is sent to your email. As seen below:
+<img width="1497" alt="Screenshot 2025-01-13 at 01 46 46" src="https://github.com/user-attachments/assets/9c303f93-c59b-49f4-8c63-13ae8d66380a" />
+
+- Then the email that was sent can be seen in the email address below:
+<img width="760" alt="Screenshot 2025-01-13 at 01 47 10" src="https://github.com/user-attachments/assets/1aa49355-1615-4af5-a458-f7a63146aaea" />
+
+- Clicking on the link in the email takes us to the confirm email address page below:
+<img width="1114" alt="Screenshot 2025-01-13 at 01 47 28" src="https://github.com/user-attachments/assets/dfdb0c5e-b129-45e3-bbd8-21266dce5c03" />
+
+- Then users can sign in as normal, images seen below:
+<img width="1246" alt="Screenshot 2025-01-13 at 01 47 42" src="https://github.com/user-attachments/assets/5e487c46-020c-4cf1-8628-067212af8122" />
+<img width="1333" alt="Screenshot 2025-01-13 at 01 49 50" src="https://github.com/user-attachments/assets/e6717b19-96f3-4139-bc31-a30e5487db34" />
+<img width="402" alt="Screenshot 2025-01-13 at 01 50 19" src="https://github.com/user-attachments/assets/072293e6-c53c-4659-8e8e-8b6b798e7b11" />
+
+- And if users want to change their password, they click on the forgot password on the sign in page and it takes them to the page below where it asks them to add their email address:
+<img width="1344" alt="Screenshot 2025-01-13 at 02 00 23" src="https://github.com/user-attachments/assets/f53c4af5-c44c-4522-8793-689b0453a498" />
+
+- After they have added their email address, a password reset email is sent to them.
+<img width="1282" alt="Screenshot 2025-01-13 at 02 01 07" src="https://github.com/user-attachments/assets/a2ba7338-6e98-470d-a7c7-a8e531a648c0" />
+
+- The email can be seen below:
+<img width="782" alt="Screenshot 2025-01-13 at 02 02 15" src="https://github.com/user-attachments/assets/2cc8d820-bb0c-49a5-9967-254a96a965d3" />
+
+- Then clicking on the link in the email takes them to the change password page as seen below:
+<img width="1100" alt="Screenshot 2025-01-13 at 02 09 32" src="https://github.com/user-attachments/assets/69bf996d-b407-4e26-82db-628246842da4" />
+ 
+- After they have added their new password, a confirmation message is displayed saying their password in now changed as seen below:
+<img width="1146" alt="Screenshot 2025-01-13 at 02 10 23" src="https://github.com/user-attachments/assets/4e919858-d49b-46c3-aed3-c0f8fff69426" />
+
+- ### Cart page
+- The cart icon is available on all pages of the site.
+- Clicking on the cart icon will take us to the cart page as seen below.
+- <img width="1703" alt="Screenshot 2025-01-13 at 03 32 34" src="https://github.com/user-attachments/assets/d26786ba-6952-42b7-be4c-7b9992b779ac" />
+
+- On the cart page just below each item, they can update their items as seen below
+<img width="1710" alt="Screenshot 2025-01-13 at 03 32 49" src="https://github.com/user-attachments/assets/d9e24117-8d7b-4d1c-a2ec-eb84725bc040" />
+
+- And they can delete their items, Image seen below
+<img width="1346" alt="Screenshot 2025-01-13 at 03 33 18" src="https://github.com/user-attachments/assets/5f790bcf-c799-44db-ad5f-bae3ecaa6d5e" />
+
+- At the bottom of the cart page, there is grand total delivery fee, keep shopping link and check out link.
+- Clicking on the keep shopping link will direct users back to the shopping page as seen below.
+<img width="1619" alt="Screenshot 2025-01-13 at 03 33 44" src="https://github.com/user-attachments/assets/14541a56-d44a-4875-913a-c24845c3526f" />
+
+- Clicking on the checkout will take users to the checkout page where they can put in their details and pay for their items.
+<img width="1673" alt="Screenshot 2025-01-13 at 03 33 59" src="https://github.com/user-attachments/assets/44208697-2d48-443c-8b77-ddfce0e22ba5" />
+
+- After adding their details as seen below:
+<img width="1509" alt="Screenshot 2025-01-13 at 03 35 55" src="https://github.com/user-attachments/assets/f19ebf2d-07d8-434e-82f3-5e713c796b9a" />
+
+- Then they can click on checkout, on successful checkout an order, a confirmation notification is sent.
+<img width="1705" alt="Screenshot 2025-01-13 at 03 36 24" src="https://github.com/user-attachments/assets/f5ed7c13-f1e9-4d1e-a3cc-b8e7369ab0f7" />
+
+- Then users will receive an email as seen below:
+<img width="516" alt="Screenshot 2025-01-13 at 03 43 42" src="https://github.com/user-attachments/assets/c8a1560a-47d6-4f2a-a694-2439cf2c0414" />
+
+- And a 200 code is received on stripe as seen below:
+<img width="1541" alt="Screenshot 2025-01-13 at 04 01 45" src="https://github.com/user-attachments/assets/be4fb4bd-cd3b-4177-a0b0-8131cc05f6ad" />
+
+
+
 
 
 - Automated Testing

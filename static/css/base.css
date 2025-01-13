@@ -277,9 +277,16 @@ table {
     color: rgb(234, 206, 211);
 }
 
+.cart-row {
+    display: none;
+    
+}
+.cart-border {
+    border-bottom: 1px solid rgb(219, 86, 108);
+}
+
 .box-element {
     box-shadow: -2px -1px 25px -4px rgba(219, 86, 108,0.75);
-    background-color: #fff;
     padding: 10px;
 }
 
@@ -358,7 +365,7 @@ footer {
 
 
     /* cart page*/
-    .cart-row {
+    .cart-row, .cart-row1{
         display: flex;
         align-items: center;
         padding-bottom: 10px;
@@ -369,6 +376,9 @@ footer {
         display: none;
     }
     
+    .checkout-btn {
+        float: right;
+    }
     /* shop page*/
     .search-dropdowns {
         display: flex;
