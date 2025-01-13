@@ -323,7 +323,7 @@ footer {
         display: flex;
     }
 
-    #plans {
+    .plans {
         font-size: 19px;
     }
 

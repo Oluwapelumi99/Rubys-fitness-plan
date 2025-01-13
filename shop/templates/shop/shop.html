@@ -132,17 +132,17 @@
     {% block postloadjs %}
 {% include 'shop/includes/quantity_script.html' %}
 
-    <script type="text/javascript">
+    <script>
         $('.toast').toast('show');
     </script>
 
-    <script type="text/javascript">
+    <script>
 		$('.btt-link').click(function(e) {
 			window.scrollTo(0,0)
 		})
 	</script>
     
-    <script type="text/javascript">
+    <script>
         $('#sort-selector').change(function() {
             var selector = $(this);
             var currentUrl = new URL(window.location);

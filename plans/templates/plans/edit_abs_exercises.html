@@ -42,7 +42,7 @@
 
 {% block postloadjs %}
     {{ block.super }}
-    <script type="text/javascript">
+    <script>
         $('#new-video').change(function() {
             var file = $('#new-video')[0].files[0];
             $('#filename').text(`Video will be set to: ${file.name}`);
