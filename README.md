@@ -90,6 +90,10 @@ The prefered font used is 'Lato' and sans-serif has been added as a fall back in
 # Imagery
 Image used on all the pages matches the theme of the site. Image is seen below. It is gotten from https://www.pexels.com
 
+# Favicon
+
+<a target="_blank" href="https://icons8.com/icon/bVjGzi_6vpGq/exercise-female">Exercise Female</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+
 # Home page 
 <img width="1690" alt="Screenshot 2025-01-02 at 17 59 30" src="https://github.com/user-attachments/assets/174ef41c-5999-4acc-80ef-58a943317c2c" />
 <img width="1695" alt="Screenshot 2025-01-02 at 17 59 45" src="https://github.com/user-attachments/assets/44f232ab-e6f3-439e-ab37-70a6fc156651" />
@@ -379,6 +383,8 @@ The meal plan page has an example of a comprehensive weekly food timetable. As s
 
 # Validator Testing
 - HTML
+- I tested the html pages with https://www.w3.org/
+- ### 
 
 - # CSS
 - I tested the css with https://www.w3.org/
