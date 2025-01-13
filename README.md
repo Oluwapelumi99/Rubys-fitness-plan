@@ -383,8 +383,15 @@ The meal plan page has an example of a comprehensive weekly food timetable. As s
 
 # Validator Testing
 - HTML
-- I tested the html pages with https://www.w3.org/
-- ### 
+
+- ### Home page
+- I tested the home page with the home page url of the deployed site on https://www.w3.org/ and it provided the errors as seen below:
+<img width="1330" alt="Screenshot 2025-01-13 at 18 36 37" src="https://github.com/user-attachments/assets/ea0d823f-2863-4ff1-9777-5d19fd5c561f" />
+
+- These errors have been fixed as seen below:
+<img width="1697" alt="Screenshot 2025-01-13 at 19 03 50" src="https://github.com/user-attachments/assets/68bb6021-e996-404f-b76c-58c13074a25b" />
+
+- 
 
 - # CSS
 - I tested the css with https://www.w3.org/
