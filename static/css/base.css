@@ -274,7 +274,7 @@ table {
 /*cart page styling*/
 .cart {
     font-size: 12px;
-    color: rgb(234, 206, 211);
+    /* color: rgb(234, 206, 211); */
 }
 
 .cart-row {
