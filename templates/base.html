@@ -88,9 +88,9 @@
                             <a  class="navbar {% if grand_total %} font-weight-bold{% else %}text-black{% endif %} navbar" href="{% url 'view_cart' %}">
                                 <div class="text-center">
                                     <div><i class="fas fa-cart-shopping fa-xl mt-3">
-                                        <h6 class="my-0 cart text-center" id="cart_quantity">
+                                        <div class="my-0 cart text-center" id="cart_quantity">
                                             {{ shop_count }}
-                                        </h6>
+                                        </div>
                                     </i></div>
                                 </div>
                             </a>
