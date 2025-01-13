@@ -91,8 +91,8 @@ The prefered font used is 'Lato' and sans-serif has been added as a fall back in
 Image used on all the pages matches the theme of the site. Image is seen below. It is gotten from https://www.pexels.com
 
 # Favicon
+<a target="_blank" href="https://icons8.com/icon/ZwHMBne7HD6x/dumbell">Dumbell</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
 
-<a target="_blank" href="https://icons8.com/icon/bVjGzi_6vpGq/exercise-female">Exercise Female</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
 
 # Home page 
 <img width="1690" alt="Screenshot 2025-01-02 at 17 59 30" src="https://github.com/user-attachments/assets/174ef41c-5999-4acc-80ef-58a943317c2c" />
@@ -145,6 +145,7 @@ At the top of the page, we can see 'Rubys', which is the appp's name, clicking o
 - cart page 
 - Clicking on the cart icon in the nav bar took us to the cart page
 <img width="1704" alt="Screenshot 2025-01-12 at 18 42 20" src="https://github.com/user-attachments/assets/4f155f28-fc9b-4b1e-baec-20575284188d" />
+
 
 
 # Testing
@@ -391,7 +392,15 @@ The meal plan page has an example of a comprehensive weekly food timetable. As s
 - These errors have been fixed as seen below:
 <img width="1697" alt="Screenshot 2025-01-13 at 19 03 50" src="https://github.com/user-attachments/assets/68bb6021-e996-404f-b76c-58c13074a25b" />
 
-- 
+- ### Cart page
+- Testing this page returned some errors.
+<img width="1300" alt="Screenshot 2025-01-13 at 19 49 31" src="https://github.com/user-attachments/assets/77bc8cd8-1977-4919-a273-7ea53351d6e5" />
+
+- These errors have been fixed as seen below:
+<img width="1708" alt="Screenshot 2025-01-13 at 19 55 09" src="https://github.com/user-attachments/assets/8666f72e-88dc-48ad-ad7c-0a506ba43859" />
+
+- ### Checkout page
+
 
 - # CSS
 - I tested the css with https://www.w3.org/

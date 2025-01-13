@@ -249,6 +249,12 @@ table {
     font-size: 18px;
 }
 
+.search-dropdowns a {
+    outline: none;
+    text-decoration: none;
+    color: black;
+}
+
 .category {
     font-size: 15px;
 }
