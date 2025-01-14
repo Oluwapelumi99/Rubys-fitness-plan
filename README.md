@@ -1,10 +1,15 @@
 # Rubys-fitness-plan
 
 ## Introduction
-.This is a project demonstrating an ecommerce store. It is about an app that provides exercise plans and meal plans to customers and within the app there is a shop where gym related products are sold. Customers can purchase what they want and they can pay for it through the website. 
-.There is a community within the app which provides blogs and users that are logged in can make comments on the blogs.
-.Users will also have the opportunity to create their accounts which has to be done in order to make comments on blogs they can also reset their password if they have forgotten their password.
+- This is a project demonstrating an ecommerce store. It is about an app that provides exercise plans and meal plans to customers and within the app there is a shop where gym related products are sold. Customers can purchase what they want and they can pay for it through the website. 
+- There is a community within the app which provides blogs and users that are logged in can make comments on the blogs.
+- Users will also have the opportunity to create their accounts which has to be done in order to make comments on blogs they can also reset their password if they have forgotten their password.
 This site was created to show case what a B2C ecommerce store looks like.
+- This is the fifth project for the Code Institute Diploma in Software Development with eCommerce.
+- I tested the responsiveness of the site using  https://ui.dev/amiresponsive
+<img width="1615" alt="Screenshot 2025-01-14 at 03 21 00" src="https://github.com/user-attachments/assets/8fff0351-2f64-4b9e-bca1-f262b1717744" />
+
+- This site is based on a B2C business model. The B2C, or business-to-consumer, model is a retail approach where products or services are sold directly from a business to the end consumer for personal use. B2C models apply to various business types, including small businesses, retail stores, restaurants, and e-commerce platforms. E-commerce businesses, in particular, use online platforms to connect their products with consumers, either by marketing and selling their own products or by facilitating transactions between buyers and sellers.
 
 
 # Table of Contents
@@ -29,6 +34,9 @@ This site was created to show case what a B2C ecommerce store looks like.
 - 404 page
 - Mail chimp, news letter
 - Privacy policy
+- sitemap.xml
+- robots.txt
+- Facebook page
 # Testing
 - Manual testing
 - Automated testing
@@ -68,11 +76,30 @@ Users can click on the email link to send an email if experiencing difficulties 
 
 # USER STORIES
 All user stories have been satisfied and has all been tested in this README. User stories including must have, should have and could have except the won't haves
-# must have
 
+# must haves
 
+<img width="1342" alt="Screenshot 2025-01-14 at 08 28 07" src="https://github.com/user-attachments/assets/383a04be-effc-49ea-af47-c0705df69505" />
+<img width="1710" alt="Screenshot 2025-01-14 at 08 28 20" src="https://github.com/user-attachments/assets/1cfe5f0b-607a-447f-a290-ddefe40fe0c3" />
+<img width="1330" alt="Screenshot 2025-01-14 at 08 28 49" src="https://github.com/user-attachments/assets/d8dfb403-752d-4eea-ace7-baa22aa81e62" />
+<img width="1333" alt="Screenshot 2025-01-14 at 08 30 02" src="https://github.com/user-attachments/assets/607f1c40-e03f-4050-9cb1-f8fcbb980915" />
+<img width="1315" alt="Screenshot 2025-01-14 at 08 30 25" src="https://github.com/user-attachments/assets/e7623e80-b31e-4f0a-95f3-702bfdadeeb7" />
+<img width="1331" alt="Screenshot 2025-01-14 at 08 30 48" src="https://github.com/user-attachments/assets/1768f87b-0bfe-4185-aafc-ad174096fc6a" />
+<img width="1352" alt="Screenshot 2025-01-14 at 08 25 47" src="https://github.com/user-attachments/assets/4db32773-cde5-4a15-93c3-e5a5a57e98b5" />
+<img width="1362" alt="Screenshot 2025-01-14 at 08 26 32" src="https://github.com/user-attachments/assets/fa72f927-3454-4ea5-b242-eb83bf13a2dc" />
+<img width="1338" alt="Screenshot 2025-01-14 at 08 27 04" src="https://github.com/user-attachments/assets/930d5dcb-f50e-4924-97c9-5c151850b356" />
+<img width="1333" alt="Screenshot 2025-01-14 at 08 27 36" src="https://github.com/user-attachments/assets/042dd168-4f0b-46b8-9bda-dcf42b81c859" />
+<img width="1345" alt="Screenshot 2025-01-14 at 08 31 36" src="https://github.com/user-attachments/assets/e8d2d508-b2d2-475a-acf3-8ebd377b8470" />
+<img width="1349" alt="Screenshot 2025-01-14 at 08 31 59" src="https://github.com/user-attachments/assets/74328dab-b6fc-4175-a9a9-557566360344" />
 
+# Should haves
+<img width="1320" alt="Screenshot 2025-01-14 at 08 29 20" src="https://github.com/user-attachments/assets/12387248-416c-41c9-8dbf-1e33eb99996a" />
+<img width="1311" alt="Screenshot 2025-01-14 at 08 29 44" src="https://github.com/user-attachments/assets/56adcc6e-6117-4413-95a5-ce2ff2d7473f" />
 
+<img width="1349" alt="Screenshot 2025-01-14 at 08 31 15" src="https://github.com/user-attachments/assets/05c2d9b5-65bc-44fe-993b-56dd4a74fa6d" />
+
+# Could have and Won't have
+<img width="1283" alt="Screenshot 2025-01-14 at 08 39 11" src="https://github.com/user-attachments/assets/9bc9016c-f9f8-489a-8315-e96d8de689b5" />
 
 # Design
 # Color Scheme
@@ -166,6 +193,13 @@ At the top of the page, we can see 'Rubys', which is the appp's name, clicking o
 <img width="381" alt="Screenshot 2025-01-14 at 03 46 14" src="https://github.com/user-attachments/assets/e7b74b61-39b0-4c73-84ea-816dae6901c2" />
 <img width="1339" alt="Screenshot 2025-01-14 at 03 46 02" src="https://github.com/user-attachments/assets/7207eaf9-f5c2-40a3-ae1c-dd994070c9cd" />
 
+- sitemap.xml file has been created to help search engines locate useful urls on the site
+- robots.txt file has been created to restrict users access when they are using our site.
+<img width="146" alt="Screenshot 2025-01-14 at 04 10 06" src="https://github.com/user-attachments/assets/c0ea9eee-f5c0-4c2b-8ff9-c07da7127600" />
+
+- Balasmiq mock up page has been used with a facebook template as facebook did not let me create a page. It said I kept giving a error message and saying I should be sure I was adhering to the terms. I tried on 3 different accountd, same results.
+- A screenshot of the mock up is below:
+<img width="645" alt="Screenshot 2025-01-14 at 06 20 08" src="https://github.com/user-attachments/assets/3ebb1bc3-025c-4a30-a1c8-b0157fdcaed3" />
 
 # Testing
 
@@ -394,12 +428,21 @@ The meal plan page has an example of a comprehensive weekly food timetable. As s
 - And a 200 code is received on stripe as seen below:
 <img width="1541" alt="Screenshot 2025-01-13 at 04 01 45" src="https://github.com/user-attachments/assets/be4fb4bd-cd3b-4177-a0b0-8131cc05f6ad" />
 
+- ### Store managers
+- Staff/ app managers can edit and delete shop items as seen below
+<img width="325" alt="Screenshot 2025-01-14 at 07 27 19" src="https://github.com/user-attachments/assets/2c8379ac-5da4-4842-a1bb-8e1d48234754" />
 
+- Staff/ app managers can edit and delete mealplans as seen below
+<img width="619" alt="Screenshot 2025-01-14 at 07 27 44" src="https://github.com/user-attachments/assets/1e1d3e40-b3e6-4acf-b931-cd18defb5433" />
+
+- Staff/ app managers can edit and delete both abs nd glutes exercises as seen below
+<img width="1045" alt="Screenshot 2025-01-14 at 07 28 06" src="https://github.com/user-attachments/assets/d6cb1555-71ac-4ecf-a528-ec09879a0a32" />
 
 
 
 - Automated Testing
-
+- Some automated testing have been started, which passed and came out ok
+<img width="685" alt="Screenshot 2025-01-14 at 07 52 46" src="https://github.com/user-attachments/assets/fdfaf038-57bf-48b1-98eb-c7f05bf861f4" />
 
 # Validator Testing
 - HTML
@@ -742,14 +785,17 @@ I tested the python files in this project with https://pep8ci.herokuapp.com/
 - I have fixed the errors and all errors are now cleared. Image below
 <img width="1358" alt="Screenshot 2025-01-09 at 00 45 07" src="https://github.com/user-attachments/assets/677eec8c-0c43-4ec0-96fd-b42844547cdf" />
 
+- # Accessibility 
+
 # Lighthouse
 - I confrimed that the colors and font chosen are easy to read and accessible by running it through lighthose in dev tools. And I also made sure all buttons were asseccible by screen readers by adding an aria-label attribute to each button and image.
+<img width="638" alt="Screenshot 2025-01-14 at 07 08 50" src="https://github.com/user-attachments/assets/9c06190c-5b38-4430-8045-7a61de63f5bb" />
 
-- ## Home page 
+- SEO was down and this has reduced the performance of the page because it says Strip uses third party cookies.
+
+<img width="639" alt="Screenshot 2025-01-14 at 07 12 26" src="https://github.com/user-attachments/assets/6b681e50-ad80-47dd-8f0a-86b07eeefae0" />
 
 
-# Wave Webaim - accessibility testing
-- I tested the pages using the https://wave.webaim.org
 
 
 - ### Footer
@@ -761,18 +807,6 @@ I tested the python files in this project with https://pep8ci.herokuapp.com/
 <img width="1708" alt="Screenshot 2024-10-11 at 03 30 40" src="https://github.com/user-attachments/assets/1128bf40-3d5a-4249-9e7d-43cd7f0c452d">
 <img width="1708" alt="Screenshot 2024-10-11 at 03 30 54" src="https://github.com/user-attachments/assets/bf7e90e2-8e0e-4fbd-b119-0b7b6ee508aa">
 
-
-## Technologies Used
-- https://www.gitpod.io/
-- https://code.visualstudio.com
-- https://www.heroku.com
-- https://pep8ci.herokuapp.com/
-- https://djangoproject.com
-- https://wave.webaim.org
-- Lighthouse on google chrome
-- Chrome dev tools
-- https://jshint.com
-- https://ui.dev/amiresponsive
 
 ## Cloning and forking.
 ### CLONING
@@ -794,3 +828,105 @@ I tested the python files in this project with https://pep8ci.herokuapp.com/
 - Optionally, in the 'Description' field, type a description of your fork.
 - Optionally, select copy the default branch only.
 - Click create fork.
+
+### Technologies Used
+- https://www.gitpod.io/
+- https://code.visualstudio.com
+- https://www.heroku.com
+- https://pep8ci.herokuapp.com/
+- https://djangoproject.com
+- Lighthouse on google chrome
+- Chrome dev tools
+- https://jshint.com
+- https://ui.dev/amiresponsive
+- asgiref==3.8.1
+- boto3==1.35.92
+- botocore==1.35.92
+- dj-database-url==0.5.0
+- Django==4.2
+- django-allauth==0.50.0
+- django-countries==7.2.1
+- django-crispy-forms==1.14.0
+- django-storages==1.14.4
+- django-summernote==0.8.20.0
+- gunicorn==23.0.0
+- jmespath==1.0.1
+- oauthlib==3.2.2
+- pillow==11.0.0
+- psycopg2==2.9.10
+- PyJWT==2.10.1
+- python3-openid==3.2.0
+- pytz==2024.2
+- requests-oauthlib==2.0.0
+- s3transfer==0.10.4
+- sqlparse==0.5.2
+- stripe==11.4.1
+- threadpoolctl==3.1.0
+
+
+### Deployment
+- The site was deployed via Heroku, and the live link is https://rubys-fitness-plan-f9d280e18cb5.herokuapp.com/
+
+- Project Deployment - needs adapting for AWS and Stripe
+- To deploy the project through Heroku I followed these steps:
+
+- Sign up / Log in to Heroku
+- From the main Heroku Dashboard page select 'New' and then 'Create New App'
+Give the project a name - I entered rubys-fitness-plan and select a suitable region, then select create app. The name for the app must be unique.
+- This will create the app within Heroku and bring you to the deploy tab. From the submenu at the top, navigate to the resources tab.
+- Add the database to the app, generate a postgresql database url using https://dbs.ci-dbs.net/ after getting the database url, I added it to the Config vars in heroku
+- Navigate to the setting tab, within the config vars section copy the DATABASE_URL to the clipboard for use in the Django configuration.
+- Within the django app repository create a new file called env.py - within this file import the os library and set the environment variable for the DATABASE_URL pasting in the address copied from Heroku. The line should appear as os.environ["DATABASE_URL"]= "Paste the link in here"
+- Add a secret key to the app using os.environ["SECRET_KEY"] = "your secret key goes here"
+- Add the secret key just created to the Heroku Config Vars as SECRET_KEY for the KEY value and the secret key value you created as the VALUE
+- In the settings.py file within the django app, import Path from pathlib, import os and import dj_database_url
+- insert the line if os.path.isfile("env.py"): import env
+- remove the insecure secret key that django has in the settings file by default and replace it with SECRET_KEY = os.environ.get('SECRET_KEY')
+- replace the databases section with DATABASES = { 'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))} ensure the correct indentation for python is used.
+- In the terminal migrate the models over to the new database connection
+
+## To connect the project with AWS.
+- Navigate in a browser to Amazon AWS, log in, or create an account and log in.
+- Create a new S3 bucket for the site and create a static directory and media directory within the bucket.
+- From the dashboard - copy the bucket details into the settings file.
+you will require the following:
+- Storage Bucket Name
+- Storage Bucket Region Name
+- Access Key ID
+- Secret Access Key
+- configure these settings in the settings file
+in the env.py file created earlier
+- add os.environ["AWS_ACCESS_KEY_ID"] = "paste in your access key"
+- add os.environ["AWS_SECRET_ACCESS_KEY"] = "paste in your secret access key"
+- In Heroku, add the keys and values copied to the clipboard to the config vars
+- Also add the KEY - DISABLE_COLLECTSTATIC with the Value - 1 to the config vars
+this key value pair must be removed prior to final deployment
+Using the requirements.txt file install all of the required packages
+- in the Settings.py file - add the STATIC files settings - the url, storage path, directory path, root path, media url and default file storage path.
+
+- Add Heroku to the ALLOWED_HOSTS list the format will be the app name given in Heroku when creating the app followed by .herokuapp.com
+- In your code editor, create three new top level folders, media, static, templates
+- Create a new file on the top level directory - Procfile
+- Within the Procfile add the code - web: guincorn PROJECT_NAME.wsgi
+- In the terminal, add the changed files, commit and push to GitHub
+- In Heroku, navigate to the deployment tab and deploy the branch manually - watch the build logs for any errors.
+- Heroku will now build the app for you. Once it has completed the build process you will see a 'Your App Was Successfully Deployed' message and a link to the app to visit the live site.
+
+## Connecting stripe to the project
+- This project utilises Stripe as a payment platform provider - You can create a stripe account at www.stripe.com you will need a developer account to gain access to the api keys required to run the payment processes.
+- Once you have successfully created your stripe account, insert the stripe public key, stripe secret key and stripe webhook key into the env.py file and the heroku config vars. Configure the settings file to point at the variables required.
+- #### Step by step guide on how to configure stripe and aws has been gotten from the boutique Ado walkthrough project.
+
+# Credits
+- ## Media
+- All images used on this site has been gotten from https://www.pexels.com/
+
+- ## Fonts 
+- Fonts used for the site was gotten from https://fonts.google.com/
+
+- ## Icons
+- https://icons8.com
+![icons8-exercise-female-color-hand-drawn-32](https://github.com/user-attachments/assets/89c3a214-283d-4921-88ad-af2c52bb28a6)
+
+- ## Content
+- The codes for stripe was gotten from Boutique Ado walk through project.
