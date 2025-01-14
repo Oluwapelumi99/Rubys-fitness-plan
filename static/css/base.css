@@ -300,6 +300,18 @@ table {
     box-shadow: -2px -1px 25px -4px rgba(219, 86, 108,0.75);
     padding: 10px;
 }
+/*Mail chimp styling*/
+#mc_embed_signup {
+    clear: left;
+    background-color: rgb(234, 206, 211);
+    right: 0;
+    font: 14px;
+    width: 90vw;
+}
+
+.subscribe-tag {
+    background-color: rgb(219, 86, 108);
+}
 
 /* footer */
 footer {
@@ -399,6 +411,20 @@ footer {
     #support {
         margin-top: 0px;
     }
+
+    /*Mail chimp styling*/
+    #mc_embed_signup {
+        clear: left;
+        background-color: rgb(234, 206, 211);
+        right: 0;
+        font: 14px;
+        width: 50vw;   
+}
+    #mc_embed_shell {
+        display: flex;
+        justify-content: flex-end;
+    }
+
 }
 
 /*Media queries of screen sizes bigger than 992px and up*/
@@ -412,6 +438,14 @@ footer {
     video {
         height: 375px;
         width: 50vw
+    }
+    /*Mail chimp styling*/
+    #mc_embed_signup {
+        clear: left;
+        background-color: rgb(234, 206, 211);
+        right: 0;
+        font: 14px;
+        width: 30vw;   
     }
 }
 

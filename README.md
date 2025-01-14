@@ -26,6 +26,9 @@ This site was created to show case what a B2C ecommerce store looks like.
 - Register page
 - Sign up page
 - Email verification page
+- 404 page
+- Mail chimp, news letter
+- Privacy policy
 # Testing
 - Manual testing
 - Automated testing
@@ -146,6 +149,22 @@ At the top of the page, we can see 'Rubys', which is the appp's name, clicking o
 - Clicking on the cart icon in the nav bar took us to the cart page
 <img width="1704" alt="Screenshot 2025-01-12 at 18 42 20" src="https://github.com/user-attachments/assets/4f155f28-fc9b-4b1e-baec-20575284188d" />
 
+- Email verificstion page
+<img width="1497" alt="Screenshot 2025-01-13 at 01 46 46" src="https://github.com/user-attachments/assets/9c303f93-c59b-49f4-8c63-13ae8d66380a" />
+
+- Mail chimp, news letter for subscription
+- A sign up form for users have been created using mail chimp as seen below
+<img width="553" alt="Screenshot 2025-01-14 at 02 53 45" src="https://github.com/user-attachments/assets/79ce6910-d111-45bf-91a8-f88cb0a04c1a" />
+
+- Testing that this form work, I have added my email to the subscription form as seen below:
+<img width="566" alt="Screenshot 2025-01-14 at 02 58 11" src="https://github.com/user-attachments/assets/8c11403a-c834-45a1-bcad-c3d06cc78455" />
+
+- Navigating to the mailchimp now shows that there are now 2 emails subscribed. Image added below.
+<img width="1156" alt="Screenshot 2025-01-14 at 03 01 11" src="https://github.com/user-attachments/assets/9d7bcc3f-48b1-4b59-9c65-eac501fed27d" />
+
+- A privacy policy has been generated for the site
+<img width="381" alt="Screenshot 2025-01-14 at 03 46 14" src="https://github.com/user-attachments/assets/e7b74b61-39b0-4c73-84ea-816dae6901c2" />
+<img width="1339" alt="Screenshot 2025-01-14 at 03 46 02" src="https://github.com/user-attachments/assets/7207eaf9-f5c2-40a3-ae1c-dd994070c9cd" />
 
 
 # Testing
@@ -437,6 +456,19 @@ The meal plan page has an example of a comprehensive weekly food timetable. As s
 - This page had no errors as seen below:
 <img width="1690" alt="Screenshot 2025-01-13 at 21 57 11" src="https://github.com/user-attachments/assets/49c69fa0-3e0f-4dc0-ad87-3f759c3ba382" />
 
+- Meal plan page
+- This page had one error that was due to using summernotes for the description
+<img width="1698" alt="Screenshot 2025-01-13 at 23 01 57" src="https://github.com/user-attachments/assets/5e334613-ec37-4c20-b0ed-ca26edcc3439" />
+
+- The shop page.
+- This page returned no errors
+<img width="1685" alt="Screenshot 2025-01-13 at 23 19 29" src="https://github.com/user-attachments/assets/48006e94-15fe-46bc-bc57-e57d1f26fcfb" />
+
+- The item detail page
+- This page returned no errors
+<img width="1686" alt="Screenshot 2025-01-13 at 23 20 06" src="https://github.com/user-attachments/assets/b6dbd53e-4f25-4dca-a65c-1f00fff5dfca" />
+
+
 
 - # CSS
 - I tested the css with https://www.w3.org/
@@ -606,6 +638,40 @@ I tested the python files in this project with https://pep8ci.herokuapp.com/
 <img width="1256" alt="Screenshot 2025-01-08 at 22 43 13" src="https://github.com/user-attachments/assets/6897f874-b982-4263-bdb3-c67545df47aa" />
 
 - ### PLANS APP
+- admin.py 
+- This file had some errors as seen below:
+<img width="1492" alt="Screenshot 2025-01-13 at 22 28 48" src="https://github.com/user-attachments/assets/47d8ae17-0609-4879-933f-90826d374356" />
+
+- All errors have been fixed
+<img width="1606" alt="Screenshot 2025-01-13 at 22 29 05" src="https://github.com/user-attachments/assets/ec07e6b3-9437-4dd6-a193-3979edd687a3" />
+
+- forms.py 
+- This file had the errors below:
+<img width="1579" alt="Screenshot 2025-01-13 at 22 32 03" src="https://github.com/user-attachments/assets/097b1251-a75d-478e-add6-48e90670958f" />
+
+- errors have been fixed as seen below:
+<img width="1366" alt="Screenshot 2025-01-13 at 22 33 00" src="https://github.com/user-attachments/assets/e93cdd7a-57a8-40cb-9a4e-70590b36c8c3" />
+
+- models.py
+- This file had some errors as seen below
+<img width="1435" alt="Screenshot 2025-01-13 at 22 34 53" src="https://github.com/user-attachments/assets/e9d2b816-d96c-4658-a654-cdb27654e41b" />
+
+- Errors have been corrected as seen below
+<img width="1289" alt="Screenshot 2025-01-13 at 22 36 37" src="https://github.com/user-attachments/assets/422ed388-2e08-41f0-ab81-a72751a37105" />
+
+- urls.py
+- Errors were found on this page as seen below:
+<img width="1466" alt="Screenshot 2025-01-13 at 22 40 15" src="https://github.com/user-attachments/assets/354e4f82-0b88-4303-acde-7f9b942ca09a" />
+
+- These errors have been fixed as seen below
+<img width="1364" alt="Screenshot 2025-01-13 at 22 42 13" src="https://github.com/user-attachments/assets/f5aeb961-515c-493e-bf77-a424b55f99b9" />
+
+- views.py 
+- This file had errors as seen below:
+<img width="1559" alt="Screenshot 2025-01-13 at 22 44 12" src="https://github.com/user-attachments/assets/dec71438-19df-49d5-9856-9b6bf3b76ed4" />
+
+- The errors have all beem fixed as seen below:
+<img width="1342" alt="Screenshot 2025-01-13 at 22 55 37" src="https://github.com/user-attachments/assets/8131f676-ce86-45e2-b2c6-65bd38d2b7ba" />
 
 - ### PROFILE APP
 - admin.py

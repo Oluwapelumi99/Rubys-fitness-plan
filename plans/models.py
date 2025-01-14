@@ -2,18 +2,22 @@ from django.db import models
 
 # Create your models here.
 
+
 class GlutesExercise(models.Model):
-    name = models.CharField(max_length=254, null=False, blank=False, default="")
+    name = models.CharField(
+        max_length=254, null=False, blank=False, default="")
     video = models.FileField(null=True, blank=True)
     description = models.TextField(null=False, blank=False, default="")
     sets = models.IntegerField(null=False, blank=False, default=1)
     reps = models.IntegerField(null=False, blank=False, default=1)
-  
+
     def __str__(self):
         return f"{self.name}"
+
 
 class AbsExercise(models.Model):
-    name = models.CharField(max_length=254, null=False, blank=False, default="")
+    name = models.CharField(
+        max_length=254, null=False, blank=False, default="")
     video = models.FileField(null=True, blank=True)
     description = models.TextField(null=False, blank=False, default="")
     sets = models.IntegerField(null=False, blank=False, default=1)
@@ -21,10 +25,12 @@ class AbsExercise(models.Model):
 
     def __str__(self):
         return f"{self.name}"
+
 
 class MealPlan(models.Model):
     name = models.CharField(max_length=254)
-    slug = models.SlugField(max_length=200, unique=True, default="", null=False)
+    slug = models.SlugField(
+        max_length=200, unique=True, default="", null=False)
     image = models.ImageField(blank=True, null=True)
     description = models.TextField()
     calories = models.IntegerField()

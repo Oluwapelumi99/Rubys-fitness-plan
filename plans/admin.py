@@ -4,6 +4,7 @@ from django_summernote.admin import SummernoteModelAdmin
 
 # Register your models here.
 
+
 @admin.register(GlutesExercise)
 class ExerciseAdmin(SummernoteModelAdmin):
     summernote_fields = ('description')

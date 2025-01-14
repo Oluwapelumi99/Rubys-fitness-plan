@@ -4,15 +4,12 @@ from django import forms
 
 class MealPlanForm(forms.ModelForm):
 
-
     class Meta:
         model = MealPlan
-        fields = ('name','slug','image','description','calories')
-
+        fields = ('name', 'slug', 'image', 'description', 'calories')
 
 
 class GlutesExerciseForm(forms.ModelForm):
-
 
     class Meta:
         model = GlutesExercise
@@ -20,7 +17,6 @@ class GlutesExerciseForm(forms.ModelForm):
 
 
 class AbsExerciseForm(forms.ModelForm):
-
 
     class Meta:
         model = AbsExercise
@@ -49,6 +45,7 @@ class DeleteGlutesExerciseForm(forms.ModelForm):
         self.fields['id'] = forms.IntegerField(widget=forms.HiddenInput())
         if self.instance and self.instance.pk:
             self.fields['id'].initial = self.instance.pk
+
 
 class DeleteAbsExerciseForm(forms.ModelForm):
     class Meta:

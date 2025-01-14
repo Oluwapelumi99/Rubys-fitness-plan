@@ -1,0 +1,552 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://rubys-fitness-plan-f9d280e18cb5.herokuapp.com/</loc>
+  <lastmod>2025-01-14T03:59:12+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://rubys-fitness-plan-f9d280e18cb5.herokuapp.com/shop/</loc>
+  <lastmod>2025-01-14T03:59:12+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://rubys-fitness-plan-f9d280e18cb5.herokuapp.com/plan/plans/exercise_page/</loc>
+  <lastmod>2025-01-14T03:59:12+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://rubys-fitness-plan-f9d280e18cb5.herokuapp.com/plan/</loc>
+  <lastmod>2025-01-14T03:59:12+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://rubys-fitness-plan-f9d280e18cb5.herokuapp.com/community/</loc>
+  <lastmod>2025-01-14T03:59:12+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://rubys-fitness-plan-f9d280e18cb5.herokuapp.com/accounts/signup/</loc>
+  <lastmod>2025-01-14T03:59:12+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://rubys-fitness-plan-f9d280e18cb5.herokuapp.com/accounts/login/</loc>
+  <lastmod>2025-01-14T03:59:12+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://rubys-fitness-plan-f9d280e18cb5.herokuapp.com/cart/</loc>
+  <lastmod>2025-01-14T03:59:12+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://rubys-fitness-plan-f9d280e18cb5.herokuapp.com/shop/?category=bags</loc>
+  <lastmod>2025-01-14T03:59:12+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://rubys-fitness-plan-f9d280e18cb5.herokuapp.com/shop/?category=resistance_bands</loc>
+  <lastmod>2025-01-14T03:59:12+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://rubys-fitness-plan-f9d280e18cb5.herokuapp.com/shop/?category=bottles</loc>
+  <lastmod>2025-01-14T03:59:12+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://rubys-fitness-plan-f9d280e18cb5.herokuapp.com/shop/?sort=price&amp;direction=asc</loc>
+  <lastmod>2025-01-14T03:59:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rubys-fitness-plan-f9d280e18cb5.herokuapp.com/shop/?sort=category&amp;direction=asc</loc>
+  <lastmod>2025-01-14T03:59:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rubys-fitness-plan-f9d280e18cb5.herokuapp.com/shop/?category=gym_wears,trainers,socks</loc>
+  <lastmod>2025-01-14T03:59:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rubys-fitness-plan-f9d280e18cb5.herokuapp.com/shop/?category=gym_wears</loc>
+  <lastmod>2025-01-14T03:59:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rubys-fitness-plan-f9d280e18cb5.herokuapp.com/shop/?category=socks</loc>
+  <lastmod>2025-01-14T03:59:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rubys-fitness-plan-f9d280e18cb5.herokuapp.com/shop/?category=trainers</loc>
+  <lastmod>2025-01-14T03:59:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rubys-fitness-plan-f9d280e18cb5.herokuapp.com/shop/?category=dumbells,kettle_bells</loc>
+  <lastmod>2025-01-14T03:59:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rubys-fitness-plan-f9d280e18cb5.herokuapp.com/shop/?category=dumbells</loc>
+  <lastmod>2025-01-14T03:59:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rubys-fitness-plan-f9d280e18cb5.herokuapp.com/shop/?category=kettle_bells</loc>
+  <lastmod>2025-01-14T03:59:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rubys-fitness-plan-f9d280e18cb5.herokuapp.com/shop/?category=bottles,mats,bags,gloves,jump_ropes,resistance_bands</loc>
+  <lastmod>2025-01-14T03:59:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rubys-fitness-plan-f9d280e18cb5.herokuapp.com/shop/?category=mats</loc>
+  <lastmod>2025-01-14T03:59:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rubys-fitness-plan-f9d280e18cb5.herokuapp.com/shop/?category=gloves</loc>
+  <lastmod>2025-01-14T03:59:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rubys-fitness-plan-f9d280e18cb5.herokuapp.com/shop/?category=jump_ropes</loc>
+  <lastmod>2025-01-14T03:59:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rubys-fitness-plan-f9d280e18cb5.herokuapp.com/shop/1</loc>
+  <lastmod>2025-01-14T03:59:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rubys-fitness-plan-f9d280e18cb5.herokuapp.com/shop/8</loc>
+  <lastmod>2025-01-14T03:59:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rubys-fitness-plan-f9d280e18cb5.herokuapp.com/shop/5</loc>
+  <lastmod>2025-01-14T03:59:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rubys-fitness-plan-f9d280e18cb5.herokuapp.com/shop/3</loc>
+  <lastmod>2025-01-14T03:59:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rubys-fitness-plan-f9d280e18cb5.herokuapp.com/shop/6</loc>
+  <lastmod>2025-01-14T03:59:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rubys-fitness-plan-f9d280e18cb5.herokuapp.com/shop/7</loc>
+  <lastmod>2025-01-14T03:59:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rubys-fitness-plan-f9d280e18cb5.herokuapp.com/shop/9</loc>
+  <lastmod>2025-01-14T03:59:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rubys-fitness-plan-f9d280e18cb5.herokuapp.com/shop/4</loc>
+  <lastmod>2025-01-14T03:59:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rubys-fitness-plan-f9d280e18cb5.herokuapp.com/shop/15</loc>
+  <lastmod>2025-01-14T03:59:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rubys-fitness-plan-f9d280e18cb5.herokuapp.com/shop/16</loc>
+  <lastmod>2025-01-14T03:59:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rubys-fitness-plan-f9d280e18cb5.herokuapp.com/shop/11</loc>
+  <lastmod>2025-01-14T03:59:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rubys-fitness-plan-f9d280e18cb5.herokuapp.com/shop/12</loc>
+  <lastmod>2025-01-14T03:59:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rubys-fitness-plan-f9d280e18cb5.herokuapp.com/shop/14</loc>
+  <lastmod>2025-01-14T03:59:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rubys-fitness-plan-f9d280e18cb5.herokuapp.com/shop/17</loc>
+  <lastmod>2025-01-14T03:59:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rubys-fitness-plan-f9d280e18cb5.herokuapp.com/shop/18</loc>
+  <lastmod>2025-01-14T03:59:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rubys-fitness-plan-f9d280e18cb5.herokuapp.com/shop/19</loc>
+  <lastmod>2025-01-14T03:59:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rubys-fitness-plan-f9d280e18cb5.herokuapp.com/shop/25</loc>
+  <lastmod>2025-01-14T03:59:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rubys-fitness-plan-f9d280e18cb5.herokuapp.com/shop/13</loc>
+  <lastmod>2025-01-14T03:59:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rubys-fitness-plan-f9d280e18cb5.herokuapp.com/shop/24</loc>
+  <lastmod>2025-01-14T03:59:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rubys-fitness-plan-f9d280e18cb5.herokuapp.com/shop/26</loc>
+  <lastmod>2025-01-14T03:59:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rubys-fitness-plan-f9d280e18cb5.herokuapp.com/shop/23</loc>
+  <lastmod>2025-01-14T03:59:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rubys-fitness-plan-f9d280e18cb5.herokuapp.com/shop/21</loc>
+  <lastmod>2025-01-14T03:59:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rubys-fitness-plan-f9d280e18cb5.herokuapp.com/shop/22</loc>
+  <lastmod>2025-01-14T03:59:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rubys-fitness-plan-f9d280e18cb5.herokuapp.com/shop/20</loc>
+  <lastmod>2025-01-14T03:59:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rubys-fitness-plan-f9d280e18cb5.herokuapp.com/shop/28</loc>
+  <lastmod>2025-01-14T03:59:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rubys-fitness-plan-f9d280e18cb5.herokuapp.com/shop/30</loc>
+  <lastmod>2025-01-14T03:59:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rubys-fitness-plan-f9d280e18cb5.herokuapp.com/shop/31</loc>
+  <lastmod>2025-01-14T03:59:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rubys-fitness-plan-f9d280e18cb5.herokuapp.com/shop/32</loc>
+  <lastmod>2025-01-14T03:59:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rubys-fitness-plan-f9d280e18cb5.herokuapp.com/shop/33</loc>
+  <lastmod>2025-01-14T03:59:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rubys-fitness-plan-f9d280e18cb5.herokuapp.com/shop/29</loc>
+  <lastmod>2025-01-14T03:59:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rubys-fitness-plan-f9d280e18cb5.herokuapp.com/shop/27</loc>
+  <lastmod>2025-01-14T03:59:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rubys-fitness-plan-f9d280e18cb5.herokuapp.com/shop/10</loc>
+  <lastmod>2025-01-14T03:59:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rubys-fitness-plan-f9d280e18cb5.herokuapp.com/shop/35</loc>
+  <lastmod>2025-01-14T03:59:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rubys-fitness-plan-f9d280e18cb5.herokuapp.com/plan/glutes_exercises/</loc>
+  <lastmod>2025-01-14T03:59:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rubys-fitness-plan-f9d280e18cb5.herokuapp.com/plan/abs_exercises/</loc>
+  <lastmod>2025-01-14T03:59:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rubys-fitness-plan-f9d280e18cb5.herokuapp.com/plan/turkey-burger/</loc>
+  <lastmod>2025-01-14T03:59:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rubys-fitness-plan-f9d280e18cb5.herokuapp.com/accounts/login/?next=/plan/edit_meal/1/</loc>
+  <lastmod>2025-01-14T03:59:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rubys-fitness-plan-f9d280e18cb5.herokuapp.com/accounts/login/?next=/plan/delete_meal/1/</loc>
+  <lastmod>2025-01-14T03:59:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rubys-fitness-plan-f9d280e18cb5.herokuapp.com/plan/chicken-salad/</loc>
+  <lastmod>2025-01-14T03:59:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rubys-fitness-plan-f9d280e18cb5.herokuapp.com/accounts/login/?next=/plan/edit_meal/7/</loc>
+  <lastmod>2025-01-14T03:59:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rubys-fitness-plan-f9d280e18cb5.herokuapp.com/accounts/login/?next=/plan/delete_meal/7/</loc>
+  <lastmod>2025-01-14T03:59:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rubys-fitness-plan-f9d280e18cb5.herokuapp.com/plan/tuna-melts/</loc>
+  <lastmod>2025-01-14T03:59:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rubys-fitness-plan-f9d280e18cb5.herokuapp.com/accounts/login/?next=/plan/edit_meal/9/</loc>
+  <lastmod>2025-01-14T03:59:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rubys-fitness-plan-f9d280e18cb5.herokuapp.com/accounts/login/?next=/plan/delete_meal/9/</loc>
+  <lastmod>2025-01-14T03:59:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rubys-fitness-plan-f9d280e18cb5.herokuapp.com/plan/grilled-lettuce/</loc>
+  <lastmod>2025-01-14T03:59:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rubys-fitness-plan-f9d280e18cb5.herokuapp.com/accounts/login/?next=/plan/edit_meal/10/</loc>
+  <lastmod>2025-01-14T03:59:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rubys-fitness-plan-f9d280e18cb5.herokuapp.com/accounts/login/?next=/plan/delete_meal/10/</loc>
+  <lastmod>2025-01-14T03:59:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rubys-fitness-plan-f9d280e18cb5.herokuapp.com/plan/turkey-fajitas/</loc>
+  <lastmod>2025-01-14T03:59:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rubys-fitness-plan-f9d280e18cb5.herokuapp.com/accounts/login/?next=/plan/edit_meal/11/</loc>
+  <lastmod>2025-01-14T03:59:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rubys-fitness-plan-f9d280e18cb5.herokuapp.com/accounts/login/?next=/plan/delete_meal/11/</loc>
+  <lastmod>2025-01-14T03:59:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rubys-fitness-plan-f9d280e18cb5.herokuapp.com/plan/oats-porridge/</loc>
+  <lastmod>2025-01-14T03:59:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rubys-fitness-plan-f9d280e18cb5.herokuapp.com/accounts/login/?next=/plan/edit_meal/12/</loc>
+  <lastmod>2025-01-14T03:59:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rubys-fitness-plan-f9d280e18cb5.herokuapp.com/accounts/login/?next=/plan/delete_meal/12/</loc>
+  <lastmod>2025-01-14T03:59:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rubys-fitness-plan-f9d280e18cb5.herokuapp.com/community/tips-for-exercising-on-vacation-if-you-want-to/</loc>
+  <lastmod>2025-01-14T03:59:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rubys-fitness-plan-f9d280e18cb5.herokuapp.com/community/how-to-prepare-and-enjoy-protein-food/</loc>
+  <lastmod>2025-01-14T03:59:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rubys-fitness-plan-f9d280e18cb5.herokuapp.com/community/is-it-bad-to-workout-hungover/</loc>
+  <lastmod>2025-01-14T03:59:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rubys-fitness-plan-f9d280e18cb5.herokuapp.com/community/why-rest-days-are-important/</loc>
+  <lastmod>2025-01-14T03:59:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rubys-fitness-plan-f9d280e18cb5.herokuapp.com/community/should-you-crack-your-back/</loc>
+  <lastmod>2025-01-14T03:59:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rubys-fitness-plan-f9d280e18cb5.herokuapp.com/community/how-to-start-working-out-a-beginners-guide/</loc>
+  <lastmod>2025-01-14T03:59:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rubys-fitness-plan-f9d280e18cb5.herokuapp.com/accounts/password/reset/</loc>
+  <lastmod>2025-01-14T03:59:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rubys-fitness-plan-f9d280e18cb5.herokuapp.com/accounts/signup/?next=%2Fplan%2Fedit_meal%2F1%2F</loc>
+  <lastmod>2025-01-14T03:59:12+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rubys-fitness-plan-f9d280e18cb5.herokuapp.com/accounts/signup/?next=%2Fplan%2Fdelete_meal%2F1%2F</loc>
+  <lastmod>2025-01-14T03:59:12+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rubys-fitness-plan-f9d280e18cb5.herokuapp.com/accounts/signup/?next=%2Fplan%2Fedit_meal%2F7%2F</loc>
+  <lastmod>2025-01-14T03:59:12+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rubys-fitness-plan-f9d280e18cb5.herokuapp.com/accounts/signup/?next=%2Fplan%2Fdelete_meal%2F7%2F</loc>
+  <lastmod>2025-01-14T03:59:12+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rubys-fitness-plan-f9d280e18cb5.herokuapp.com/accounts/signup/?next=%2Fplan%2Fedit_meal%2F9%2F</loc>
+  <lastmod>2025-01-14T03:59:12+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rubys-fitness-plan-f9d280e18cb5.herokuapp.com/accounts/signup/?next=%2Fplan%2Fdelete_meal%2F9%2F</loc>
+  <lastmod>2025-01-14T03:59:12+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rubys-fitness-plan-f9d280e18cb5.herokuapp.com/accounts/signup/?next=%2Fplan%2Fedit_meal%2F10%2F</loc>
+  <lastmod>2025-01-14T03:59:12+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rubys-fitness-plan-f9d280e18cb5.herokuapp.com/accounts/signup/?next=%2Fplan%2Fdelete_meal%2F10%2F</loc>
+  <lastmod>2025-01-14T03:59:12+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rubys-fitness-plan-f9d280e18cb5.herokuapp.com/accounts/signup/?next=%2Fplan%2Fedit_meal%2F11%2F</loc>
+  <lastmod>2025-01-14T03:59:12+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rubys-fitness-plan-f9d280e18cb5.herokuapp.com/accounts/signup/?next=%2Fplan%2Fdelete_meal%2F11%2F</loc>
+  <lastmod>2025-01-14T03:59:12+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rubys-fitness-plan-f9d280e18cb5.herokuapp.com/accounts/signup/?next=%2Fplan%2Fedit_meal%2F12%2F</loc>
+  <lastmod>2025-01-14T03:59:12+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rubys-fitness-plan-f9d280e18cb5.herokuapp.com/accounts/signup/?next=%2Fplan%2Fdelete_meal%2F12%2F</loc>
+  <lastmod>2025-01-14T03:59:12+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rubys-fitness-plan-f9d280e18cb5.herokuapp.com/accounts/login/?next=%2Fplan%2Fedit_meal%2F1%2F</loc>
+  <lastmod>2025-01-14T03:59:12+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://rubys-fitness-plan-f9d280e18cb5.herokuapp.com/accounts/login/?next=%2Fplan%2Fdelete_meal%2F1%2F</loc>
+  <lastmod>2025-01-14T03:59:12+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://rubys-fitness-plan-f9d280e18cb5.herokuapp.com/accounts/login/?next=%2Fplan%2Fedit_meal%2F7%2F</loc>
+  <lastmod>2025-01-14T03:59:12+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://rubys-fitness-plan-f9d280e18cb5.herokuapp.com/accounts/login/?next=%2Fplan%2Fdelete_meal%2F7%2F</loc>
+  <lastmod>2025-01-14T03:59:12+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://rubys-fitness-plan-f9d280e18cb5.herokuapp.com/accounts/login/?next=%2Fplan%2Fedit_meal%2F9%2F</loc>
+  <lastmod>2025-01-14T03:59:12+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://rubys-fitness-plan-f9d280e18cb5.herokuapp.com/accounts/login/?next=%2Fplan%2Fdelete_meal%2F9%2F</loc>
+  <lastmod>2025-01-14T03:59:12+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://rubys-fitness-plan-f9d280e18cb5.herokuapp.com/accounts/login/?next=%2Fplan%2Fedit_meal%2F10%2F</loc>
+  <lastmod>2025-01-14T03:59:12+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://rubys-fitness-plan-f9d280e18cb5.herokuapp.com/accounts/login/?next=%2Fplan%2Fdelete_meal%2F10%2F</loc>
+  <lastmod>2025-01-14T03:59:12+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://rubys-fitness-plan-f9d280e18cb5.herokuapp.com/accounts/login/?next=%2Fplan%2Fedit_meal%2F11%2F</loc>
+  <lastmod>2025-01-14T03:59:12+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://rubys-fitness-plan-f9d280e18cb5.herokuapp.com/accounts/login/?next=%2Fplan%2Fdelete_meal%2F11%2F</loc>
+  <lastmod>2025-01-14T03:59:12+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://rubys-fitness-plan-f9d280e18cb5.herokuapp.com/accounts/login/?next=%2Fplan%2Fedit_meal%2F12%2F</loc>
+  <lastmod>2025-01-14T03:59:12+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://rubys-fitness-plan-f9d280e18cb5.herokuapp.com/accounts/login/?next=%2Fplan%2Fdelete_meal%2F12%2F</loc>
+  <lastmod>2025-01-14T03:59:12+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+
+
+</urlset>

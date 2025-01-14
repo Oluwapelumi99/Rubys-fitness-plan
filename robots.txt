@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /accounts/
+Disallow: /cart/
+Disallow: /admin/
+Disallow: /profiles/
+Sitemap: https://rubys-fitness-plan-f9d280e18cb5.herokuapp.com/sitemap.xml
