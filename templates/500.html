@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block body %}
+<main class="bg-base">
+    <h1>Oh No! 500 Error</h1>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 col-md-10 col-xl-8 mt-4 d-flex flex-column gap align-items-center mx-auto">
+                <h3>Something broke!</h3>
+                <p>A 500 error is when something has gone wrong on the website's server - that's where it lives normally.</p>
+                <p>It is likely only a temporary issue, so give it a few seconds and try again. If you continue to have issues, please contact us.</p>
+                <p>Alternatively you can head back to home page here <a href="{% url 'home' %}" class="btn1 btn-primary">Back to Homepage</a></p>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}
+{% block postloadjs %}
+{% endblock %}

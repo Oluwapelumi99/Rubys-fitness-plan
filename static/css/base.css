@@ -188,7 +188,11 @@ a {
 h5, h1 {
     font-weight: bolder;
 }
-
+.subscribe-end {
+    display: flex;
+    justify-content: flex-end;
+    right: 0;
+}
 /* toast */
 .toast {
     position: fixed;

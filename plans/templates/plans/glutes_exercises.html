@@ -3,7 +3,7 @@
 
 
 {% block content %}
-<div class="plan-container">
+<div class="plan-container mb-3 ">
     <div class="container  text-center">
         {% for glutes_exercise in glutes_exercises %}
         <h1 class="">{{ glutes_exercise.name }}</h1>
@@ -20,7 +20,7 @@
             <p >REPS:{{ glutes_exercise.reps }}</p>
         </div>
         {% if request.user.is_superuser %}
-            <small class="ml-3">
+            <small class="">
             <a href="{% url 'edit_glutes_exercise' glutes_exercise.id %}">Edit</a> | 
             <a href="{% url 'delete_glutes_exercise' glutes_exercise.id %}">Delete</a>
             </small>

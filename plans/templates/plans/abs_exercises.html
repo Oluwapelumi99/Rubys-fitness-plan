@@ -3,7 +3,7 @@
 {% block content %}
 
 
-<div class="plan-container">
+<div class="plan-container mb-3">
     <div class="container mt-5 text-center">
         {% for abs_exercise in abs_exercises %}
         <h1 class="mt-5">{{ abs_exercise.name }}</h1>
@@ -16,12 +16,14 @@
         {% endif %}
         <div id="plans" class="mt-5 mb-4">
             <p>{{ abs_exercise.description | safe }}
-            <p style='color:  rgb(189, 58, 80);'>SETS:{{ abs_exercise.sets }}</p>
-            <p style='color:  rgb(189, 58, 80);'>REPS:{{ abs_exercise.reps }}</p>
+            <p >SETS:{{ abs_exercise.sets }}</p>
+            <p>REPS:{{ abs_exercise.reps }}</p>
         </div>
         {% if request.user.is_superuser %}
         <small class="ml-3">
-        <a class="" href="{% url 'edit_abs_exercise' abs_exercise.id %}">Edit</a>
+        <a class="" href="{% url 'edit_abs_exercise' abs_exercise.id %}">Edit</a> |
+        <a href="{% url 'delete_abs_exercise' abs_exercise.id %}">Delete</a>
+
         </small>
     {% endif %}
         {% endfor %}

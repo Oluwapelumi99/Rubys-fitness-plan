@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block body %}
+<main class="bg-base">
+    <h1>Oh No! 403 Error</h1>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 col-md-10 col-xl-8 mt-4 d-flex flex-column gap align-items-center mx-auto">
+                <h3>There isn't anything there!</h3>
+                <p>It appears that you do not have access to the page you requested.</p>
+                <p>If you believe you should have access, please contact us.</p>
+                <p>You can head back to home page here <a href="{% url 'home' %}" class="btn btn-primary">Back to Homepage</a></p>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}
+{% block postloadjs %}
+{% endblock %}
