@@ -925,8 +925,7 @@ Using the requirements.txt file install all of the required packages
 - Fonts used for the site was gotten from https://fonts.google.com/
 
 - ## Icons
-- https://icons8.com
-![icons8-exercise-female-color-hand-drawn-32](https://github.com/user-attachments/assets/89c3a214-283d-4921-88ad-af2c52bb28a6)
+<a target="_blank" href="https://icons8.com/icon/ZwHMBne7HD6x/dumbell">Dumbell</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
 
 - ## Content
 - The codes for stripe was gotten from Boutique Ado walk through project.
