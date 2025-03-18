@@ -12,20 +12,40 @@
 </div>
 <div class="container about">
     <div class="plans">
-        <h3 class="text-center mt-5 mx-3">A more empowered you.</h3>
-        Our goal? Helping you smash your goals. At Rubys, our mission is to empower women to take control of their fitness journey by providing
+        <h1 class="text-center mt-5 mx-3">Ruby's - Ladies fitness plan.</h1>
+        Our <strong>ladies' only gym</strong> will help you smash your fitness goals. At Rubys, our mission is to empower women to take control of their fitness journey by providing
         a comprehensive and engaging mobile app experience.
-        Our team of experts have come together to create an app that helps motivate and guide you towards acheiving your fitness goals.
-        Founded by a team of passionate fitness enthusiasts and technologists, Rubys aims to bridge the gap between traditional gym workouts and the convinence
-        of digital fitness. We believe that everyone deserves access to high quality fitness guidance and motivation, regardless of their location and schedule.
-        You can also visit our online store which offers a range of fitness related products, including resistance bands and exercise equipments, yoga mats, fitness apparel and accessories.
+        Ladies keeping fit is important for physical and mental wellbeing, it also enhances quality of life and helps prevent age related health issues.
+    </div>
+    <div>
+        <h1 class="text-center mt-5 mx-3">Why Join Our Ladies Only Program?</h1>
+        <hr>
+        <h2>Safe workout space.</h2>
+        With our <strong>women's only program,</strong> you can be confident that both our meal plan and exercise plan have been tailored to suit the needs of women of all ages.
+        <hr>
+        <h2>Supportive community.</h2>
+        <p class="gym-link">Many women need a specific style of encouragement and motivation when it comes to their bodies.
+        <strong>A women-only plan</strong> will provide the kind of support that helps women thrive on a mental level. Check out our <a href="{% url 'BlogList' %}">supportive community for women.</a></p>
+        <hr>
+        <h2>Non-judgemental</h2>
+        For many ladies, the fear of judgement can be a major barrier to working out.
+        In our <strong>female only program</strong>, we create a welcoming atmosphere where you can feel comfortable and express your self openly with the female only trainers.
+        <hr>
+        <h2>Adequate nutritional intake</h2>
+        With our <strong>meal plan,</strong> you can expect that our meals will provide the necessary calorie intake needed for women of all ages to reach their goals whether it is weight loss, maintenance or muscle gain..
+    </div>
+    <div>
+        <h1 class="text-center mt-5 mx-3">Online gym shop</h1>
+        <div class="gym-link">
+            We also have <a href="{% url 'shop' %}">online store</a> on the the app where you can <em>buy gym products,</em> including resistance bands, exercise equipments, yoga mats, fitness apparel and other gym accessories.
+        </div>
     </div>
 </div>
 <div class="plan-container">
     <div class="container mt-5">
         <a href="{% url 'exercise_page' %}">
             <h5 class="text-center plan  mt-5 mx-3">Exercise plans</h5>
-            <img src="{{ MEDIA_URL }}woman_holding_barbell_in_the_gym.jpg" alt="woman_holding_barbell_in_the_gym.jpg" class="float-left curved-edges mt-4 font-weight-bold"></a>
+            <img src="{{ MEDIA_URL }}woman_holding_barbell_in_the_gym.jpg" alt="woman performing deadlift in the gym" class="float-left curved-edges mt-4 font-weight-bold"></a>
         <div class="plans">
             Our exercise plans cater to various fitness levels, from beginner to advanced, and focus on functional training, strength building, and cardiovascular fitness. You'll
             find workouts that can be done at home, in a gym, or outdoors, using a variety of equipments and techniques. Whether you're looking to tone and sculpt, increase
@@ -38,11 +58,11 @@
     <div class="container mt-5">
         <a href="{% url 'MealPlanList' %}">
             <h5 class="text-center mt-5 plan mx-3">Meal plans</h5>
-            <img src="{{ MEDIA_URL }}plate_of_food.jpg" alt="plate_of_food.jpg" class="float-left curved-edges mt-5 font-weight-bold"></a> 
+            <img src="{{ MEDIA_URL }}plate_of_food.jpg" alt="personalised meal" class="float-left curved-edges mt-5 font-weight-bold"></a> 
         <div class="plans">
-            Our meal plans are designed to support your fitness goals, providing balanced and nutritious diet that fuels your body for optimal performance.
-            Our plans take into account variety dietary needs and preferences, including vegetarian, gluten-free, and low-carb options. You'll receive personalized
-            guidance on portion control, macronutrient ratios, and healthy eating habits to suport your weight loss, maintenance or muscle-building goals.
+            Our <strong>meal plans</strong> are designed to support your fitness goals, providing balanced and nutritious diet that fuels your body for optimal performance.
+            Our plans take into account variety dietary needs and preferences, including vegetarian, gluten-free, and low-carb options. You'll receive <strong>personalized
+            plans</strong> on portion control, macronutrient ratios, and healthy eating habits to suport your weight loss, maintenance or muscle-building goals.
         </div>
     </div>
 </div>
@@ -58,21 +78,21 @@
         <div class="row text-center">
             <div class="col-lg-4">
                 <div class="card-body curved-edges">
-                    <a href="{% url 'shop' %}?category=bags"><img src="{{ MEDIA_URL }}1_black_and_tan_gym_bag.png" alt="1_black_and_tan_gym_bag"></a>
+                    <a href="{% url 'shop' %}?category=bags"><img src="{{ MEDIA_URL }}1_black_and_tan_gym_bag.png" alt="black and tan gym bag"></a>
                 </div>
                 <h5 class="">Black and tan gym bag</h5>
                 <p class="font-weight-bold">£15.99</p>
             </div>
             <div class="col-lg-4">
                 <div class="card-body curved-edges">
-                    <a href="{% url 'shop' %}?category=resistance_bands"><img src="{{ MEDIA_URL }}resistance_bands.jpg" alt="resistance_bands"></a>
+                    <a href="{% url 'shop' %}?category=resistance_bands"><img src="{{ MEDIA_URL }}resistance_bands.jpg" alt="resistance bands"></a>
                 </div>
                 <h5 class="">Resistance bands</h5>
                 <p class="font-weight-bold">£13.99</p>
             </div>
             <div class="col-lg-4">
                 <div class="card-body curved-edges">
-                    <a href="{% url 'shop' %}?category=bottles"><img src="{{ MEDIA_URL }}2_water_bottles_red_and_blue.png" alt="2_water_bottles_red_and_blue"></a>
+                    <a href="{% url 'shop' %}?category=bottles"><img src="{{ MEDIA_URL }}2_water_bottles_red_and_blue.png" alt="gym accessories"></a>
                 </div>
                 <h5 class="">Water bottles</h5>
                 <p class="font-weight-bold">£30.99</p>

@@ -92,6 +92,11 @@ a {
     transition: 0.5s;
 }
 
+.gym-link a {
+    text-decoration: underline;
+    color: black;
+}
+
 .buttons {
     height: 30px;
     width: 200px;
@@ -203,7 +208,7 @@ h5, h1 {
 
 
 /*exercise page styling*/
-section {
+#section {
     display: flex;
     flex-direction: column;
     height: 300px;
