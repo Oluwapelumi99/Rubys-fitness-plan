@@ -1,7 +1,7 @@
 # Rubys-fitness-plan
 
 ## Introduction
-- This is a project demonstrating an ecommerce store. It is about an app that provides exercise plans and meal plans to customers and within the app there is a shop where gym related products are sold. Customers can purchase what they want and they can pay for it through the website. 
+- This is a project demonstrating an ecommerce store. It is about an app that provides exercise plans and meal plans to only ladies and within the app there is a shop where gym related products are sold. Ladies can purchase what they want and they can pay for it through the website. 
 - There is a community within the app which provides blogs and users that are logged in can make comments on the blogs.
 - Users will also have the opportunity to create their accounts which has to be done in order to make comments on blogs they can also reset their password if they have forgotten their password.
 This site was created to show case what a B2C ecommerce store looks like.
